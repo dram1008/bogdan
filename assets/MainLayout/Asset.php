@@ -30,7 +30,7 @@ class Asset extends AssetBundle
         'js/grayscale.js',
     ];
     public $depends = [
-        'yii\web\YiiAsset',
+//        'yii\web\YiiAsset',
         'yii\web\JqueryAsset',
 //        'yii\bootstrap\BootstrapThemeAsset',
 //        'yii\bootstrap\BootstrapPluginAsset',

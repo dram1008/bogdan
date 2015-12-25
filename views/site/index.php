@@ -8,53 +8,79 @@
 $this->title = 'Главная';
 ?>
 
-<?= \cs\plugins\ImageGallery\ImageGallery::widget([]); ?>
-<!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
-<div id="blueimp-gallery" class="blueimp-gallery" data-use-bootstrap-modal="false">
-    <!-- The container for the modal slides -->
-    <div class="slides"></div>
-    <!-- Controls for the borderless lightbox -->
-    <h3 class="title"></h3>
-    <a class="prev">‹</a>
-    <a class="next">›</a>
-    <a class="close">×</a>
-    <a class="play-pause"></a>
-    <ol class="indicator"></ol>
-    <!-- The modal dialog, which will be used to wrap the lightbox content -->
-    <div class="modal fade">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title"></h4>
-                </div>
-                <div class="modal-body next"></div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default pull-left prev">
-                        <i class="glyphicon glyphicon-chevron-left"></i>
-                        Previous
-                    </button>
-                    <button type="button" class="btn btn-primary next">
-                        Next
-                        <i class="glyphicon glyphicon-chevron-right"></i>
-                    </button>
+<!-- Intro Header -->
+<header class="intro">
+    <div class="intro-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h1 class="brand-heading">Авиалинии БогДан</h1>
+                    <p class="intro-text">Мы исполняем мечты! Летайте как птицы!</p>
+                    <a href="#about" class="btn btn-circle page-scroll">
+                        <i class="fa fa-angle-double-down animated"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</header>
 
-<div id="links">
-    <a href="/images/controller/site/index/5element/o/11220831_10153801349482888_2669576415985857245_n.jpg" title="Banana" data-gallery>
-        <img src="/images/controller/site/index/5element/11220831_10153801349482888_2669576415985857245_n.jpg" alt="Banana">
-    </a>
-    <a href="/images/controller/site/index/5element/o/12309886_10153801349847888_298748282568923343_o.jpg" title="Apple" data-gallery>
-        <img src="/images/controller/site/index/5element/12309886_10153801349847888_298748282568923343_o.jpg" alt="Apple">
-    </a>
-    <a href="/images/controller/site/index/5element/o/12360196_10153801349407888_5675000495656611666_n.jpg" title="Orange" data-gallery>
-        <img src="/images/controller/site/index/5element/12360196_10153801349407888_5675000495656611666_n.jpg" alt="Orange">
-    </a>
-    <a href="/images/controller/site/index/5element/o/12366378_10153801349457888_7899524003151262732_n.jpg" title="Orange" data-gallery>
-        <img src="/images/controller/site/index/5element/12366378_10153801349457888_7899524003151262732_n.jpg" alt="Orange">
-    </a>
-</div>
+<!-- About Section -->
+<section id="about" class="container content-section text-center">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <h2>О нас</h2>
+            <p>Новая технология перелетов в пространстве при помощи «крыльев ангела». Включает школу по обучению, Институт Многомерной Медицины, Институт Квантовой Генетики и технологии виртуальной реальности.</p>
+
+            <p>Также предоставляет перелеты на обычных самолетах. Отличительным знаком компании является Крылья Ангела.</p>
+
+            <p>Также разрабатывает и продает летающие автомобили.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Download Section -->
+<section id="download" class="content-section text-center">
+    <div class="download-section">
+        <div class="container">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Download Grayscale</h2>
+                <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
+                <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="container content-section text-center">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <h2>Contact Start Bootstrap</h2>
+            <p>Feel free to email us to provide some feedback on our templates, give us suggestions for new templates and themes, or to just say hello!</p>
+            <p><a href="mailto:feedback@startbootstrap.com">feedback@startbootstrap.com</a>
+            </p>
+            <ul class="list-inline banner-social-buttons">
+                <li>
+                    <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                </li>
+                <li>
+                    <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                </li>
+                <li>
+                    <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Map Section -->
+<div id="map"></div>
+
+<!-- Footer -->
+<footer>
+    <div class="container text-center">
+        <p>Copyright &copy; Your Website 2014</p>
+    </div>
+</footer>
