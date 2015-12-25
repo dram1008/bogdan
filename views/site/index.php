@@ -9,16 +9,20 @@ $this->title = 'Главная';
 ?>
 
 <!-- Intro Header -->
-<header class="intro">
+<header class="intro" style="height: 600px;">
     <div class="intro-body">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
-                    <h1 class="brand-heading">Авиалинии БогДан</h1>
+                    <div style="">
+                    <h1 class="brand-heading" style="text-transform: none; font-size: 300%;">Авиалинии БогДан</h1>
+                    <p class="intro-text" style="margin-bottom: 10px;">Представляют проект</p>
+                    <h1 class="brand-heading" style="text-transform: none;margin-top: 0px;">Крылья Ангела</h1>
                     <p class="intro-text">Мы исполняем мечты! Летайте как птицы!</p>
-                    <a href="#about" class="btn btn-circle page-scroll">
-                        <i class="fa fa-angle-double-down animated"></i>
-                    </a>
+<!--                    <a href="#about" class="btn btn-circle page-scroll">-->
+<!--                        <i class="fa fa-angle-double-down animated"></i>-->
+<!--                    </a>-->
+                    </div>
                 </div>
             </div>
         </div>
@@ -26,27 +30,40 @@ $this->title = 'Главная';
 </header>
 
 <!-- About Section -->
-<section id="about" class="container content-section text-center">
+<section id="about" class="container content-section">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
-            <h2>О нас</h2>
-            <p>Новая технология перелетов в пространстве при помощи «крыльев ангела». Включает школу по обучению, Институт Многомерной Медицины, Институт Квантовой Генетики и технологии виртуальной реальности.</p>
+            <h2 class="text-center">О проекте</h2>
 
-            <p>Также предоставляет перелеты на обычных самолетах. Отличительным знаком компании является Крылья Ангела.</p>
+            <p><img src="/images/controller/site/index/10408693_10153724707772888_1233079936717193229_n.jpg" width="100%">
+            <p>Проект Крылья Ангела представляет собой тренажер для полетов в виртуальной реальности вместе с кристальным звуком</p>
+            <p>Он будет установлен в Москве в марте-мае 2016 г. и стоять в одном из торговых центров Москвы</p>
+            <p>Для того чтобы испытать этот тренажер вам нужно купить билет</p>
+            <p>Покупая билет вы получите:<br>
+                - 30 мин первокласного ощущения полета на Крыльях Ангела<br>
+                - измененное состояние созания легкости после полета<br>
+                - специальный подарок
+            </p>
+            <p><iframe width="100%"
+                       height="315" src="https://www.youtube.com/embed/gWLHIusLWOc" frameborder="0" allowfullscreen></iframe></p>
 
-            <p>Также разрабатывает и продает летающие автомобили.</p>
+            <p>Этот симулятор Birdly<sup>®</sup> разработан компанией <a href="http://somniacs.co/" target="_blank">Somniacs</a></p>
+
         </div>
     </div>
 </section>
 
 <!-- Download Section -->
 <section id="download" class="content-section text-center">
-    <div class="download-section">
+    <div class="download-section" style="
+    border-bottom: 1px solid #87aad0;
+    border-top: 1px solid #87aad0;
+    ">
         <div class="container">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Download Grayscale</h2>
-                <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
-                <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
+            <div class="col-lg-8 col-lg-offset-2" style="color: #000000">
+                <h2>Попробовать</h2>
+                <p>Стоимость одного полета 1 000 руб.<br>Покупка осуществляется на сайте Boomstarter.ru</p>
+                <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Перейти на Boomstarter</a>
             </div>
         </div>
     </div>
@@ -56,31 +73,19 @@ $this->title = 'Главная';
 <section id="contact" class="container content-section text-center">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
-            <h2>Contact Start Bootstrap</h2>
-            <p>Feel free to email us to provide some feedback on our templates, give us suggestions for new templates and themes, or to just say hello!</p>
-            <p><a href="mailto:feedback@startbootstrap.com">feedback@startbootstrap.com</a>
+            <h2>Наши контакты</h2>
+            <p>+7-925-237-45-01<br>+7-926-518-98-75</p>
+            <p>
+                <a href="mailto:feedback@startbootstrap.com">avia@galaxysss.ru</a>
             </p>
-            <ul class="list-inline banner-social-buttons">
-                <li>
-                    <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                </li>
-                <li>
-                    <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                </li>
-                <li>
-                    <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
-                </li>
-            </ul>
+
         </div>
     </div>
 </section>
 
-<!-- Map Section -->
-<div id="map"></div>
-
 <!-- Footer -->
 <footer>
     <div class="container text-center">
-        <p>Copyright &copy; Your Website 2014</p>
+        <p>&copy; bog-dan.com 2015</p>
     </div>
 </footer>

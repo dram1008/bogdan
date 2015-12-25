@@ -25,6 +25,7 @@ use app\assets\AppAsset;
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <link rel="shortcut icon" href="/images/icon32.png">
     <title><?= Html::encode($this->title) ?> :: Авиалинии БогДан</title>
     <?= Html::csrfMetaTags() ?>
     <?php $this->head() ?>
@@ -41,14 +42,14 @@ use app\assets\AppAsset;
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
 <!-- Navigation -->
-<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation" style="background-color: #0042ae;">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                 <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand page-scroll" href="#page-top">
-                <i class="fa fa-play-circle"></i>  <span class="light">Start</span> Bootstrap
+            <a class="navbar-brand page-scroll" href="#page-top" style="padding: 0px;  margin: 0px 10px 0px 10px;">
+                <img src="/images/logo3.png" height="50">
             </a>
         </div>
 
@@ -60,13 +61,16 @@ use app\assets\AppAsset;
                     <a href="#page-top"></a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#about">About</a>
+                    <a class="page-scroll" href="#about">О проекте</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#download">Download</a>
+                    <a class="page-scroll" href="#download">Попробовать</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#contact">Contact</a>
+                    <a class="page-scroll" href="#contact">Контакты</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="/about">О нас</a>
                 </li>
             </ul>
         </div>
