@@ -11,181 +11,146 @@ use app\assets\AppAsset;
 
 ?>
 <?php $this->beginPage() ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
+
+
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
     <title><?= Html::encode($this->title) ?> :: Школа Богов</title>
     <?= Html::csrfMetaTags() ?>
-    <meta name="og:image" content="http://www.i-am-avatar.com/share.jpg">
-    <meta name="og:url" content="http://www.i-am-avatar.com/">
-    <meta name="og:title" content="Школа Богов">
-    <meta name="og:description" content="Миссия: Трансформировать всех желающих людей в Богов-Аватаров наделенных божественными способностями. Установление на Планете Земля мира Богов Со-Творцов. Обучить всех дарить Любовь ближнему теми дарами и талантами, которые были даны Творцом от рождения. Обучение таким наукам как: ...">
-    <link rel="shortcut icon" href="/images/ico.png">
-    <style type="text/css">
-        a {
-            color: white;
-            text-decoration: underline;
-        }
-        a:hover {
-            color: white;
-            text-decoration: none;
-        }
-        a:visited {
-            color: white;
-            text-decoration: underline;
-        }
-        a:active {
-            color: white;
-            text-decoration: underline;
-        }
-    </style>
     <?php $this->head() ?>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
 
-<body style="margin: 0px 0px 0px 0px;">
-<?php $this->beginBody() ?>
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
-    <tr>
-        <td align="center" style="
-    background-color: #cf016e;
-    color:white;
-    font-family: 'Times New Roman', Times, serif;
-    font-size:500%;
-    padding: 40px 0px 20px 0px;
-    ">Школа Богов
-        </td>
-    </tr>
-    <tr>
-        <td align="center" style="background-image: url(/images/controller/site/index/bg.png); background-repeat: x;"><img
-                src="/images/controller/site/index/Tesla-Gen-logo1-copy-5.jpg" width="800" height="800" alt="Школа Богов"
-                /></td>
-    </tr>
-    <tr>
-        <td align="center" style="
-    background-color: #1c69b7;
-    color:white;
-    font-family: 'Times New Roman', Times, serif;
-    font-size:120%;
-    padding: 0px 0px 40px 0px;
-    ">
-            <table border="0" cellpadding="0" cellspacing="0" width="600" align="center">
-                <tr>
-                    <td>
-                        <p>Миссия:</p>
-                        <p>Трансформировать всех желающих людей в Богов-Аватаров наделенных божественными способностями.</p>
-                        <p>Установление на Планете Земля мира Богов Со-Творцов.</p>
-                        <p>Обучить всех дарить Любовь ближнему теми дарами и талантами, которые были даны Творцом от рождения.</p>
-                        <p>Обучение таким наукам как:<br>
-                            ~ Трансформации страха в любовь<br>
-                            ~ Распознавание лжи<br>
-                            ~ Ясновидение<br>
-                            ~ Яснослышание<br>
-                            ~ Словообразование и сензарский энергоинформационный телепатический язык<br>
-                            ~ Родительская любовь<br>
-                            ~ Дружба<br>
-                            ~ Открытие и использование Звездной Памяти<br>
-                            ~ Практика многомерной эволюции и многомерная личность<br>
-                            ~ Близнецовые пламена и Супружеская любовь<br>
-                            ~ Род, чистота Рода и крови<br>
-                            ~ Благодарение – основа счастья<br>
-                            ~ Время, календарь и нулевая точка<br>
-                            ~ Медитация<br>
-                            ~ Природа<br>
-                            ~ Сознание как потенциал Творения<br>
-                            ~ Земля как живое Существо и Единый организм<br>
-                            ~ Житейская мудрость<br>
-                            ~ Раскрытие божественного потенциала Мужчины (для мальчиков)<br>
-                            ~ Раскрытие божественного потенциала Женщины (для девочек)<br>
-                            ~ <a href="http://www.galaxysss.ru/category/house/433">Полет на «Крыльях Ангела»</a><br>
-                            ~ <a href="http://www.galaxysss.ru/services/11" target="_blank">Задействование полного потенциала мозговой деятельности</a><br>
-                            ~ Балансировка Разума и Сердца<br>
-                            ~ Чтение Хроник Акаши<br>
-                            ~ Исследование Храма Внутреннего Сердца</p>
-                        <?= $content ?>
-                    </td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-    <tr>
-        <td align="center" style="
-    background-color: #1c69b7;
-    color:white;
-    font-family: 'Times New Roman', Times, serif;
-    font-size:300%;
-    padding: 20px 0px 40px 0px;
-    "><iframe width="100%" height="400" style="max-width:900px;" src="https://www.youtube.com/embed/y7LWDpGOnkc" frameborder="0" allowfullscreen></iframe>
-        </td>
-    </tr>
-    <tr>
-        <td align="center" style="
-    background-color: #1c69b7;
-    color:white;
-    font-family: 'Times New Roman', Times, serif;
-    font-size:300%;
-    padding: 20px 0px 40px 0px;
-    "><iframe width="100%" height="400" style="max-width:900px;" src="https://www.youtube.com/embed/YWoCsoPpwig" frameborder="0" allowfullscreen></iframe>
-        </td>
-    </tr>
-    <tr>
-        <td align="center" style="
-    background-color: #1c69b7;
-    color:white;
-    font-family: 'Times New Roman', Times, serif;
-    font-size:300%;
-    padding: 20px 0px 40px 0px;
-    ">
-            <p style="text-align: center; font-family: 'courier new'; font-size: 12pt; margin: 30px 0px 0px 0px;">Почта: god@i-am-avatar.com</p>
-            <p>Скоро открытие</p>
-        </td>
-    </tr>
-    <tr>
-        <td align="center" style="
-    background-color:#1c69b7;
-    color:white;
-    padding: 20px 0px 20px 0px;
-    ">
-            <a href="http://www.galaxysss.ru/" target="_blank">Галактический Союз Сил Света</a> ♥ <a
-                href="http://www.galaxysss.ru/vasudev/login" target="_blank">Элитный Клуб Фрактального Бизнеса «Vasudev
-                Bagavan»</a>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+<!-- Navigation -->
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand page-scroll" href="#page-top">
+                <i class="fa fa-play-circle"></i>  <span class="light">Start</span> Bootstrap
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+            <ul class="nav navbar-nav">
+                <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                <li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#about">About</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#download">Download</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Intro Header -->
+<header class="intro">
+    <div class="intro-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h1 class="brand-heading">Grayscale</h1>
+                    <p class="intro-text">A free, responsive, one page Bootstrap theme.<br>Created by Start Bootstrap.</p>
+                    <a href="#about" class="btn btn-circle page-scroll">
+                        <i class="fa fa-angle-double-down animated"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- About Section -->
+<section id="about" class="container content-section text-center">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <h2>About Grayscale</h2>
+            <p>Grayscale is a free Bootstrap 3 theme created by Start Bootstrap. It can be yours right now, simply download the template on <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
+            <p>This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.</p>
+            <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Download Section -->
+<section id="download" class="content-section text-center">
+    <div class="download-section">
+        <div class="container">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Download Grayscale</h2>
+                <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
+                <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="container content-section text-center">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <h2>Contact Start Bootstrap</h2>
+            <p>Feel free to email us to provide some feedback on our templates, give us suggestions for new templates and themes, or to just say hello!</p>
+            <p><a href="mailto:feedback@startbootstrap.com">feedback@startbootstrap.com</a>
+            </p>
+            <ul class="list-inline banner-social-buttons">
+                <li>
+                    <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                </li>
+                <li>
+                    <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                </li>
+                <li>
+                    <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Map Section -->
+<div id="map"></div>
+
+<!-- Footer -->
+<footer>
+    <div class="container text-center">
+        <p>Copyright &copy; Your Website 2014</p>
+    </div>
+</footer>
 
 
-    </tr>
-
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-        (function (d, w, c) {
-            (w[c] = w[c] || []).push(function() {
-                try {
-                    w.yaCounter33748969 = new Ya.Metrika({
-                        id:33748969,
-                        clickmap:true,
-                        trackLinks:true,
-                        accurateTrackBounce:true,
-                        webvisor:true,
-                        trackHash:true
-                    });
-                } catch(e) { }
-            });
-
-            var n = d.getElementsByTagName("script")[0],
-                s = d.createElement("script"),
-                f = function () { n.parentNode.insertBefore(s, n); };
-            s.type = "text/javascript";
-            s.async = true;
-            s.src = "https://mc.yandex.ru/metrika/watch.js";
-
-            if (w.opera == "[object Opera]") {
-                d.addEventListener("DOMContentLoaded", f, false);
-            } else { f(); }
-        })(document, window, "yandex_metrika_callbacks");
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/33748969" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
-</table>
 <?php $this->endBody() ?>
 </body>
+
 </html>
 <?php $this->endPage() ?>
