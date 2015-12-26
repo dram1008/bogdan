@@ -62,7 +62,7 @@ $this->title = 'О нас';
                 <h2>Наши контакты</h2>
                 <p>+7-925-237-45-01<br>+7-926-518-98-75</p>
                 <p>
-                    <a href="mailto:feedback@startbootstrap.com">avia@galaxysss.ru</a>
+                    <a href="mailto:avia@galaxysss.ru" style="color: #000000;">avia@galaxysss.ru</a>
                 </p>
             </div>
         </div>
@@ -76,7 +76,7 @@ $this->title = 'О нас';
             <h2>Поделиться</h2>
             <?= $this->render('../blocks/share', [
                 'url'         => \yii\helpers\Url::current([], true),
-                'image'       => \yii\helpers\Url::to('/images/controller/site/about/img.jpg', true),
+                'image'       => \yii\helpers\Url::to('/images/controller/site/about/share.jpg', true),
                 'title'       => 'Авиалинии БогДан',
                 'description' => 'Компании предоставляет людям новую технологию перелетов в пространстве при помощи «Крыльев Ангела».
                 Компания включает школу по обучению, Институт Многомерной Медицины, Институт Квантовой Генетики и технологии виртуальной реальности.

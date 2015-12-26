@@ -84,7 +84,7 @@ use app\assets\AppAsset;
 <!-- Footer -->
 <footer>
     <div class="container text-center">
-        <p>&copy; bog-dan.com 2016 & Birdly® of <a href="http://somniacs.co/" target="_blank">Somniacs</a><br><span style="font-size: 80%">При участии богов <a href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B0">РА</a>, <a href="https://ru.wikipedia.org/wiki/%D0%A1%D1%83%D1%80%D1%8C%D1%8F">Сурья</a>, <a href="https://ru.wikipedia.org/wiki/%D0%9D%D0%B0%D1%80%D0%B0%D1%8F%D0%BD%D0%B0">Нараяна</a>, <a href="https://ru.wikipedia.org/wiki/%D0%9F%D0%B5%D1%80%D1%83%D0%BD">Перун</a></span></p>
+        <p>&copy; bog-dan.com <?= date('Y') ?> & Birdly® of <a href="http://somniacs.co/" target="_blank">Somniacs</a><br><span style="font-size: 80%">При участии богов <a href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B0">РА</a>, <a href="https://ru.wikipedia.org/wiki/%D0%A1%D1%83%D1%80%D1%8C%D1%8F">Сурья</a>, <a href="https://ru.wikipedia.org/wiki/%D0%9D%D0%B0%D1%80%D0%B0%D1%8F%D0%BD%D0%B0">Нараяна</a>, <a href="https://ru.wikipedia.org/wiki/%D0%9F%D0%B5%D1%80%D1%83%D0%BD">Перун</a></span></p>
         <p><a href="http://www.galaxysss.ru/" style="font-size: 80%">Галактичский Союз Сил Света</a></p>
     </div>
 </footer>
