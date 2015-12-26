@@ -35,14 +35,15 @@ $this->title = 'Главная';
         <div class="col-lg-8 col-lg-offset-2">
             <h2 class="text-center">О проекте</h2>
 
-            <p><img src="/images/controller/site/index/10408693_10153724707772888_1233079936717193229_n.jpg" width="100%">
-            <p>Проект Крылья Ангела представляет собой тренажер для полетов в виртуальной реальности вместе с кристальным звуком</p>
+            <p><img src="/images/controller/site/index/10408693_10153724707772888_1233079936717193229_n.jpg" width="100%"></p>
+            <p>Проект Крылья Ангела представляет собой тренажер для полетов в виртуальной реальности вместе с кристальным звуком. По факту этот тренажер является персональным кинотеатром 5D</p>
             <p>Он будет установлен в Москве в марте-мае 2016 г. и стоять в одном из торговых центров Москвы</p>
-            <p>Для того чтобы испытать этот тренажер вам нужно купить билет</p>
-            <p>Покупая билет вы получите:<br>
+            <p>Для того чтобы испытать этот тренажер вам нужно получить билет</p>
+            <p>Получая билет вы получите:<br>
                 - 30 мин первокласного ощущения полета на Крыльях Ангела<br>
                 - измененное состояние созания легкости после полета<br>
-                - специальный подарок
+                - купон на скидку для вас и ваших друзей<br>
+                - специальный подарок!
             </p>
             <p><iframe width="100%"
                        height="315" src="https://www.youtube.com/embed/gWLHIusLWOc" frameborder="0" allowfullscreen></iframe></p>
@@ -62,7 +63,7 @@ $this->title = 'Главная';
         <div class="container">
             <div class="col-lg-8 col-lg-offset-2" style="color: #000000">
                 <h2>Попробовать</h2>
-                <p>Стоимость одного полета 1 000 руб.<br>Покупка осуществляется на сайте Boomstarter.ru</p>
+                <p>Один билет равен 1 000 благодарностей (руб.) в наш адрес<br>Получить билет вы можете на сайте Boomstarter.ru</p>
                 <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Перейти на Boomstarter</a>
             </div>
         </div>
@@ -86,6 +87,6 @@ $this->title = 'Главная';
 <!-- Footer -->
 <footer>
     <div class="container text-center">
-        <p>&copy; bog-dan.com 2015</p>
+        <p>&copy; bog-dan.com 2015<br><span style="font-size: 80%">При участии Бога "<a href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B0">РА</a>" (Солнце)</span></p>
     </div>
 </footer>
