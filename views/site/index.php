@@ -55,8 +55,15 @@ $this->title = 'Главная';
                 Как это выглядит внутри
                 <iframe src="https://player.vimeo.com/video/127065582" width="100%" height="300" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></p>
 
-            <p>Этот симулятор Birdly<sup>®</sup> разработан компанией <a href="http://somniacs.co/" target="_blank">Somniacs</a></p>
 
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="/images/controller/site/index/1/1_small.jpg" width="100%" class="thumbnail">
+                </div>
+                <div class="col-lg-6">
+                    <img src="/images/controller/site/index/1/2_small.jpg" width="100%" class="thumbnail">
+                </div>
+            </div>
         </div>
     </div>
 </section>
