@@ -21,5 +21,5 @@ $this->registerMetaTag(['name' => 'og:description', 'content' => $description]);
 <p>
     <a href="<?= (string)(new csUrl('http://www.facebook.com/sharer.php', [
         'u' => $url,
-    ])) ?>" target="_blank">facebook</a>
+    ])) ?>" target="_blank" class="btn btn-default btn-lg">facebook</a>
 </p>

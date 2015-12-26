@@ -45,10 +45,15 @@ $this->title = 'Главная';
                 - эффект присутствия через зрение, слух, гравитацию, ощущение ветра<br>
                 - фото вашего полета на память<br>
                 - купон на скидку для вас и ваших друзей<br>
-                - специальный подарок!
+                - специальный подарок: оберег Ангела-Хранителя от Богов РА, Сурья, Нараяна, Перун!
             </p>
-            <p><iframe width="100%"
+            <p>
+                Как это выглядит снаружи
+                <iframe width="100%"
                        height="315" src="https://www.youtube.com/embed/gWLHIusLWOc" frameborder="0" allowfullscreen></iframe></p>
+            <p>
+                Как это выглядит внутри
+                <iframe src="https://player.vimeo.com/video/127065582" width="100%" height="300" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></p>
 
             <p>Этот симулятор Birdly<sup>®</sup> разработан компанией <a href="http://somniacs.co/" target="_blank">Somniacs</a></p>
 
