@@ -45,6 +45,7 @@ $this->title = 'О нас';
             <p><iframe allowfullscreen=""  frameborder="0" height="315" src="https://www.youtube.com/embed/gWLHIusLWOc" width="100%"></iframe></p>
 
             <p class="text-center"><img alt="" src="/images/controller/site/about/1450076809_j6zweTIc7L.jpg" style="width: 100%; max-width: 500px;" class="img-center"></p>
+            <p><iframe allowfullscreen=""  frameborder="0" height="315" src="https://www.youtube.com/embed/P8ZDQ3fPVOA" width="100%"></iframe></p>
 
         </div>
     </div>
