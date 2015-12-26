@@ -49,7 +49,7 @@ use app\assets\AppAsset;
                 <i class="fa fa-bars"></i>
             </button>
             <a class="navbar-brand page-scroll" href="<?php if (\yii\helpers\Url::current() != '/') echo '/'; ?>#page-top" style="padding: 0px;  margin: 0px 10px 0px 10px;">
-                <img src="/images/logo3.png" height="50">
+                <img src="/images/logo4.png" height="50">
             </a>
         </div>
 
