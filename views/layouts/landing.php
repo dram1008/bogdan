@@ -61,13 +61,13 @@ use app\assets\AppAsset;
                     <a href="#page-top"></a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#about">О проекте</a>
+                    <a class="page-scroll" href="/#about">О проекте</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#download">Попробовать</a>
+                    <a class="page-scroll" href="/#download">Попробовать</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#contact">Контакты</a>
+                    <a class="page-scroll" href="/#contact">Контакты</a>
                 </li>
                 <li>
                     <a class="page-scroll" href="/about">О нас</a>
@@ -80,6 +80,14 @@ use app\assets\AppAsset;
 </nav>
 
 <?= $content ?>
+
+<!-- Footer -->
+<footer>
+    <div class="container text-center">
+        <p>&copy; bog-dan.com 2016<br><span style="font-size: 80%">При участии богов <a href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B0">РА</a>, <a href="https://ru.wikipedia.org/wiki/%D0%A1%D1%83%D1%80%D1%8C%D1%8F">Сурья</a>, <a href="https://ru.wikipedia.org/wiki/%D0%9D%D0%B0%D1%80%D0%B0%D1%8F%D0%BD%D0%B0">Нараяна</a>, <a href="https://ru.wikipedia.org/wiki/%D0%9F%D0%B5%D1%80%D1%83%D0%BD">Перун</a></span></p>
+        <p><a href="http://www.galaxysss.ru/" style="font-size: 80%">Галактичский Союз Сил Света</a></p>
+    </div>
+</footer>
 
 
 <?php $this->endBody() ?>
