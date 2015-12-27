@@ -16,8 +16,8 @@ $this->title = 'Заказ. шаг 2';
             <h2 class="text-center">Шаг 2</h2>
 
             <iframe frameborder="0" allowtransparency="true" scrolling="no"
-                    src="https://money.yandex.ru/embed/shop.xml?account=410011473018906&quickpay=shop&payment-type-choice=on&mobile-payment-type-choice=on&writer=seller&targets=%D0%9E%D0%BF%D0%BB%D0%B0%D1%82%D0%B0+%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0+1&targets-hint=&default-sum=500&button-text=03&comment=on&hint=&successURL="
-                    width="450" height="253"></iframe>
+                    src="https://money.yandex.ru/embed/shop.xml?account=410011473018906&quickpay=shop&payment-type-choice=on&mobile-payment-type-choice=on&writer=seller&targets=%D0%BF%D1%80%D0%BE&targets-hint=&default-sum=20&button-text=01&successURL="
+                    width="450" height="198"></iframe>
 
         </div>
     </div>
