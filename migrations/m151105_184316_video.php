@@ -7,7 +7,7 @@ class m151105_184316_video extends Migration
 {
     public function up()
     {
-        $this->execute('ALTER TABLE galaxysss_5.rod_article_list ADD video VARCHAR(255) NULL;');
+//        $this->execute('ALTER TABLE galaxysss_5.rod_article_list ADD video VARCHAR(255) NULL;');
     }
 
     public function down()

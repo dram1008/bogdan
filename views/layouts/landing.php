@@ -72,6 +72,9 @@ use app\assets\AppAsset;
                 <li>
                     <a class="page-scroll" href="/about">О нас</a>
                 </li>
+                <li>
+                    <a class="btn btn-default" style="color: black;"><span class="glyphicon glyphicon-user"></span></a>
+                </li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->

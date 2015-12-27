@@ -7,6 +7,7 @@ use app\models\Form\NewPassword;
 use app\models\Form\Request;
 use app\models\Log;
 use app\models\User;
+use cs\Application;
 use cs\base\BaseController;
 use cs\services\VarDumper;
 use cs\web\Exception;
@@ -14,6 +15,7 @@ use Yii;
 use yii\bootstrap\ActiveForm;
 use yii\data\ActiveDataProvider;
 use yii\filters\AccessControl;
+use yii\helpers\Url;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
@@ -44,57 +46,16 @@ class SiteController extends BaseController
         ]);
     }
 
-    public function actionArticles_month($year, $month)
+    public function actionTable()
     {
-        return $this->render([
-            'list' => Article::query([
-                'MONTH(date_insert)' => $month,
-                'YEAR(date_insert)' => $year,
-            ])->orderBy(['date_insert' => SORT_DESC])->all(),
-            'year' => $year,
-            'month' => $month,
-        ]);
-    }
-
-    public function actionSearch()
-    {
-        $term = self::getParam('term');
-        $items = Article::query(['like', 'content', $term])->orWhere(['like', 'header', $term])->all();
 
         return $this->render([
-            'list' => $items,
         ]);
     }
 
-    public function actionIn()
+    public function actionPrice()
     {
-        return $this->render();
-    }
-
-    public function actionArticles()
-    {
-        return $this->render();
-    }
-
-    public function actionArticle($year, $month, $day, $id)
-    {
-        $item = Article::find([
-            'id_string' => $id,
-            'date'      => $year . $month . $day
-        ]);
-        if (is_null($item)) {
-            throw new Exception('Нет такой статьи');
-        }
-        $item->incViewCounter();
-
-        return $this->render([
-            'item' => $item,
-        ]);
-    }
-
-    public function actionOut()
-    {
-        return $this->render();
+        return $this->render([]);
     }
 
     public function actionAbout()
@@ -171,29 +132,6 @@ class SiteController extends BaseController
         ]);
     }
 
-    public function actionProduction()
-    {
-        return $this->render([]);
-    }
-
-    public function actionProduction_item()
-    {
-        $id = self::getParam('id');
-        $item = Product::find($id);
-
-        return $this->render([
-            'item' => $item,
-        ]);
-    }
-
-    public function actionMap()
-    {
-        return $this->render([
-            'lat' => self::getParam('lat'),
-            'lng' => self::getParam('lng'),
-        ]);
-    }
-
     public function actionProm()
     {
         return $this->render([]);
@@ -204,20 +142,15 @@ class SiteController extends BaseController
         return $this->render([]);
     }
 
+    /**
+     * @param int $id product_id bog_shop_product.id
+     * @return string|Response
+     */
     public function actionBuy($id)
     {
-        $model = new Request();
-
-        if (Yii::$app->request->isAjax && $model->load(Yii::$app->request->post())) {
-            Yii::$app->response->format = Response::FORMAT_JSON;
-
-            return ActiveForm::validate($model);
-        }
-
-        if ($model->load(Yii::$app->request->post()) && $model->insert($id)) {
-            Yii::$app->session->setFlash('contactFormSubmitted');
-
-            return $this->refresh();
+        $model = new \app\models\Form\Shop\Request();
+        if ($model->load(Yii::$app->request->post()) && ($fields = $model->insert2($id))) {
+            return $this->redirect(Url::to(['site/buy_request', 'id' => $fields['id']]));
         } else {
             return $this->render([
                 'model' => $model,
@@ -226,10 +159,35 @@ class SiteController extends BaseController
         }
     }
 
+    /**
+     * @param int $id bog_shop_requests.id
+     * @return string|Response
+     */
+    public function actionBuy_request($id)
+    {
+        return $this->render([
+            'id'    => $id,
+        ]);
+    }
+
     public function actionLog()
     {
         return $this->render([
             'log' => file_get_contents(Yii::getAlias('@runtime/logs/app.log')),
+        ]);
+    }
+
+    /**
+     * Прием денег из яндекса
+     *
+     * @return string
+     */
+    public function actionRequest_success()
+    {
+        $secretCode = 'Wre4ZX0X3vDc1aEHElOvsOof';
+
+        Application::mail('dram1008@yandex.ru','yandexMoney','yandex_money',[
+            'post' => Yii::$app->request->post(),
         ]);
     }
 

@@ -35,7 +35,7 @@ $this->title = 'Главная';
         <div class="col-lg-8 col-lg-offset-2">
             <h2 class="text-center">О проекте</h2>
 
-            <p><img src="/images/controller/site/index/10408693_10153724707772888_1233079936717193229_n.jpg" width="100%"></p>
+            <p><img src="/images/controller/site/index/10408693_10153724707772888_1233079936717193229_n.jpg" width="100%" style="border-radius: 20px; border: 1px solid blue;"></p>
             <p>Проект Крылья Ангела представляет собой тренажер для полетов в виртуальной реальности вместе с кристальным звуком. По факту этот тренажер является персональным кинотеатром 5D, где вы являетесь главным действующим лицом.</p>
             <p>Он будет установлен в Москве в марте-мае 2016 г. и стоять в одном из торговых центров Москвы</p>
             <p>Для того чтобы испытать этот тренажер вам нужно получить билет</p>
@@ -53,17 +53,18 @@ $this->title = 'Главная';
                        height="315" src="https://www.youtube.com/embed/gWLHIusLWOc" frameborder="0" allowfullscreen></iframe></p>
             <p>
                 Как это выглядит внутри
-                <iframe src="https://player.vimeo.com/video/127065582" width="100%" height="300" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></p>
+                <iframe  src="https://player.vimeo.com/video/127065582" width="100%" height="300" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></p>
 
 
             <div class="row">
                 <div class="col-lg-6">
-                    <img src="/images/controller/site/index/1/1_small.jpg" width="100%" class="thumbnail">
+                    <img src="/images/controller/site/index/1/1_small.jpg" width="100%"  style="border-radius: 20px; border: 1px solid blue;">
                 </div>
                 <div class="col-lg-6">
-                    <img src="/images/controller/site/index/1/2_small.jpg" width="100%" class="thumbnail">
+                    <img src="/images/controller/site/index/1/2_small.jpg" width="100%"  style="border-radius: 20px; border: 1px solid blue;">
                 </div>
             </div>
+
         </div>
     </div>
 </section>
@@ -76,9 +77,10 @@ $this->title = 'Главная';
     ">
         <div class="container">
             <div class="col-lg-8 col-lg-offset-2" style="color: #000000">
+                <p class="text-center"><img src="/images/icon.png" class="img-center"> </p>
                 <h2>Попробовать</h2>
-                <p>Один билет равен 1 000 благодарностей (руб.) в наш адрес<br>Получить билет вы можете на сайте Boomstarter.ru</p>
-                <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Перейти на Boomstarter</a>
+                <p>Один билет равен 1 000 благодарностей (руб.) в наш адрес</p>
+                <a href="/price" class="btn btn-default btn-lg">Получить билет</a>
             </div>
         </div>
     </div>

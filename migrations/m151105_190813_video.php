@@ -7,13 +7,13 @@ class m151105_190813_video extends Migration
 {
     public function up()
     {
-        $this->execute('CREATE TABLE IF NOT EXISTS `gs_users_email_change` (
-  `id` int(10) unsigned NOT NULL,
-  `email` varchar(50) DEFAULT NULL,
-  `code` varchar(60) DEFAULT NULL,
-  `date_finish` int(11) DEFAULT NULL,
-  `parent_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;');
+//        $this->execute('CREATE TABLE IF NOT EXISTS `gs_users_email_change` (
+//  `id` int(10) unsigned NOT NULL,
+//  `email` varchar(50) DEFAULT NULL,
+//  `code` varchar(60) DEFAULT NULL,
+//  `date_finish` int(11) DEFAULT NULL,
+//  `parent_id` int(11) NOT NULL
+//) ENGINE=InnoDB DEFAULT CHARSET=utf8;');
     }
 
     public function down()

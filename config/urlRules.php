@@ -29,6 +29,12 @@ return [
     'activate/<code:\\w+>'                                         => 'site/activate',
     'logDb'                                                        => 'site/log_db',
     'contact'                                                      => 'site/contact',
+    'price'                                                        => 'site/price',
+    'buy/<id:\\d+>'                                                => 'site/buy',
+    'buy/request/<id:\\d+>'                                        => 'site/buy_request',
+    'request/success'                                          => 'site/request_success',
+    // Wre4ZX0X3vDc1aEHElOvsOof
+    'table'                                                        => 'site/table',
     'login'                                                        => 'site/login',
     'logout'                                                       => 'site/logout',
     'articles'                                                     => 'site/articles',
