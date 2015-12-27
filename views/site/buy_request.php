@@ -20,7 +20,7 @@ $this->title = 'Заказ. шаг 2';
                 <input type="hidden" name="formcomment" value="Проект «Железный человек»: реактор холодного ядерного синтеза">
                 <input type="hidden" name="short-dest" value="Проект «Железный человек»: реактор холодного ядерного синтеза">
                 <input type="hidden" name="label" value="1231">
-                <input type="hidden" name="quickpay-form" value="shop">
+                <input type="hidden" name="quickpay-form" value="donate">
                 <input type="hidden" name="targets" value="транзакция {1231}">
                 <input type="hidden" name="sum" value="20" data-type="number">
                 <input type="hidden" name="comment" value="Хотелось бы дистанционного управления.">
