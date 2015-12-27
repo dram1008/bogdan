@@ -15,10 +15,23 @@ $this->title = 'Заказ. шаг 2';
         <div class="col-lg-8 col-lg-offset-2">
             <h2 class="text-center">Шаг 2</h2>
 
-            <iframe frameborder="0" allowtransparency="true" scrolling="no"
-                    src="https://money.yandex.ru/embed/shop.xml?account=410011473018906&quickpay=shop&payment-type-choice=on&mobile-payment-type-choice=on&writer=seller&targets=%D0%BF%D1%80%D0%BE&targets-hint=&default-sum=20&button-text=01&successURL="
-                    width="450" height="198"></iframe>
-
+            <form method="POST" action="https://money.yandex.ru/quickpay/confirm.xml">
+                <input type="hidden" name="receiver" value="410011473018906">
+                <input type="hidden" name="formcomment" value="Проект «Железный человек»: реактор холодного ядерного синтеза">
+                <input type="hidden" name="short-dest" value="Проект «Железный человек»: реактор холодного ядерного синтеза">
+                <input type="hidden" name="label" value="1231">
+                <input type="hidden" name="quickpay-form" value="shop">
+                <input type="hidden" name="targets" value="транзакция {1231}">
+                <input type="hidden" name="sum" value="20" data-type="number">
+                <input type="hidden" name="comment" value="Хотелось бы дистанционного управления.">
+                <input type="hidden" name="need-fio" value="true">
+                <input type="hidden" name="need-email" value="false">
+                <input type="hidden" name="need-phone" value="false">
+                <input type="hidden" name="need-address" value="false">
+                <label><input type="radio" name="paymentType" value="PC">Яндекс.Деньгами</label>
+                <label><input type="radio" name="paymentType" value="AC">Банковской картой</label>
+                <input type="submit" value="Перевести">
+            </form>
         </div>
     </div>
 </section>
