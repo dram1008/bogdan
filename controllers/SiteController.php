@@ -186,6 +186,18 @@ class SiteController extends BaseController
     {
         $secretCode = 'Wre4ZX0X3vDc1aEHElOvsOof';
 
+//        'notification_type' => 'p2p-incoming'
+//        'amount' => '138.29'
+//        'datetime' => '2015-12-27T20:28:51Z'
+//        'codepro' => 'false'
+//        'sender' => '41001000040'
+//        'sha1_hash' => '163ca7ebf6685d84db11985cd06df592301a1b20'
+//        'test_notification' => 'true'
+//        'operation_label' => ''
+//        'operation_id' => 'test-notification'
+//        'currency' => '643'
+//        'label' => ''
+
         Application::mail('dram1008@yandex.ru','yandexMoney','yandex_money',[
             'post' => Yii::$app->request->post(),
         ]);
