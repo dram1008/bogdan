@@ -22,7 +22,7 @@ $this->title = 'Цены';
                     <div class="col-lg-8">
                         <?= $item['content'] ?>
                         <p>= <b style="font-family: 'courier new'"><?= Yii::$app->formatter->asCurrency($item['price']) ?></b></p>
-                        <p><a href="/buy/1" class="btn btn-default btn-lg">Получить</a></p>
+                        <p><a href="<?= \yii\helpers\Url::to(['site/buy', 'id' => $item['id'] ])?>" class="btn btn-default btn-lg">Получить</a></p>
                     </div>
                 </div>
             <?php } ?>

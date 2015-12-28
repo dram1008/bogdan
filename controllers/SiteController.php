@@ -155,13 +155,22 @@ class SiteController extends BaseController
     }
 
     /**
+     * Выдает форму для оплаты заказа
+     *
      * @param int $id bog_shop_requests.id
+     *
      * @return string|Response
+     * @throws \cs\web\Exception
      */
     public function actionBuy_request($id)
     {
+        $request = \app\models\Shop\Request::find($id);
+        if (is_null($request)) {
+            throw new Exception('Нет такого заказа');
+        }
+
         return $this->render([
-            'id'    => $id,
+            'request'    => $request,
         ]);
     }
 
