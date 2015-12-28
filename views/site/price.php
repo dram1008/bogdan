@@ -8,44 +8,23 @@
 $this->title = 'Цены';
 ?>
 
-
-<!-- Intro Header -->
-<header class="intro" style="height: 600px;">
-    <div class="intro-body">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <div style="">
-                        <h1 class="brand-heading" style="text-transform: none; font-size: 300%;">Авиалинии БогДан</h1>
-                        <p class="intro-text" style="margin-bottom: 10px;">Представляют проект</p>
-                        <h1 class="brand-heading" style="text-transform: none;margin-top: 0px;">Крылья Ангела</h1>
-                        <p class="intro-text">Мы исполняем мечты! Летайте как птицы!</p>
-                        <!--                    <a href="#about" class="btn btn-circle page-scroll">-->
-                        <!--                        <i class="fa fa-angle-double-down animated"></i>-->
-                        <!--                    </a>-->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-
-
 <!-- About Section -->
-<section id="about" class="container content-section">
+<section id="about" class="container content-section" style="margin-top: 50px;">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
-            <h2 class="text-center">Цены</h2>
+            <h2 class="text-center">Наши подарки</h2>
 
-            <div class="col-lg-4">
-                <p>Знакомство с Крылями-ангела</p>
-            </div>
-            <div class="col-lg-8">
-                <p>Билет на полет<br>
-                    Оберег Ангела-Хранителя</p>
-                <p><a href="/buy/1" class="btn btn-default btn-lg">Подарок 1</a></p>
-
-            </div>
+            <?php foreach(\app\models\Shop\Product::query()->orderBy(['price' => SORT_ASC])->all() as $item) { ?>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <p><?= $item['name'] ?></p>
+                    </div>
+                    <div class="col-lg-8">
+                        <?= $item['content'] ?>
+                        <p><a href="/buy/1" class="btn btn-default btn-lg">Получить</a></p>
+                    </div>
+                </div>
+            <?php } ?>
 
         </div>
     </div>
