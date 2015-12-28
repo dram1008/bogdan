@@ -70,10 +70,24 @@ use app\assets\AppAsset;
                     <a class="page-scroll" href="<?php if (\yii\helpers\Url::current() != '/') echo '/'; ?>#contact">Контакты</a>
                 </li>
                 <li>
+                    <a class="page-scroll" href="/media">Медиа</a>
+                </li>
+                <li>
                     <a class="page-scroll" href="/about">О нас</a>
                 </li>
                 <li>
-                    <a class="btn btn-default" style="color: black;"><span class="glyphicon glyphicon-user"></span></a>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-user"></span></button>
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="/requests">Заказы</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="/logout">Выход</a></li>
+                        </ul>
+                    </div>
                 </li>
             </ul>
         </div>

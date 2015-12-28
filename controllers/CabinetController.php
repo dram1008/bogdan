@@ -40,7 +40,7 @@ class CabinetController extends BaseController
     public function actionRequests()
     {
         return $this->render([
-            'items' => \app\models\Request::query(['user_id' => \Yii::$app->user->id])->all(),
+            'items' => \app\models\Shop\Request::query(['user_id' => \Yii::$app->user->id])->all(),
         ]);
     }
 

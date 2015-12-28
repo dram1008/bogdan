@@ -15,8 +15,8 @@ use app\models\Union;
 class GsssHtml
 {
     public static $formatIcon = [
-        490,
-        242,
+        300,
+        300,
         \cs\Widget\FileUpload2\FileUpload::MODE_THUMBNAIL_CUT
     ];
 

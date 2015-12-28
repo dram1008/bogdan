@@ -33,11 +33,11 @@ $this->params['breadcrumbs'][] = $this->title;
                     'options' => ['enctype' => 'multipart/form-data']
                 ]); ?>
                 <?= $model->field($form, 'name') ?>
-                <?= $model->field($form, 'v') ?>
-                <?= $model->field($form, 'kvt') ?>
-                <?= $model->field($form, 'price') ?>
+                <?= $model->field($form, 'description')->textarea(['rows' => 10]) ?>
                 <?= $model->field($form, 'content') ?>
                 <?= $model->field($form, 'image') ?>
+                <?= $model->field($form, 'price') ?>
+
 
                 <hr>
                 <div class="form-group">

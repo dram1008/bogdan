@@ -28,6 +28,7 @@ class Asset extends AssetBundle
         'js/jquery.easing.min.js',
         'https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false',
         'js/grayscale.js',
+        'js/tg.js',
     ];
     public $depends = [
 //        'yii\web\YiiAsset',

@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use app\models\Article;
 use app\models\Page;
+use app\models\Shop\Request;
 use app\models\SiteUpdate;
 use app\services\Subscribe;
 use cs\services\VarDumper;
@@ -11,13 +12,13 @@ use cs\web\Exception;
 use Yii;
 use yii\base\UserException;
 
-class Admin_pageController extends AdminBaseController
+class Admin_requestsController extends AdminBaseController
 {
 
     public function actionIndex()
     {
         return $this->render([
-            'items' => Page::query()->orderBy(['date_insert' => SORT_DESC])->all(),
+            'items' => Request::query()->orderBy(['date_create' => SORT_DESC])->all(),
         ]);
     }
 

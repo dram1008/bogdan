@@ -38,6 +38,10 @@ $('.buttonDelete').click(function (e) {
             });
         }
     });
+
+    $('.rowTable').click(function() {
+        window.location = '/admin/requests/' + $(this).data('id');
+    });
 JS
 );
 ?>
@@ -48,39 +52,41 @@ JS
 
     <?= \yii\grid\GridView::widget([
         'dataProvider' => new \yii\data\ActiveDataProvider([
-            'query'      => \app\models\Request::query()->orderBy(['datetime' => SORT_DESC]),
+            'query'      => \app\models\Shop\Request::query()->orderBy(['is_answer_from_client' => SORT_DESC]),
             'pagination' => [
                 'pageSize' => 50,
             ],
         ]),
+        'tableOptions' => [
+            'class' => 'table table-hover table-striped'
+        ],
+        'rowOptions' => function($item) {
+            return [
+                'role' => 'button',
+                'data-id' => $item['id'],
+                'class' => 'rowTable'
+            ];
+        },
         'columns' =>
         [
             [
                 'class' => 'yii\grid\SerialColumn', // <-- here
                 // you may configure additional properties here
             ],
+            'address',
             [
                 'header' => 'Время',
                 'content' => function ($model, $key, $index, $column) {
-                    return Yii::$app->formatter->asDatetime($model['datetime']);
+                    return Yii::$app->formatter->asDatetime($model['date_create']);
                 },
             ],
-            [
-                'header' => 'Модель',
-                'content' => function ($model, $key, $index, $column) {
-                    return \app\models\Product::find($model['product_id'])->getField('name');
-                },
-            ],
-            'name',
-            'email',
-            'phone',
-            'point_address',
             [
                 'header' => 'Комментарий',
                 'content' => function ($model, $key, $index, $column) {
                     return Html::tag('pre', nl2br($model['comment']));
                 },
             ],
+            'is_answer_from_client',
         ]
     ]) ?>
 

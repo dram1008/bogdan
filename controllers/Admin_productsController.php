@@ -10,7 +10,7 @@ use cs\web\Exception;
 use Yii;
 use yii\base\UserException;
 
-class Admin_articleController extends AdminBaseController
+class Admin_productsController extends AdminBaseController
 {
 
     public function actionIndex()
@@ -21,12 +21,12 @@ class Admin_articleController extends AdminBaseController
 
     public function actionMain()
     {
-        return $this->redirect(['admin_article/index']);
+        return $this->redirect(['admin_requests/index']);
     }
 
     public function actionAdd()
     {
-        $model = new \app\models\Form\Article();
+        $model = new \app\models\Form\Shop\Product();
         if ($model->load(Yii::$app->request->post()) && $model->insert()) {
             Yii::$app->session->setFlash('contactFormSubmitted');
 
@@ -40,7 +40,7 @@ class Admin_articleController extends AdminBaseController
 
     public function actionEdit($id)
     {
-        $model = \app\models\Form\Article::find($id);
+        $model = \app\models\Form\Shop\Product::find($id);
         if ($model->load(Yii::$app->request->post()) && $model->update()) {
             Yii::$app->session->setFlash('contactFormSubmitted');
 
@@ -54,7 +54,7 @@ class Admin_articleController extends AdminBaseController
 
     public function actionDelete($id)
     {
-        \app\models\Form\Article::find($id)->delete();
+        \app\models\Form\Shop\Product::find($id)->delete();
 
         return self::jsonSuccess();
     }

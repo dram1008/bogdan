@@ -24,7 +24,7 @@ $this->registerMetaTag(['name' => 'title', 'content' => $this->title]);
     <meta name='yandex-verification' content='6721c497dd2fba14'/>
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?> :: Агентство Сохранения Рода</title>
-    <link rel="shortcut icon" href="/images/ico.png">
+    <link rel="shortcut icon" href="/images/icon32.png">
     <?php $this->head() ?>
 </head>
 <body>
@@ -44,7 +44,7 @@ $this->registerMetaTag(['name' => 'title', 'content' => $this->title]);
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="<?= \yii\helpers\Url::to(['admin_article/main']) ?>" style="padding: 5px 15px 5px 5px;">
-                    <img src="/images/logo5.png" height="40">
+                    <img src="/images/icon.png" height="40">
                 </a>
                 <a class="navbar-brand" href="<?= \yii\helpers\Url::to(['admin_article/main']) ?>">
                         Административный модуль
@@ -56,8 +56,8 @@ $this->registerMetaTag(['name' => 'title', 'content' => $this->title]);
                 <?= Nav::widget([
                     'options' => ['class' => 'navbar-nav'],
                     'items'   => [
-                        ['label' => 'Статьи', 'url' => ['admin_article/index']],
-                        ['label' => 'Страницы', 'url' => ['admin_page/index']],
+                        ['label' => 'Заказы', 'url' => ['admin_requests/index']],
+                        ['label' => 'Продукты', 'url' => ['admin_products/index']],
                     ],
                 ]);
                 ?>
@@ -145,7 +145,7 @@ $this->registerMetaTag(['name' => 'title', 'content' => $this->title]);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; <a href="/">Школа Богов</a> 2015</p>
+        <p class="pull-left">&copy; <a href="/">Авиалинии БогДан</a> 2016</p>
     </div>
 </footer>
 

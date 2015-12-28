@@ -132,12 +132,7 @@ class SiteController extends BaseController
         ]);
     }
 
-    public function actionProm()
-    {
-        return $this->render([]);
-    }
-
-    public function actionService()
+    public function actionMedia()
     {
         return $this->render([]);
     }
@@ -186,6 +181,22 @@ class SiteController extends BaseController
     {
         $secretCode = 'Wre4ZX0X3vDc1aEHElOvsOof';
 
+    // живой платеж
+//        'notification_type' => 'card-incoming'
+//        'amount' => '19.60'
+//        'datetime' => '2015-12-28T15:38:38Z'
+//        'codepro' => 'false'
+//        'withdraw_amount' => '20.00'
+//        'sender' => ''
+//        'sha1_hash' => '4bf0ac57f8a86653914d68ba28a3a02c99780eed'
+//        'unaccepted' => 'false'
+//        'operation_label' => '1e136b24-0002-5000-8033-8fa644e381dd'
+//        'operation_id' => '504632318089016012'
+//        'currency' => '643'
+//        'label' => '1231'
+
+
+//        пример
 //        'notification_type' => 'p2p-incoming'
 //        'amount' => '138.29'
 //        'datetime' => '2015-12-27T20:28:51Z'

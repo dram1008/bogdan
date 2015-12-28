@@ -58,7 +58,7 @@ class Product extends \cs\base\BaseForm
             ],
             [
                 'price',
-                'Price',
+                'Цена',
                 0,
                 'integer'
             ],
