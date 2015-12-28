@@ -21,6 +21,7 @@ $this->title = 'Цены';
                     </div>
                     <div class="col-lg-8">
                         <?= $item['content'] ?>
+                        <p>= <b style="font-family: 'courier new'"><?= Yii::$app->formatter->asCurrency($item['price']) ?></b></p>
                         <p><a href="/buy/1" class="btn btn-default btn-lg">Получить</a></p>
                     </div>
                 </div>
