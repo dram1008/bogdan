@@ -19,8 +19,9 @@ $this->title = 'Медиа материалы';
             <p class="text-center"><img src="/images/controller/site/media/tumblr_nxmafvUP9e1tl8u0ko1_500.gif"  class="img-center"></p>
             <p class="text-center">Фильм Ангел-А</p>
             <p class="text-center"><iframe src="//vk.com/video_ext.php?oid=-48319873&id=171212722&hash=f3c9b9b2a2f03532&hd=2" width="100%" height="480"  frameborder="0"></iframe></p>
-            <p class="text-center">Презентация Крыльев Ангела</p>
+            <p class="text-center">Презентация yiiКрыльев Ангела</p>
             <p class="text-center"><iframe src="https://player.vimeo.com/video/150057401" width="100%" height="350" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></p>
+            <p class="text-center"><iframe width="100%" height="315" src="https://www.youtube.com/embed/i7V33aCNso4" frameborder="0" allowfullscreen></iframe></p>
 
 
         </div>

@@ -28,7 +28,7 @@ class Product extends \cs\base\BaseForm
     public $content;
     public $image;
     public $price;
-    public $shop_node_id;
+    public $tickets_counter;
 
     function __construct($fields = [])
     {
@@ -55,6 +55,12 @@ class Product extends \cs\base\BaseForm
                 'Описание краткое',
                 0,
                 'string'
+            ],
+            [
+                'tickets_counter',
+                'Кол-во билетов в продукте',
+                0,
+                'integer'
             ],
             [
                 'price',

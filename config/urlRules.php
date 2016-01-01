@@ -11,6 +11,7 @@ return [
     'requests/<id:\\d+>/answerPay'          => 'site_cabinet/order_item_answer_pay',
     'requests/<id:\\d+>/done'               => 'site_cabinet/order_item_done',
 
+
     'cabinet/passwordChange'                => 'cabinet/password_change',
     'cabinet/changeEmail'                   => 'cabinet/change_email',
     'changeEmail/activate/<code:\\w+>'      => 'auth/change_email_activate',
@@ -43,6 +44,7 @@ return [
     'media'                                 => 'site/media',
     'login'                                 => 'site/login',
     'logout'                                => 'site/logout',
+    'products/accelerator'                                => 'products/accelerator',
 
     'about'                                 => 'site/about',
     'search'                                => 'site/search',
@@ -58,6 +60,12 @@ return [
     'admin/requests/<id:\\d+>'              => 'admin_requests/item',
     'admin/requests/<id:\\d+>/delete'       => 'admin_requests/delete',
     'admin/requests/<id:\\d+>/edit'         => 'admin_requests/edit',
+
+    'admin/requests/<id:\\d+>/message'      => 'admin_requests/item_message',
+    'admin/requests/<id:\\d+>/newBill'      => 'admin_requests/item_new_bill',
+    'admin/requests/<id:\\d+>/answerPay'    => 'admin_requests/item_answer_pay',
+    'admin/requests/<id:\\d+>/send'         => 'admin_requests/item_send',
+    'admin/requests/<id:\\d+>/done'         => 'admin_requests/item_done',
 
 
 ];

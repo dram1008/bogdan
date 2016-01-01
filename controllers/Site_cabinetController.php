@@ -96,7 +96,7 @@ class Site_cabinetController extends BaseController
     private function sendStatus($id, $status)
     {
         $text = self::getParam('text');
-        $request = Request::find($id);
+        $request = \app\models\Shop\Request::find($id);
         if ($request->getField('user_id') != Yii::$app->user->id) {
             return self::jsonErrorId(101, 'Это не ваш заказ');
         }
@@ -121,7 +121,7 @@ class Site_cabinetController extends BaseController
      */
     public function actionOrder_item_done($id)
     {
-        return $this->sendStatus($id, Request::STATUS_FINISH_CLIENT);
+        return $this->sendStatus($id, \app\models\Shop\Request::STATUS_FINISH_CLIENT);
     }
 
     /**
@@ -137,7 +137,7 @@ class Site_cabinetController extends BaseController
      */
     public function actionOrder_item_answer_pay($id)
     {
-        return $this->sendStatus($id, Request::STATUS_PAID_CLIENT);
+        return $this->sendStatus($id, \app\models\Shop\Request::STATUS_PAID_CLIENT);
     }
 
 }

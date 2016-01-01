@@ -6,6 +6,7 @@ use app\models\Union;
 use app\models\User;
 use app\services\Subscribe;
 use cs\services\BitMask;
+use cs\services\Security;
 use yii\db\Query;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Url;
@@ -24,14 +25,14 @@ class Request extends \cs\base\DbRecord
     const STATUS_FINISH_SHOP = 11;       // заказ исполнен, магазин сам указал этот статут по своим данным
 
     const DIRECTION_TO_CLIENT = 1;
-    const DIRECTION_TO_SHOP   = 2;
+    const DIRECTION_TO_SHOP = 2;
 
 
     public static $statusList = [
         self::STATUS_USER_NOT_CONFIRMED => [
-            'client' => 'Пользователь не подтвердил почту',
-            'shop'   => 'Пользователь не подтвердил почту',
-            'style'  => 'default',
+            'client'   => 'Пользователь не подтвердил почту',
+            'shop'     => 'Пользователь не подтвердил почту',
+            'style'    => 'default',
             'timeLine' => [
                 'icon'  => 'glyphicon-minus',
                 'color' => 'default',
@@ -155,6 +156,29 @@ class Request extends \cs\base\DbRecord
         }
 
         return $this->addMessageItem($fields, self::DIRECTION_TO_CLIENT);
+    }
+
+    /**
+     * Устанавливает статус для заказа "Оплата подтверждена магазином" self::STATUS_PAID_SHOP
+     * Прикрепляет билеты для заказа
+     *
+     * @param string $message - сообщение для статуса
+     *
+     * @return bool
+     */
+    public function paid($message = null)
+    {
+        $tickets_counter = $this->getField('tickets_counter');
+        for($i=0;$i<$tickets_counter;$i++) {
+            Ticket::insert([
+                'request_id'  => $this->getId(),
+                'code'        => Security::generateRandomString(20),
+                'date_insert' => time(),
+            ]);
+        }
+        $this->addStatusToClient(self::STATUS_PAID_SHOP);
+
+        return true;
     }
 
     /**
@@ -304,5 +328,15 @@ class Request extends \cs\base\DbRecord
     public function getStatus()
     {
         return $this->getField('status');
+    }
+
+    /**
+     * @return \app\models\Shop\Product
+     */
+    public function getProduct()
+    {
+        $product = Product::find($this->getField('product_id'));
+
+        return $product;
     }
 }

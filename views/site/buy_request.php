@@ -21,9 +21,6 @@ JS
 ?>
 
 
-
-
-
 <!-- Download Section -->
 <section id="download" class="content-section text-center">
     <div class="download-section" style="
