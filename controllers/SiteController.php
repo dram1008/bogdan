@@ -229,7 +229,7 @@ class SiteController extends BaseController
 
         // отправка письма
         Application::mail($item->getClient()->getEmail(), 'Ваш подарок', 'new_request_client', [
-            'request' => $this
+            'request' => $item
         ]);
 
         return self::jsonSuccess($item->getId());
