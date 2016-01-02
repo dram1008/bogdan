@@ -25,6 +25,9 @@ $this->title = 'Медиа материалы';
             <p class="text-center"><iframe width="100%" height="315" src="https://www.youtube.com/embed/aFrXJRHq8kM" frameborder="0" allowfullscreen></iframe></p>
             <p class="text-center"><iframe width="100%" height="315" src="https://www.youtube.com/embed/i7V33aCNso4" frameborder="0" allowfullscreen></iframe></p>
 
+            <p class="text-center">Медитация Крыльев Ангела</p>
+            <p class="text-center"><iframe allowfullscreen=""  frameborder="0" height="315" src="https://www.youtube.com/embed/P8ZDQ3fPVOA" width="100%"></iframe></p>
+
 
             <p class="text-center">Изображения</p>
             <?php
