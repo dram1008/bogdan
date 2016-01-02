@@ -19,15 +19,21 @@ use yii\helpers\Html;
     border: 1px solid #cccccc;
 ">
         <tr>
+            <td>
+                <img src="<?= \yii\helpers\Url::to('/images/mail/header.jpg', true) ?>" width="600">
+            </td>
+        <tr>
+        <tr>
             <td style="padding: 20px;">
                 <p>Мир Вашему дому!</p>
                 <?= $content ?>
             </td>
-        <tr>
         </tr>
-        <td style="padding: 20px;">
-            <p>С Любовью и Светом корпорация TeslaGen.</p>
-        </td>
+        <tr>
+            <td style="padding: 20px;">
+                <p>С Любовью и Светом</p>
+                <p>Авиалинии БогДан</p>
+            </td>
         </tr>
     </table>
     <?php $this->endBody() ?>

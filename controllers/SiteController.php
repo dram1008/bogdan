@@ -227,6 +227,11 @@ class SiteController extends BaseController
         $item = \app\models\Shop\Request::insert($fields);
         $item->addStatusToShop(\app\models\Shop\Request::STATUS_SEND_TO_SHOP);
 
+        // отправка письма
+        Application::mail($item->getClient()->getEmail(), 'Ваш подарок', 'new_request_client', [
+            'request' => $this
+        ]);
+
         return self::jsonSuccess($item->getId());
     }
 
