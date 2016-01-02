@@ -19,8 +19,6 @@ use cs\web\Exception;
 
 class AuthController extends BaseController
 {
-    public $layout = 'menu';
-
     public function behaviors()
     {
         return [
@@ -55,36 +53,6 @@ class AuthController extends BaseController
                 ],
             ],
         ];
-    }
-
-    /**
-     * Страница активации для подтверждения сменя email
-     *
-     * @param string $code код подтверждения
-     *
-     * @return string|\yii\web\Response
-     *
-     * @throws \cs\web\Exception
-     */
-    public function actionChange_email_activate($code)
-    {
-        $row = EmailChangeDispatcher::find(['code' => $code]);
-        if (is_null($row)) {
-            throw new Exception('Данный код уже активирован или не найден');
-        }
-        if (Yii::$app->user->isGuest) {
-            /** @var \app\models\User $user */
-            $user = User::find($row->getField('parent_id'));
-            $user->update(['email' => $row->getField('email')]);
-            Yii::$app->user->login($user);
-        } else {
-            /** @var \app\models\User $user */
-            $user = Yii::$app->user->identity;
-            $user->update(['email' => $row->getField('email')]);
-        }
-        $row->delete();
-
-        return $this->render();
     }
 
     /**
@@ -183,12 +151,38 @@ class AuthController extends BaseController
         return $this->redirect($_SERVER['HTTP_REFERER']);
     }
 
+    /**
+     * Страница активации для подтверждения сменя email
+     *
+     * @param string $code код подтверждения
+     *
+     * @return string|\yii\web\Response
+     *
+     * @throws \cs\web\Exception
+     */
+    public function actionChange_email_activate($code)
+    {
+        $row = EmailChangeDispatcher::find(['code' => $code]);
+        if (is_null($row)) {
+            throw new Exception('Данный код уже активирован или не найден');
+        }
+        if (Yii::$app->user->isGuest) {
+            /** @var \app\models\User $user */
+            $user = User::find($row->getField('parent_id'));
+            $user->update(['email' => $row->getField('email')]);
+            Yii::$app->user->login($user);
+        } else {
+            /** @var \app\models\User $user */
+            $user = Yii::$app->user->identity;
+            $user->update(['email' => $row->getField('email')]);
+        }
+        $row->delete();
+
+        return $this->render();
+    }
+
     public function actionPassword_recover()
     {
-        if (\yii\helpers\ArrayHelper::getValue(Yii::$app->params, 'isTransfere', false) == true) {
-            throw new Exception(Yii::$app->params['isTransfere_string']);
-        }
-
         $model = new \app\models\Form\PasswordRecover();
         $model->setScenario('insert');
 
@@ -214,22 +208,49 @@ class AuthController extends BaseController
 
     public function actionRegistration()
     {
-        if (\yii\helpers\ArrayHelper::getValue(Yii::$app->params, 'isTransfere', false) == true) {
-            throw new Exception(Yii::$app->params['isTransfere_string']);
-        }
         $model = new \app\models\Form\Registration();
-
-        if (Yii::$app->request->isAjax) {
-            $model->setScenario('ajax');
-            if ($model->load(Yii::$app->request->post())) {
-                Yii::$app->response->format = Response::FORMAT_JSON;
-                return ActiveForm::validate($model);
-            }
-        }
         $model->setScenario('insert');
+
+        if (Yii::$app->request->isAjax && $model->load(Yii::$app->request->post())) {
+            $model->setScenario('ajax');
+            Yii::$app->response->format = Response::FORMAT_JSON;
+
+            return ActiveForm::validate($model);
+        }
 
         if ($model->load(Yii::$app->request->post()) && $model->register()) {
             Yii::$app->session->setFlash('contactFormSubmitted');
+
+            return $this->refresh();
+        }
+        else {
+            return $this->render([
+                'model' => $model,
+            ]);
+        }
+    }
+
+    public function actionRegistration_referal($code)
+    {
+        $model = new \app\models\Form\Registration();
+        $model->setScenario('insert');
+
+        if (Yii::$app->request->isAjax && $model->load(Yii::$app->request->post())) {
+            $model->setScenario('ajax');
+            Yii::$app->response->format = Response::FORMAT_JSON;
+
+            return ActiveForm::validate($model);
+        }
+
+        if ($model->load(Yii::$app->request->post()) && ($user = $model->register())) {
+            Yii::$app->session->setFlash('contactFormSubmitted');
+            Yii::$app->session->setFlash('user_id', $user->getId());
+            \app\models\Registration::insert([
+                'referal_code' => $code,
+                'user_id'      => $user->getId(),
+            ]);
+            $user->activate();
+            Yii::$app->user->login($user);
 
             return $this->refresh();
         }
@@ -250,9 +271,6 @@ class AuthController extends BaseController
      */
     public function actionRegistration_activate($code)
     {
-        if (\yii\helpers\ArrayHelper::getValue(Yii::$app->params, 'isTransfere', false) == true) {
-            throw new Exception(Yii::$app->params['isTransfere_string']);
-        }
         $row = RegistrationDispatcher::query(['code' => $code])->one();
         if ($row === false) {
             throw new Exception('Срок ссылки истек или не верный код активации');
@@ -278,9 +296,6 @@ class AuthController extends BaseController
      */
     public function actionPassword_recover_activate($code)
     {
-        if (\yii\helpers\ArrayHelper::getValue(Yii::$app->params, 'isTransfere', false) == true) {
-            throw new Exception(Yii::$app->params['isTransfere_string']);
-        }
         $row = PasswordRecoverDispatcher::query(['code' => $code])->one();
         if ($row === false) {
             throw new Exception('Не верный код активации');

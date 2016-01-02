@@ -44,9 +44,10 @@ return [
     'table'                                 => 'site/table',
     'media'                                 => 'site/media',
 
+    'auth'                                  => 'auth/auth',
     'login'                                 => 'site/login',
-    'loginAjax'                                 => 'site/login_ajax',
-    'registrationAjax'                                 => 'site/registration_ajax',
+    'loginAjax'                             => 'site/login_ajax',
+    'registrationAjax'                      => 'site/registration_ajax',
     'logout'                                => 'site/logout',
 
     'products/accelerator'                  => 'products/accelerator',

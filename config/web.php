@@ -55,7 +55,10 @@ $config = [
                 ],
             ],
         ],
-
+        'authClientCollection' => [
+            'class'   => 'yii\authclient\Collection',
+            'clients' => require(__DIR__ . '/authClientCollection.php'),
+        ],
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
