@@ -1,16 +1,12 @@
 <?php
 
 return [
-    'subscribe/mail'                        => 'subscribe/mail',
-    'subscribe/activate/<code:\\w+>'        => 'subscribe/activate',
-
     'cabinet/profile'                       => 'cabinet/profile',
     'requests'                              => 'site_cabinet/requests',
     'requests/<id:\\d+>'                    => 'site_cabinet/request',
     'requests/<id:\\d+>/message'            => 'site_cabinet/order_item_message',
     'requests/<id:\\d+>/answerPay'          => 'site_cabinet/order_item_answer_pay',
     'requests/<id:\\d+>/done'               => 'site_cabinet/order_item_done',
-
 
     'cabinet/passwordChange'                => 'cabinet/password_change',
     'cabinet/changeEmail'                   => 'cabinet/change_email',
@@ -19,13 +15,9 @@ return [
 
     'password/recover'                      => 'auth/password_recover',
     'password/recover/activate/<code:\\w+>' => 'auth/password_recover_activate',
-    'registration/<code:\\w+>'              => 'auth/registration_referal',
+    'registration/<code:\\w+>'              => 'auth/registration_activate',
 
     'captcha'                               => 'site/captcha',
-
-    'checkBoxTreeMask/add'                  => 'check_box_tree_mask/add',
-    'checkBoxTreeMask/addInto'              => 'check_box_tree_mask/add_into',
-    'checkBoxTreeMask/delete'               => 'check_box_tree_mask/delete',
 
     'upload/upload'                         => 'upload/upload',
     'upload/HtmlContent2'                   => 'html_content/upload',
@@ -39,7 +31,6 @@ return [
     'price'                                 => 'site/price',
     'buy/<id:\\d+>'                         => 'site/buy',
     'buy/ajax'                              => 'site/buy_ajax',
-    'buy/request/<id:\\d+>'                 => 'site/buy_request',
     'request/success'                       => 'site/request_success',
     'table'                                 => 'site/table',
     'media'                                 => 'site/media',

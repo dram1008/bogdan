@@ -88,7 +88,7 @@ $config = [
                     'message'    => [
                         'from'    => ['admin@galaxysss.ru'],
                         'to'      => ['god@galaxysss.ru'],
-                        'subject' => 'TESLA.GALAXYSSS.RU ERROR',
+                        'subject' => 'BOG-DAN.COM ERROR',
                     ],
                 ],
             ],
@@ -97,7 +97,6 @@ $config = [
     ],
     'params'     => $params,
     'controllerMap' => [
-        'check_box_tree_mask' => 'cs\Widget\CheckBoxTreeMask\Controller',
         'upload'              => 'cs\Widget\FileUploadMany\UploadController',
         'html_content'        => 'cs\Widget\HtmlContent\Controller',
     ],

@@ -123,7 +123,7 @@ class SiteController extends BaseController
      */
     public function actionLogin_ajax()
     {
-        $login = self::getParam('login');
+        $login = strtolower(self::getParam('login'));
         $password = self::getParam('password');
 
         $user = User::find(['email' => $login]);
@@ -143,19 +143,21 @@ class SiteController extends BaseController
      *
      * RESPONSE:
      * - login - string
-     * - password - string
+     * - name - string
      *
      * @return array|string|Response
      */
     public function actionRegistration_ajax()
     {
-        $login = self::getParam('login');
+        $login = strtolower(self::getParam('login'));
+        $name = self::getParam('name');
 
-        $user = User::find(['email' => $login]);
-        if ($user) {
-            return self::jsonErrorId(101, 'Пользователь уж существует');
+        if (User::query(['email' => $login])->exists()) {
+            return self::jsonErrorId(101, 'Пользователь уже существует');
         }
-        $user = User::registration($login, Security::generateRandomString());
+        $user = User::registration($login, Security::generateRandomString(), [
+            'name_first' => $name,
+        ]);
         Yii::$app->user->login($user);
 
         return self::jsonSuccess();

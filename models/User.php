@@ -112,13 +112,14 @@ class User extends \cs\base\DbRecord implements \yii\web\IdentityInterface
      *
      * @param $email
      * @param $password
+     * @param $fields
      *
      * @return static
      */
-    public static function registration($email, $password)
+    public static function registration($email, $password, $fields = [])
     {
         $email = strtolower($email);
-        $fields = [
+        $fields = ArrayHelper::merge($fields, [
             'email'                    => $email,
             'password'                 => self::hashPassword($password),
             'is_active'                => 1,
@@ -126,7 +127,8 @@ class User extends \cs\base\DbRecord implements \yii\web\IdentityInterface
             'datetime_reg'             => gmdate('YmdHis'),
             'referal_code'             => Security::generateRandomString(20),
             'subscribe_is_bogdan'      => 1,
-        ];
+        ]);
+
         $user = self::insert($fields);
         $fields = \app\services\RegistrationDispatcher::add($user->getId());
         \cs\Application::mail($email, 'Подтверждение регистрации', 'registration', [

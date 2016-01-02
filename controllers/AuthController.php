@@ -265,7 +265,7 @@ class AuthController extends BaseController
         Yii::$app->user->login($user);
         RegistrationDispatcher::delete($row['parent_id']);
 
-        return $this->goHome();
+        return $this->redirect(['site_cabinet/requests']);
     }
 
     /**

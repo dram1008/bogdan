@@ -163,6 +163,7 @@ JS
                     $model2 = new \app\models\Auth\Regisration();
                     ?>
 
+                    <?= $form->field($model2, 'name', ['inputOptions' => ['placeholder' => 'Имя (Фамилия)']])->label('', ['class' => 'hide']) ?>
                     <?= $form->field($model2, 'username', ['inputOptions' => ['placeholder' => 'Логин/почта']])->label('', ['class' => 'hide']) ?>
 
                     <?php \yii\bootstrap\ActiveForm::end(); ?>
@@ -170,6 +171,12 @@ JS
                     <?php
                     $this->registerJs(<<<JS
                         $('#buttonRegister').click(function(){
+                            if ($('#regisration-name').val() == '') {
+                                $('.field-regisration-name').addClass('has-error');
+                                $('.field-regisration-name .help-block').show().html('Нужно заполнить имя');
+
+                                return false;
+                            }
                             if ($('#regisration-username').val() == '') {
                                 $('.field-regisration-username').addClass('has-error');
                                 $('.field-regisration-username .help-block').show().html('Нужно заполнить логин');
@@ -180,7 +187,8 @@ JS
                             ajaxJson({
                                 url: '/registrationAjax',
                                 data: {
-                                    login: $('#regisration-username').val()
+                                    login: $('#regisration-username').val(),
+                                    name: $('#regisration-name').val()
                                 },
                                 success: function(ret) {
                                     $('#blockLogin').hide();
@@ -203,6 +211,10 @@ JS
                         $('#regisration-username').on('focus', function() {
                             $('.field-regisration-username').removeClass('has-error');
                             $('.field-regisration-username .help-block').hide();
+                        });
+                        $('#regisration-name').on('focus', function() {
+                            $('.field-regisration-name').removeClass('has-error');
+                            $('.field-regisration-name .help-block').hide();
                         });
 JS
                     );

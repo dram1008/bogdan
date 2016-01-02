@@ -13,6 +13,7 @@ use yii\helpers\ArrayHelper;
  */
 class Regisration extends BaseForm
 {
+    public $name;
     public $username;
     private $_user = false;
 
@@ -21,7 +22,10 @@ class Regisration extends BaseForm
     {
         self::$fields = [
             [
-                'username', 'Логин',1,'string'
+                'username', 'Логин', 1, 'string'
+            ],
+            [
+                'name', 'Имя', 1, 'string'
             ],
         ];
         parent::__construct($config);
