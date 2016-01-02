@@ -6,6 +6,7 @@ use app\models\Article;
 use app\models\Form\NewPassword;
 use app\models\Form\Request;
 use app\models\Log;
+use app\models\Shop\Payments;
 use app\models\User;
 use cs\Application;
 use cs\base\BaseController;
@@ -16,6 +17,8 @@ use Yii;
 use yii\bootstrap\ActiveForm;
 use yii\data\ActiveDataProvider;
 use yii\filters\AccessControl;
+use yii\helpers\ArrayHelper;
+use yii\helpers\StringHelper;
 use yii\helpers\Url;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
@@ -207,6 +210,20 @@ class SiteController extends BaseController
     }
 
     /**
+     * Оплата проведена успешно
+     *
+     * @param int $id идентификатор заказа
+     * @return string|Response
+     */
+    public function actionBuy_success($id)
+    {
+        $request = \app\models\Shop\Request::find($id);
+        $request->paid();
+
+        return self::jsonSuccess();
+    }
+
+    /**
      * AJAX
      *
      * REQUEST
@@ -269,7 +286,10 @@ class SiteController extends BaseController
      */
     public function actionRequest_success()
     {
-        $secretCode = 'Wre4ZX0X3vDc1aEHElOvsOof';
+        $secretCode = 'Wre4ZX0X3vDc1aEHElOvsOof'; // для кошелька 410011473018906
+
+        // https://money.yandex.ru/doc.xml?id=526991
+        // Удостоверение подлинности и целостности уведомления
 
     // живой платеж
 //        'notification_type' => 'card-incoming'
@@ -299,9 +319,88 @@ class SiteController extends BaseController
 //        'currency' => '643'
 //        'label' => ''
 
-        Application::mail('dram1008@yandex.ru','yandexMoney','yandex_money',[
-            'post' => Yii::$app->request->post(),
-        ]);
+
+        // добавляю в БД
+        $fields = Yii::$app->request->post();
+        $fields['is_valid'] = ($this->isValidSha1($fields, $secretCode))? 1 : 0;
+        $fields['date_insert'] = time();
+        Payments::insert(Yii::$app->request->post());
+
+        // проверка на верность
+        $label = ArrayHelper::getValue($fields, 'label', '');
+        $mail = ArrayHelper::getValue(Yii::$app->params, 'mailer.payment', '');
+        if ($fields['is_valid'] == 0) {
+            if ($mail) {
+                Application::mail($mail, 'Ошибка. подлинность не подтверждена', 'not_valid', [
+                    'fields' => $fields,
+                ]);
+            }
+        }
+        if ($label != '') {
+            if (StringHelper::startsWith($label, 'bogdan.')) {
+                $label = explode('.', $label);
+                $request_id = $label[1];
+                $request = \app\models\Shop\Request::find($request_id);
+                if (is_null($request)) {
+                    if ($mail) {
+                        Application::mail($mail, 'Ошибка. не найден заказ', 'no_request', [
+                            'fields' => $fields,
+                        ]);
+                    }
+                }
+                if ($request->getField('price') != $fields['withdraw_amount']) {
+                    if ($mail) {
+                        Application::mail($mail, 'Ошибка. Сумма не соотвтствует заказу', 'wrong_sum', [
+                            'fields' => $fields,
+                            'request' => $request,
+                        ]);
+                    }
+                }
+                $request->paid();
+//                Application::mail('dram1008@yandex.ru', 'yandexMoney', 'yandex_money', [
+//                    'post' => Yii::$app->request->post(),
+//                ]);
+            }
+        }
+    }
+
+    /**
+     * Проверка целостности полей и подлинности
+     *
+     * @param array $fields поля
+     * @param string $notification_secret секретный код от Яндекса
+     *
+     * @return bool
+     */
+    private function isValidSha1($fields, $notification_secret)
+    {
+        // notification_type&operation_id&amount&currency&datetime&sender&codepro&notification_secret&label
+        $arr = [
+            'notification_type',
+            'operation_id',
+            'amount',
+            'currency',
+            'datetime',
+            'sender',
+            'codepro',
+            'notification_secret',
+            'label',
+        ];
+        $str = [];
+        foreach($arr as $i) {
+            if ($i == 'notification_secret') {
+                $str[] = $notification_secret;
+            } else {
+                $str[] = ArrayHelper::getValue($fields, $i, '');
+            }
+        }
+        $str = join('&', $str);
+        $sha1 = sha1($str);
+
+        $sha1Fields = ArrayHelper::getValue($fields, 'sha1_hash', '');
+        if ($sha1Fields == '') return false;
+
+        return $sha1Fields == $sha1;
     }
 
     public function actionLog_db()

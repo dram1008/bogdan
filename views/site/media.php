@@ -26,6 +26,19 @@ $this->title = 'Медиа материалы';
             <p class="text-center"><iframe width="100%" height="315" src="https://www.youtube.com/embed/i7V33aCNso4" frameborder="0" allowfullscreen></iframe></p>
 
 
+            <p class="text-center">Изображения</p>
+            <?php
+            \app\assets\SlideShow\Asset::register($this);
+            ?>
+            <?php foreach(\app\models\Picture::query()->all() as $foto) { ?>
+                <div class="col-lg-2">
+                    <a href="<?= \cs\Widget\FileUpload2\FileUpload::getOriginal($foto['image']) ?>" rel="lightbox[example]" class="highslide" onclick="return hs.expand(this)">
+                        <img src="<?= $foto['image'] ?>"  alt="<?= $foto['name'] ?>" width="100%">
+                    </a>
+                </div>
+            <?php } ?>
+
+
         </div>
     </div>
 </section>

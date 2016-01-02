@@ -177,6 +177,7 @@ class Request extends \cs\base\DbRecord
                 'date_insert' => time(),
             ]);
         }
+        $this->addStatusToClient(self::STATUS_PAID_CLIENT);
         $this->addStatusToClient(self::STATUS_PAID_SHOP);
         // отправка письма
         Application::mail($this->getClient()->getEmail(), 'Ваш подарок', 'new_request_client', [
@@ -184,7 +185,6 @@ class Request extends \cs\base\DbRecord
         ]);
         // прибавление счетчика
         \app\models\Counter::inc($this->getProduct()->getPrice());
-
 
         return true;
     }

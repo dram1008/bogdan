@@ -58,6 +58,7 @@ $this->registerMetaTag(['name' => 'title', 'content' => $this->title]);
                     'items'   => [
                         ['label' => 'Заказы', 'url' => ['admin_requests/index']],
                         ['label' => 'Продукты', 'url' => ['admin_products/index']],
+                        ['label' => 'Картинки', 'url' => ['admin_pictures/index']],
                     ],
                 ]);
                 ?>
@@ -91,8 +92,9 @@ $this->registerMetaTag(['name' => 'title', 'content' => $this->title]);
                             </a>
                             <ul class="dropdown-menu" role="menu">
                                 <?php if (Yii::$app->user->identity->isAdmin()) { ?>
-                                    <li><a href="<?= \yii\helpers\Url::to(['admin_article/index']) ?>">Статьи</a></li>
-                                    <li><a href="<?= \yii\helpers\Url::to(['admin_page/index']) ?>">Страницы</a></li>
+                                    <li><a href="<?= \yii\helpers\Url::to(['admin_requests/index']) ?>">Заказы</a></li>
+                                    <li><a href="<?= \yii\helpers\Url::to(['admin_products/index']) ?>">Продукты</a></li>
+                                    <li><a href="<?= \yii\helpers\Url::to(['admin_pictures/index']) ?>">Картинки</a></li>
                                 <?php } ?>
 
                                 <li class="divider"></li>

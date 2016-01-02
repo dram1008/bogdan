@@ -30,6 +30,7 @@ return [
     'contact'                               => 'site/contact',
     'price'                                 => 'site/price',
     'buy/<id:\\d+>'                         => 'site/buy',
+    'buy/<id:\\d+>/success'                 => 'site/buy_success',
     'buy/ajax'                              => 'site/buy_ajax',
     'request/success'                       => 'site/request_success',
     'table'                                 => 'site/table',
@@ -52,6 +53,11 @@ return [
     'admin/products/add'                    => 'admin_products/add',
     'admin/products/<id:\\d+>/delete'       => 'admin_products/delete',
     'admin/products/<id:\\d+>'              => 'admin_products/edit',
+
+    'admin/pictures'                        => 'admin_pictures/index',
+    'admin/pictures/add'                    => 'admin_pictures/add',
+    'admin/pictures/<id:\\d+>/delete'       => 'admin_pictures/delete',
+    'admin/pictures/<id:\\d+>'              => 'admin_pictures/edit',
 
     'admin/requests'                        => 'admin_requests/index',
     'admin/requests/add'                    => 'admin_requests/add',

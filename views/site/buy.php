@@ -47,7 +47,7 @@ $this->registerJs(<<<JS
                 address: $('#request-address').val()
             },
             success: function(ret) {
-                $('input[name="label"]').val(ret);
+                $('#formPayLabel').val('bogdan.' + ret);
                 $('#formPay').submit();
             }
 
@@ -242,7 +242,7 @@ JS
                     <input type="hidden" name="receiver" value="410011473018906">
                     <input type="hidden" name="formcomment" value="Авиалинии «БогДан»">
                     <input type="hidden" name="short-dest" value="<?= $product->getField('name') ?>">
-                    <input type="hidden" name="label" value="1231">
+                    <input type="hidden" name="label" value="" id="formPayLabel">
                     <input type="hidden" name="quickpay-form" value="donate">
                     <input type="hidden" name="targets" value="<?= $product->getField('name') ?>">
                     <input type="hidden" name="sum" value="<?= $product->getField('price') ?>" data-type="number"
