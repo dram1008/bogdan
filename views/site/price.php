@@ -22,7 +22,11 @@ $this->title = 'Цены';
                     <div class="col-lg-8">
                         <?= $item['content'] ?>
                         <p>= <b style="font-family: 'courier new'"><?= Yii::$app->formatter->asCurrency($item['price']) ?></b></p>
-                        <p><a href="<?= \yii\helpers\Url::to(['site/buy', 'id' => $item['id'] ])?>" class="btn btn-default btn-lg">Получить</a></p>
+                        <?php if ($item['price'] > 100000) { ?>
+                            <p><a href="/#contact" class="btn btn-default btn-lg">Звоните</a></p>
+                        <?php } else { ?>
+                            <p><a href="<?= \yii\helpers\Url::to(['site/buy', 'id' => $item['id'] ])?>" class="btn btn-default btn-lg">Получить</a></p>
+                        <?php } ?>
                     </div>
                 </div>
             <?php } ?>

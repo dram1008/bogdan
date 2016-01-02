@@ -87,6 +87,36 @@ $this->title = 'Главная';
 </section>
 
 <!-- Contact Section -->
+<section class="container content-section text-center">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <h2>Наша цель</h2>
+            <p>Весь этот проект является исключительно благотворительным. Его миссия заключается в предоставлении технологиий для людей готовым к новым возможностям, которые открываются для челоечества в новый Золотой Век
+            Эры Водолея.
+            </p>
+            <p>Мы собираем деньги для того чтобы это предетсавить такую возможность для Вас. Только при помощи ваших благодарностей мы сможем вам предоставить такой подарок.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Download Section -->
+<section class="content-section text-center" style="height: 400px;">
+    <div class="download-section" style="
+    border-bottom: 1px solid #87aad0;
+    border-top: 1px solid #87aad0;
+    height: 350px;
+    ">
+        <div class="container">
+            <div class="col-lg-8 col-lg-offset-2" style="color: #000000">
+                <p class="text-center"><img src="/images/icon.png" class="img-center"> </p>
+                <h2>Уже собрано</h2>
+                <p class="lead"><?= Yii::$app->formatter->asDecimal((new \yii\db\Query())->select('counter')->from('bog_counter')->where(['id' => 1])->scalar(),0)?> из 3 000 000 руб.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
 <section id="contact" class="container content-section text-center">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">

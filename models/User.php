@@ -121,17 +121,12 @@ class User extends \cs\base\DbRecord implements \yii\web\IdentityInterface
         $fields = [
             'email'                    => $email,
             'password'                 => self::hashPassword($password),
-            'is_active'                => 0,
+            'is_active'                => 1,
             'is_confirm'               => 0,
             'datetime_reg'             => gmdate('YmdHis'),
             'referal_code'             => Security::generateRandomString(20),
+            'subscribe_is_bogdan'      => 1,
         ];
-        // добавляю поля для подписки
-        foreach(\app\services\Subscribe::$userFieldList as $field) {
-            $fields[$field] = 1;
-        }
-        \Yii::info('REQUEST: ' . \yii\helpers\VarDumper::dumpAsString($_REQUEST), 'gs\\user_registration');
-        \Yii::info('Поля для регистрации: ' . \yii\helpers\VarDumper::dumpAsString($fields), 'gs\\user_registration');
         $user = self::insert($fields);
         $fields = \app\services\RegistrationDispatcher::add($user->getId());
         \cs\Application::mail($email, 'Подтверждение регистрации', 'registration', [

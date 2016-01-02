@@ -9,6 +9,7 @@ use app\models\Log;
 use app\models\User;
 use cs\Application;
 use cs\base\BaseController;
+use cs\services\Security;
 use cs\services\VarDumper;
 use cs\web\Exception;
 use Yii;
@@ -111,6 +112,55 @@ class SiteController extends BaseController
         ]);
     }
 
+    /**
+     * AJAX
+     *
+     * RESPONSE:
+     * - login - string
+     * - password - string
+     *
+     * @return array|string|Response
+     */
+    public function actionLogin_ajax()
+    {
+        $login = self::getParam('login');
+        $password = self::getParam('password');
+
+        $user = User::find(['email' => $login]);
+        if (is_null($user)) {
+            return self::jsonErrorId(101, 'Пользователь не найден');
+        }
+        if (!$user->validatePassword($password)) {
+            return self::jsonErrorId(102, 'Не верный пароль');
+        }
+        Yii::$app->user->login($user);
+
+        return self::jsonSuccess();
+    }
+
+    /**
+     * AJAX
+     *
+     * RESPONSE:
+     * - login - string
+     * - password - string
+     *
+     * @return array|string|Response
+     */
+    public function actionRegistration_ajax()
+    {
+        $login = self::getParam('login');
+
+        $user = User::find(['email' => $login]);
+        if ($user) {
+            return self::jsonErrorId(101, 'Пользователь уж существует');
+        }
+        $user = User::registration($login, Security::generateRandomString());
+        Yii::$app->user->login($user);
+
+        return self::jsonSuccess();
+    }
+
     public function actionLogout()
     {
         Yii::$app->user->logout();
@@ -152,6 +202,30 @@ class SiteController extends BaseController
                 'id'    => $id,
             ]);
         }
+    }
+
+    /**
+     * AJAX
+     *
+     * REQUEST
+     * - id - int - идентификатор продукта
+     * - comment - string
+     * - dostavka - int -
+     * - address - string -
+     * - price - int -
+     *
+     * @return string|Response
+     */
+    public function actionBuy_ajax()
+    {
+        $fields['product_id'] = self::getParam('id');
+        $fields['comment'] = self::getParam('comment');
+        $fields['address'] = self::getParam('address');
+
+        $item = \app\models\Shop\Request::insert($fields);
+        $item->addStatusToShop(\app\models\Shop\Request::STATUS_SEND_TO_SHOP);
+
+        return self::jsonSuccess($item->getId());
     }
 
     /**

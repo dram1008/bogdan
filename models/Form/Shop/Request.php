@@ -23,6 +23,7 @@ class Request extends \cs\base\BaseForm
     public $user_id;
     public $product_id;
     public $address;
+    public $dostavka;
     public $status;
     public $date_create;
     public $comment;
@@ -40,9 +41,15 @@ class Request extends \cs\base\BaseForm
             ],
             [
                 'comment',
-                'Описание',
+                'Комментарий',
                 0,
                 'string',
+            ],
+            [
+                'dostavka',
+                'Способ Доставки',
+                0,
+                'integer',
             ],
         ];
         parent::__construct($fields);

@@ -38,13 +38,19 @@ return [
     'contact'                               => 'site/contact',
     'price'                                 => 'site/price',
     'buy/<id:\\d+>'                         => 'site/buy',
+    'buy/ajax'                              => 'site/buy_ajax',
     'buy/request/<id:\\d+>'                 => 'site/buy_request',
     'request/success'                       => 'site/request_success',
     'table'                                 => 'site/table',
     'media'                                 => 'site/media',
+
     'login'                                 => 'site/login',
+    'loginAjax'                                 => 'site/login_ajax',
+    'registrationAjax'                                 => 'site/registration_ajax',
     'logout'                                => 'site/logout',
-    'products/accelerator'                                => 'products/accelerator',
+
+    'products/accelerator'                  => 'products/accelerator',
+    'products/keyHeart'                     => 'products/key_heart',
 
     'about'                                 => 'site/about',
     'search'                                => 'site/search',

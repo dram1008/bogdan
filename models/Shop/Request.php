@@ -5,6 +5,7 @@ namespace app\models\Shop;
 use app\models\Union;
 use app\models\User;
 use app\services\Subscribe;
+use cs\Application;
 use cs\services\BitMask;
 use cs\services\Security;
 use yii\db\Query;
@@ -169,7 +170,7 @@ class Request extends \cs\base\DbRecord
     public function paid($message = null)
     {
         $tickets_counter = $this->getField('tickets_counter');
-        for($i=0;$i<$tickets_counter;$i++) {
+        for ($i = 0; $i < $tickets_counter; $i++) {
             Ticket::insert([
                 'request_id'  => $this->getId(),
                 'code'        => Security::generateRandomString(20),
@@ -177,6 +178,13 @@ class Request extends \cs\base\DbRecord
             ]);
         }
         $this->addStatusToClient(self::STATUS_PAID_SHOP);
+        // отправка письма
+        Application::mail($this->getClient()->getEmail(), 'Ваш подарок', 'new_request_client', [
+            'request' => $this
+        ]);
+        // прибавление счетчика
+        \app\models\Counter::inc($this->getProduct()->getPrice());
+
 
         return true;
     }
@@ -329,6 +337,15 @@ class Request extends \cs\base\DbRecord
     {
         return $this->getField('status');
     }
+
+    /**
+     * @return array
+     */
+    public function getTickets()
+    {
+        return Ticket::query(['request_id' => $this->getId()])->all();
+    }
+
 
     /**
      * @return \app\models\Shop\Product

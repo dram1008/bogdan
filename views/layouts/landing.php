@@ -16,9 +16,7 @@ use app\assets\AppAsset;
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
 
-
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -75,19 +73,33 @@ use app\assets\AppAsset;
                 <li>
                     <a class="page-scroll" href="/about">О нас</a>
                 </li>
-                <li>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-user"></span></button>
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="caret"></span>
-                            <span class="sr-only">Toggle Dropdown</span>
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a href="/requests">Заказы</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="/logout">Выход</a></li>
-                        </ul>
-                    </div>
+                <li style="padding-top: 6px;" id="blockProfileLi">
+                    <?php if (Yii::$app->user->isGuest) { ?>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-user"></span></button>
+                        </div>
+                    <?php } else { ?>
+                        <?php
+                        $this->registerJs(<<<JS
+                            $('.buttonMain').click(function() {
+                                window.location = '/requests';
+                            });
+JS
+);
+                        ?>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default buttonMain"><span class="glyphicon glyphicon-user"></span></button>
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="caret"></span>
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="/requests">Заказы</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="/logout">Выход</a></li>
+                            </ul>
+                        </div>
+                    <?php } ?>
                 </li>
             </ul>
         </div>
@@ -95,6 +107,21 @@ use app\assets\AppAsset;
     </div>
     <!-- /.container -->
 </nav>
+<div style="display: none;" id="menuProfile">
+    <div class="btn-group">
+        <button type="button" class="btn btn-default buttonMain"><span class="glyphicon glyphicon-user"></span></button>
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="caret"></span>
+            <span class="sr-only">Toggle Dropdown</span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="/requests">Заказы</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="/logout">Выход</a></li>
+        </ul>
+    </div>
+</div>
+
 
 <?= $content ?>
 
@@ -106,6 +133,38 @@ use app\assets\AppAsset;
     </div>
 </footer>
 
+
+<?php if (YII_ENV_PROD) { ?>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function() {
+                try {
+                    w.yaCounter34505705 = new Ya.Metrika({
+                        id:34505705,
+                        clickmap:true,
+                        trackLinks:true,
+                        accurateTrackBounce:true,
+                        webvisor:true
+                    });
+                } catch(e) { }
+            });
+
+            var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () { n.parentNode.insertBefore(s, n); };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else { f(); }
+        })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/34505705" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+<?php } ?>
 
 <?php $this->endBody() ?>
 </body>

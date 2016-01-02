@@ -25,14 +25,12 @@ class Product extends \cs\base\DbRecord
         return Url::to($url, $isScheme);
     }
 
-    public function accept()
+    /**
+     * @return int
+     */
+    public function getPrice()
     {
-        $this->update(['moderation_status' => 1]);
-    }
-
-    public function reject()
-    {
-        $this->update(['moderation_status' => 0]);
+        return $this->getField('price');
     }
 
 }

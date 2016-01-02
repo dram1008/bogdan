@@ -22,20 +22,18 @@ use app\models\LoginForm;
 use app\models\ContactForm;
 use yii\web\Response;
 
-class SiteController extends BaseController
+class ProductsController extends BaseController
 {
     public $layout = 'landing';
 
 
-    /**
-     * Выдает форму для оплаты заказа
-     *
-     * @param int $id bog_shop_requests.id
-     *
-     * @return string|Response
-     * @throws \cs\web\Exception
-     */
-    public function actionAccelerator($id)
+
+    public function actionAccelerator()
+    {
+        return $this->render([]);
+    }
+
+    public function actionKey_heart()
     {
         return $this->render([]);
     }
