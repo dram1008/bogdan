@@ -7,7 +7,7 @@ class m151229_115524_tickets extends Migration
 {
     public function up()
     {
-        $this->execute('ALTER TABLE galaxysss_1.bog_shop_requests_tickets ADD date_insert int NULL;');
+        $this->execute('ALTER TABLE bog_shop_requests_tickets ADD date_insert int NULL;');
     }
 
     public function down()

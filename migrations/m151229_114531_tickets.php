@@ -7,7 +7,7 @@ class m151229_114531_tickets extends Migration
 {
     public function up()
     {
-        $this->execute('ALTER TABLE galaxysss_1.bog_shop_product ADD tickets_counter TINYINT(1) NULL;');
+        $this->execute('ALTER TABLE bog_shop_product ADD tickets_counter TINYINT(1) NULL;');
     }
 
     public function down()
