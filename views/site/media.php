@@ -33,7 +33,7 @@ $this->title = 'Медиа материалы';
             <?php foreach(\app\models\Picture::query()->all() as $foto) { ?>
                 <div class="col-lg-2">
                     <a href="<?= \cs\Widget\FileUpload2\FileUpload::getOriginal($foto['image']) ?>" rel="lightbox[example]" class="highslide" onclick="return hs.expand(this)">
-                        <img src="<?= $foto['image'] ?>"  alt="<?= $foto['name'] ?>" width="100%">
+                        <img src="<?= $foto['image'] ?>"  alt="<?= $foto['name'] ?>" width="100%" style="margin-bottom: 20px;">
                     </a>
                 </div>
             <?php } ?>
