@@ -208,12 +208,6 @@ JS
                     );
                     ?>
                 </div>
-                <div class="col-lg-12">
-                    <?= \yii\authclient\widgets\AuthChoice::widget([
-                        'baseAuthUrl' => ['auth/auth']
-                    ]); ?>
-                </div>
-
             </div>
 
             <div id="blockOrder"<?php if (Yii::$app->user->isGuest) echo(' style="display: none;"') ?>>
