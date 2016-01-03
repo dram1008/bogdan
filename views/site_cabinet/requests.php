@@ -14,7 +14,7 @@ $this->title = 'Заказ';
         <div class="col-lg-8 col-lg-offset-2">
             <h2 class="text-center">Мои заказы</h2>
 
-            <table class="table">
+            <table class="table" style="margin-bottom: 100px;">
                 <?php
                 $this->registerJs(<<<JS
     $('.rowButton').click(function() {

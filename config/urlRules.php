@@ -51,6 +51,11 @@ return [
     'products/accelerator'                  => 'products/accelerator',
     'products/keyHeart'                     => 'products/key_heart',
     'products/rod'                          => 'products/rod',
+    'products/stamp'                        => 'products/stamp',
+    'products/planet'                       => 'products/planet',
+    'products/obereg'                       => 'products/obereg',
+    'products/carKeeper'                    => 'products/car_keeper',
+    'products/svidetelstvo'                 => 'products/svidetelstvo',
 
     'about'                                 => 'site/about',
 ];

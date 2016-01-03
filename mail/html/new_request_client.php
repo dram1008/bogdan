@@ -12,7 +12,7 @@ $tickets = $request->getTickets();
 <p>Ваши билеты:</p>
 
 <?php foreach($tickets as $t) { ?>
-    <p>Билет #<?= $t['id'] ?> (<?= $t['code'] ?>)</p>
+    <p><a href="<?= \yii\helpers\Url::to(['site/ticket', 'id' => $t['id']], true) ?>">Билет #<?= $t['id'] ?> (<?= $t['code'] ?>)</p>
 <?php } ?>
 
 <p>Билеты вы можете распечатать в личном кабинете.</p>

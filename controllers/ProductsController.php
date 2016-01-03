@@ -38,5 +38,35 @@ class ProductsController extends BaseController
         return $this->render([]);
     }
 
+    public function actionSvidetelstvo()
+    {
+        return $this->render([]);
+    }
+
+    public function actionCar_keeper()
+    {
+        return $this->render([]);
+    }
+
+    public function actionObereg()
+    {
+        return $this->render([]);
+    }
+
+    public function actionPlanet()
+    {
+        return $this->render([]);
+    }
+
+    public function actionStamp()
+    {
+        return $this->render([]);
+    }
+
+    public function actionRod()
+    {
+        return $this->render([]);
+    }
+
 
 }
