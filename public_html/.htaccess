@@ -8,3 +8,6 @@ RewriteCond %{REQUEST_FILENAME} !-d
 
 # Otherwise forward the request to index.php
 RewriteRule . index.php
+
+RewriteCond %{HTTP_HOST} ^bog-dan.com
+RewriteRule (.*) http://www.bog-dan.com/$1 [R=301,L]

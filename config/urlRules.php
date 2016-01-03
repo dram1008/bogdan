@@ -35,6 +35,7 @@ return [
     'request/success'                       => 'site/request_success',
     'table'                                 => 'site/table',
     'media'                                 => 'site/media',
+    'ticket/<id:\\d+>'                                 => 'site/ticket',
 
     'auth'                                  => 'auth/auth',
     'login'                                 => 'site/login',

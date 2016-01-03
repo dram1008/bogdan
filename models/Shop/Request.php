@@ -173,7 +173,7 @@ class Request extends \cs\base\DbRecord
         for ($i = 0; $i < $tickets_counter; $i++) {
             Ticket::insert([
                 'request_id'  => $this->getId(),
-                'code'        => Security::generateRandomString(20),
+                'code'        => substr(str_shuffle("012345678901234567890123456789"), 0, 20),
                 'date_insert' => time(),
             ]);
         }

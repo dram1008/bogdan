@@ -224,6 +224,37 @@ class SiteController extends BaseController
     }
 
     /**
+     * Оплата проведена успешно
+     *
+     * @param int $id идентификатор билета
+     * @return string|Response
+     * @throws \cs\web\Exception
+     */
+    public function actionTicket($id)
+    {
+        if (Yii::$app->user->isGuest) {
+            throw new Exception('Нужно авторизоваться перед просмотром билета');
+        }
+        $ticket = \app\models\Shop\Ticket::find($id);
+        if (is_null($ticket)) {
+            throw new Exception('Не найден такой билет');
+        }
+        $request = \app\models\Shop\Request::find($ticket->getField('request_id'));
+        if (is_null($ticket)) {
+            throw new Exception('Не найден заказ для билета');
+        }
+        if ($request->getField('user_id') != Yii::$app->user->id) {
+            throw new Exception('Это не ваш билет');
+        }
+
+        $this->layout = 'blank';
+        return $this->render([
+            'ticket' => $ticket,
+            'request' => $request,
+        ]);
+    }
+
+    /**
      * AJAX
      *
      * REQUEST
