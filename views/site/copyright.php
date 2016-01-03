@@ -8,22 +8,6 @@
 $this->title = 'О нас';
 ?>
 
-<!-- Intro Header -->
-<header class="intro"
-        style="height: 600px; background: url('/images/controller/site/about/img.jpg')  no-repeat top scroll;">
-    <div class="intro-body">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <div style="">
-                        <!--                    </a>-->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-
 <!-- About Section -->
 <section id="about" class="container content-section">
     <div class="row">
