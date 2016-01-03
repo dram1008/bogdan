@@ -67,16 +67,32 @@ use app\assets\AppAsset;
                 <li>
                     <a class="page-scroll" href="<?php if (\yii\helpers\Url::current() != '/') echo '/'; ?>#contact">Контакты</a>
                 </li>
-                <li>
-                    <a class="page-scroll" href="/media">Медиа</a>
+                <li<?php if (\yii\helpers\Url::current() == \yii\helpers\Url::to(['site/media'])) echo " class='active'" ?>>
+                    <a href="/media">Медиа</a>
                 </li>
-                <li>
-                    <a class="page-scroll" href="/about">О нас</a>
+                <li<?php if (\yii\helpers\Url::current() == \yii\helpers\Url::to(['site/about'])) echo " class='active'" ?>>
+                    <a href="/about">О нас</a>
                 </li>
                 <li style="padding-top: 6px;" id="blockProfileLi">
                     <?php if (Yii::$app->user->isGuest) { ?>
+                        <?php
+                        $this->registerJs(<<<JS
+                            $('.buttonMain').click(function() {
+                                window.location = '/login';
+                            });
+JS
+                        );
+                        ?>
                         <div class="btn-group">
                             <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-user"></span></button>
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="caret"></span>
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="/registration">Регистрация</a></li>
+                                <li><a href="/password/recover">Восстановить пароль</a></li>
+                            </ul>
                         </div>
                     <?php } else { ?>
                         <?php
@@ -128,8 +144,12 @@ JS
 <!-- Footer -->
 <footer>
     <div class="container text-center">
-        <p>&copy; bog-dan.com <?= date('Y') ?> & Birdly® of <a href="http://somniacs.co/" target="_blank">Somniacs</a><br><span style="font-size: 80%">При участии богов <a href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B0">РА</a>, <a href="https://ru.wikipedia.org/wiki/%D0%A1%D1%83%D1%80%D1%8C%D1%8F">Сурья</a>, <a href="https://ru.wikipedia.org/wiki/%D0%9D%D0%B0%D1%80%D0%B0%D1%8F%D0%BD%D0%B0">Нараяна</a>, <a href="https://ru.wikipedia.org/wiki/%D0%9F%D0%B5%D1%80%D1%83%D0%BD">Перун</a></span></p>
-        <p><a href="http://www.galaxysss.ru/" style="font-size: 80%">Галактичский Союз Сил Света</a></p>
+        <p><a href="/copyright">&copy;</a> bog-dan.com <?= date('Y') ?> & Birdly® of <a href="http://somniacs.co/" target="_blank">Somniacs</a><br><span style="font-size: 80%">При участии богов <a href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B0" target="_blank">РА</a>, <a target="_blank" target="_blank" href="https://ru.wikipedia.org/wiki/%D0%A1%D1%83%D1%80%D1%8C%D1%8F">Сурья</a>, <a target="_blank" href="https://ru.wikipedia.org/wiki/%D0%9D%D0%B0%D1%80%D0%B0%D1%8F%D0%BD%D0%B0">Нараяна</a>, <a href="https://ru.wikipedia.org/wiki/%D0%9F%D0%B5%D1%80%D1%83%D0%BD" target="_blank">Перун</a></span></p>
+        <p><a href="/hologram"><img src="/images/holo.png" style="opacity: 0.3" onmouseover="$(this).css('opacity', 1);" onmouseout="$(this).css('opacity', 0.3);"></a></p>
+
+        <p style="font-size: 90%"><a href="http://www.galaxysss.ru/" target="_blank">Галактичский Союз Сил Света</a><br><a
+                href="http://www.galaxysss.ru/vasudev/login" target="_blank">Элитный Клуб Фрактального Бизнеса «Vasudev
+                Bagavan»</a></p>
     </div>
 </footer>
 

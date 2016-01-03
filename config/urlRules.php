@@ -35,11 +35,14 @@ return [
     'request/success'                       => 'site/request_success',
     'table'                                 => 'site/table',
     'media'                                 => 'site/media',
-    'ticket/<id:\\d+>'                                 => 'site/ticket',
+    'copyright'                             => 'site/copyright',
+    'hologram'                              => 'site/hologram',
+    'ticket/<id:\\d+>'                      => 'site/ticket',
 
     'auth'                                  => 'auth/auth',
     'login'                                 => 'site/login',
     'loginAjax'                             => 'site/login_ajax',
+    'registration'                          => 'site/registration',
     'registrationAjax'                      => 'site/registration_ajax',
     'logout'                                => 'site/logout',
 
@@ -47,30 +50,4 @@ return [
     'products/keyHeart'                     => 'products/key_heart',
 
     'about'                                 => 'site/about',
-    'search'                                => 'site/search',
-
-    'admin'                                 => 'admin_products/main',
-    'admin/products'                        => 'admin_products/index',
-    'admin/products/add'                    => 'admin_products/add',
-    'admin/products/<id:\\d+>/delete'       => 'admin_products/delete',
-    'admin/products/<id:\\d+>'              => 'admin_products/edit',
-
-    'admin/pictures'                        => 'admin_pictures/index',
-    'admin/pictures/add'                    => 'admin_pictures/add',
-    'admin/pictures/<id:\\d+>/delete'       => 'admin_pictures/delete',
-    'admin/pictures/<id:\\d+>'              => 'admin_pictures/edit',
-
-    'admin/requests'                        => 'admin_requests/index',
-    'admin/requests/add'                    => 'admin_requests/add',
-    'admin/requests/<id:\\d+>'              => 'admin_requests/item',
-    'admin/requests/<id:\\d+>/delete'       => 'admin_requests/delete',
-    'admin/requests/<id:\\d+>/edit'         => 'admin_requests/edit',
-
-    'admin/requests/<id:\\d+>/message'      => 'admin_requests/item_message',
-    'admin/requests/<id:\\d+>/newBill'      => 'admin_requests/item_new_bill',
-    'admin/requests/<id:\\d+>/answerPay'    => 'admin_requests/item_answer_pay',
-    'admin/requests/<id:\\d+>/send'         => 'admin_requests/item_send',
-    'admin/requests/<id:\\d+>/done'         => 'admin_requests/item_done',
-
-
 ];

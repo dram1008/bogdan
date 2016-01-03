@@ -33,17 +33,19 @@ $this->title = 'О нас';
             <p>Основателем компании является человек именуемый БогДан, обладающий колосальными знаниями и опытом полетов в том числе и знание своих прошлых жизней где он ранее летал. В этой жизни он решил сделать людям подарок в виде предоставления технологии полетов. Проект Крылья Ангела и является стартом такой манифестации.</p>
             <p><iframe width="100%" height="315" src="https://www.youtube.com/embed/Vt-m-Cj9kLA" frameborder="0" allowfullscreen></iframe></p>
             <p><iframe width="100%" height="315" src="https://www.youtube.com/embed/GbUk75J-N8s" frameborder="0" allowfullscreen></iframe></p>
-            <p>Компания "Авиалинии БогДан" являтся полноправным представителем Бога на планете Земля и одной из ее вледельцев.</p>
+            <p>Компания «Авиалинии БогДан» являтся полноправным представителем Бога на планете Земля и одной из ее вледельцев.</p>
             <p><img src="/images/controller/site/about/1450666172_9RAcQICogZ.jpg" style="width: 100%;max-width: 800px;border-radius: 20px;" ></p>
             <p>Компания предоставляет людям новую технологию перелетов в пространстве при помощи «Крыльев Ангела».<br>
                 Компания включает школу по обучению, <a href="http://www.galaxysss.ru/category/medical/344" target="_blank">Институт Многомерной Медицины</a>, <a href="http://www.galaxysss.ru/category/medical/166" target="_blank">Институт Квантовой Генетики</a> и технологии виртуальной реальности.<br>
-                Также предоставляет перелеты на обычных самолетах. Отличительным знаком компании является Крылья Ангела.</p>
+                Также предоставляет перелеты на обычных самолетах. Отличительным знаком компании является «Крылья Ангела».</p>
             <p>Также разрабатывает и продает летающие автомобили (особая секретная технология основнная на принципах антигравитации). Эта информация доступна только, тем кто принял <a href="http://teslagen.org/video" target="_blank">условия соглашения и вступил на Новую Землю</a></p>
 
             <p>Наши партнеры:<br>
-            <a href="http://www.jetman.com/">http://www.jetman.com/</a>&nbsp;- полет в реальной жизни с реактивным двигателем<br>
+            <a href="http://www.jetman.com/">www.jetman.com</a>&nbsp;- Полет в реальной жизни с реактивным двигателем<br>
 
-            <a href="http://somniacs.co/" target="_blank">http://somniacs.co/</a>&nbsp;- Полет на аттракционе в Виртуальной Реальности</p>
+            <a href="http://www.somniacs.co/" target="_blank">www.somniacs.co</a>&nbsp;- Полет на аттракционе в Виртуальной Реальности<br>
+            <a href="http://www.ansmed.ru/" target="_blank">www.ansmed.ru</a>&nbsp;- Институт Многомерной Медицины<br>
+            <a href="http://www.wavegenetics.org/" target="_blank">www.wavegenetics.org</a>&nbsp;- Институт Квантовой Генетики</p>
             <p><iframe allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/_VPvKl6ezyc" width="100%"></iframe></p>
 
             <p><iframe allowfullscreen=""  frameborder="0" height="315" src="https://www.youtube.com/embed/gWLHIusLWOc" width="100%"></iframe></p>

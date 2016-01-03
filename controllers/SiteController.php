@@ -475,7 +475,7 @@ class SiteController extends BaseController
         ]);
     }
 
-    public function actionRent()
+    public function actionCopyright()
     {
         return $this->render([]);
     }
@@ -485,13 +485,9 @@ class SiteController extends BaseController
         return $this->render([]);
     }
 
-    public function actionDiller()
+    public function actionHologram()
     {
         return $this->render([]);
     }
 
-    public function actionHouse()
-    {
-        return $this->render([]);
-    }
 }
