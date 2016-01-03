@@ -198,15 +198,10 @@ class SiteController extends BaseController
      */
     public function actionBuy($id)
     {
-        $model = new \app\models\Form\Shop\Request();
-        if ($model->load(Yii::$app->request->post()) && ($fields = $model->insert2($id))) {
-            return $this->redirect(Url::to(['site/buy_request', 'id' => $fields['id']]));
-        } else {
-            return $this->render([
-                'model' => $model,
-                'id'    => $id,
-            ]);
-        }
+        return $this->render([
+            'model' => new \app\models\Form\Shop\Request(),
+            'id'    => $id,
+        ]);
     }
 
     /**

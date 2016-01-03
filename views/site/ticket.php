@@ -64,8 +64,7 @@ function get_control_digit($nomer)
 
 // Теперь задаем двенадцать цифр кода (первая цифра определяет исполнение):
 
-$nomer = "481027900007";
-$nomer = "123332111212";
+$nomer = substr($ticket->getField('code'),0,12);
 $nomer .= get_control_digit($nomer); // добавка контрольной суммы
 $first = substr($nomer, 0, 1);
 

@@ -8,6 +8,7 @@ use app\services\Subscribe;
 use cs\Application;
 use cs\services\BitMask;
 use cs\services\Security;
+use cs\services\VarDumper;
 use yii\db\Query;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Url;
@@ -192,11 +193,11 @@ class Request extends \cs\base\DbRecord
      */
     public function paid($message = null)
     {
-        $tickets_counter = $this->getField('tickets_counter');
+        $tickets_counter = $this->getProduct()->getField('tickets_counter');
         for ($i = 0; $i < $tickets_counter; $i++) {
             Ticket::insert([
                 'request_id'  => $this->getId(),
-                'code'        => substr(str_shuffle("012345678901234567890123456789"), 0, 20),
+                'code'        => substr(str_shuffle("012345678901234567890123456789"), 0, 12),
                 'date_insert' => time(),
             ]);
         }
