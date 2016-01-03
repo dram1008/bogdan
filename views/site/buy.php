@@ -4,6 +4,7 @@
 /* @var $model \cs\base\BaseForm */
 /* @var $id int product_id bog_shop_product.id */
 
+
 $this->title = 'Заказ';
 $product = \app\models\Shop\Product::find($id);
 $productPrice = $product->getField('price');
@@ -37,12 +38,16 @@ $this->registerJs(<<<JS
                 return false;
             }
         }
+        var dd = null;
+        $('input[name="Request[dostavka]"]').each(function(){
+            if ($(this).is(':checked')) dd = $(this).attr('value');
+        });
         ajaxJson({
             url: '/buy/ajax',
             data: {
                 id: {$product->getId()},
                 comment: $('#request-comment').val(),
-                dostavka: $('input[name="Request[dostavka]"]').val(),
+                dostavka: dd,
                 price: $('input[name="sum"]').val(),
                 address: $('#request-address').val()
             },
@@ -223,14 +228,17 @@ JS
             </div>
 
             <div id="blockOrder"<?php if (Yii::$app->user->isGuest) echo(' style="display: none;"') ?>>
-                <?php $form = \yii\bootstrap\ActiveForm::begin([
+                <?php
+                $model = new \app\models\Form\Shop\Request();
+                $form = \yii\bootstrap\ActiveForm::begin([
                     'id'                 => 'contact-form',
                     'options'            => ['enctype' => 'multipart/form-data'],
                     'enableClientScript' => false,
-                ]); ?>
+                ]);
+                ?>
                 <?= $model->field($form, 'dostavka')->radioList(\app\models\Shop\Request::$dostavkaList) ?>
-                <?= $model->field($form, 'address')->textarea(['rows' => 10]) ?>
-                <?= $model->field($form, 'comment')->textarea(['rows' => 10]) ?>
+                <?= $model->field($form, 'address')->textarea(['rows' => 3]) ?>
+                <?= $model->field($form, 'comment')->textarea(['rows' => 3]) ?>
                 <?php \yii\bootstrap\ActiveForm::end(); ?>
                 Оплата:
                 <form method="POST" action="https://money.yandex.ru/quickpay/confirm.xml" name="form2" id="formPay">

@@ -167,6 +167,11 @@ class Request extends \cs\base\DbRecord
         return $this->addMessageItem($fields, self::DIRECTION_TO_CLIENT);
     }
 
+    /**
+     *
+     *
+     * @return mixed | string
+     */
     public function getDostavkaText()
     {
         $d = $this->getField('dostavka');

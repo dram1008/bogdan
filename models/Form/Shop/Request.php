@@ -55,30 +55,4 @@ class Request extends \cs\base\BaseForm
         parent::__construct($fields);
     }
 
-    /**
-     * @param int $id product_id
-     * @return array
-     */
-    public function insert2($id)
-    {
-        $this->product_id = $id;
-
-        $fields = parent::insert([
-            'beforeInsert' => function ($fields, \app\models\Form\Shop\Request $model) {
-                $fields['date_create'] = time();
-                $fields['product_id'] = $model->product_id;
-//                $fields['user_id'] = \Yii::$app->user->id;
-                $fields['user_id'] = 1;
-                $fields['is_answer_from_shop'] = 1;
-                $fields['is_answer_from_client'] = 0;
-
-                return $fields;
-            },
-        ]);
-
-        $item = \app\models\Shop\Request::find($fields['id']);
-        $item->addStatusToShop(\app\models\Shop\Request::STATUS_SEND_TO_SHOP);
-
-        return $fields;
-    }
 }
