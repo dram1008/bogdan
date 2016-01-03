@@ -50,6 +50,7 @@ return [
 
     'products/accelerator'                  => 'products/accelerator',
     'products/keyHeart'                     => 'products/key_heart',
+    'products/rod'                          => 'products/rod',
 
     'about'                                 => 'site/about',
 ];

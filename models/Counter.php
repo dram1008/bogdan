@@ -14,7 +14,7 @@ class Counter extends \cs\base\DbRecord
     {
         $counterRow = self::find(1);
         $counter = $counterRow->getField('counter');
-        $counterRow->update([$counter + $sum]);
+        $counterRow->update(['counter' => $counter + $sum]);
 
         return true;
     }
