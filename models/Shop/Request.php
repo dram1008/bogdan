@@ -104,6 +104,14 @@ class Request extends \cs\base\DbRecord
         ],
     ];
 
+
+    public static $dostavkaList = [
+        1 => "На месте полета",
+        2 => "Самовывоз",
+        3 => "Доставка по Москве",
+        4 => "Доставка по России",
+    ];
+
     /**
      * @param array $fields
      * @return \app\models\Shop\Request
@@ -177,8 +185,9 @@ class Request extends \cs\base\DbRecord
                 'date_insert' => time(),
             ]);
         }
-        $this->addStatusToClient(self::STATUS_PAID_CLIENT);
+        $this->addStatusToShop(self::STATUS_PAID_CLIENT);
         $this->addStatusToClient(self::STATUS_PAID_SHOP);
+        $this->update(['is_paid' => 1]);
         // отправка письма
         Application::mail($this->getClient()->getEmail(), 'Ваш подарок', 'new_request_client', [
             'request' => $this

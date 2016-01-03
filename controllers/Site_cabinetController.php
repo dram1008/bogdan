@@ -43,7 +43,14 @@ class Site_cabinetController extends BaseController
     public function actionRequests()
     {
         return $this->render([
-            'items' => \app\models\Shop\Request::query(['user_id' => \Yii::$app->user->id])->all(),
+            'items' => \app\models\Shop\Request::query(['bog_shop_requests.user_id' => \Yii::$app->user->id])
+                ->select([
+                    'bog_shop_requests.*',
+                    'bog_shop_product.name as product_name',
+                    'bog_shop_product.image as product_image',
+                ])
+                ->innerJoin('bog_shop_product', 'bog_shop_product.id = bog_shop_requests.product_id')
+                ->all(),
         ]);
     }
 

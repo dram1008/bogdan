@@ -262,7 +262,7 @@ class SiteController extends BaseController
      * - comment - string
      * - dostavka - int -
      * - address - string -
-     * - price - int -
+     * - price - int - полная цена заказа с учетом доставки
      *
      * @return string|Response
      */
@@ -271,6 +271,8 @@ class SiteController extends BaseController
         $fields['product_id'] = self::getParam('id');
         $fields['comment'] = self::getParam('comment');
         $fields['address'] = self::getParam('address');
+        $fields['dostavka'] = self::getParam('dostavka');
+        $fields['price'] = self::getParam('price');
 
         $item = \app\models\Shop\Request::insert($fields);
         $item->addStatusToShop(\app\models\Shop\Request::STATUS_SEND_TO_SHOP);

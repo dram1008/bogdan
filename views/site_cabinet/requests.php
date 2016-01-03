@@ -14,9 +14,32 @@ $this->title = 'Заказ';
         <div class="col-lg-8 col-lg-offset-2">
             <h2 class="text-center">Мои заказы</h2>
 
-            <?php foreach($items as $item) {?>
-                <p><a href="/requests/<?= $item['id']?>"><?= $item['id']?></a></p>
-            <?php }?>
+            <table class="table">
+                <?php
+                $this->registerJs(<<<JS
+    $('.rowButton').click(function() {
+        window.location = '/requests/' + $(this).data('id');
+    });
+JS
+);
+                ?>
+                <?php foreach($items as $item) {?>
+                    <tr role="button" class="rowButton" data-id="<?= $item['id'] ?>">
+                        <td>
+                            <?= $item['id']?>
+                        </td>
+                        <td>
+                            <?= $item['product_name']?>
+                        </td>
+                        <td>
+                            <?php if ($item['is_answer_from_shop'] == 1) { ?>
+                                <span class="glyphicon glyphicon-envelope"></span>
+                            <?php } ?>
+                        </td>
+                    </tr>
+                <?php }?>
+            </table>
+
 
         </div>
     </div>

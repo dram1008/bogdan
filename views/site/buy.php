@@ -228,12 +228,7 @@ JS
                     'options'            => ['enctype' => 'multipart/form-data'],
                     'enableClientScript' => false,
                 ]); ?>
-                <?= $model->field($form, 'dostavka')->radioList([
-                    1 => "На месте полета",
-                    2 => "Самовывоз",
-                    3 => "Доставка по Москве",
-                    4 => "Доставка по России",
-                ]) ?>
+                <?= $model->field($form, 'dostavka')->radioList(\app\models\Shop\Request::$dostavkaList) ?>
                 <?= $model->field($form, 'address')->textarea(['rows' => 10]) ?>
                 <?= $model->field($form, 'comment')->textarea(['rows' => 10]) ?>
                 <?php \yii\bootstrap\ActiveForm::end(); ?>

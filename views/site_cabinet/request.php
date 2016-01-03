@@ -2,7 +2,9 @@
 
 /* @var $this yii\web\View */
 /* @var $items array */
+/* @var $request \app\models\Shop\Request */
 
+$product = $request->getProduct();
 $this->title = 'Заказ';
 ?>
 
@@ -51,6 +53,7 @@ $this->title = 'Заказ';
         position: relative;
         -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
         box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+        background-color: white;
     }
     .timeline > li > .timeline-panel:before {
         position: absolute;
@@ -91,9 +94,11 @@ $this->title = 'Заказ';
         border-top-left-radius: 50%;
         border-bottom-right-radius: 50%;
         border-bottom-left-radius: 50%;
+        border: 1px solid rgba(255,255,255,0.5);
     }
     .timeline > li.timeline-inverted > .timeline-panel {
         float: right;
+        background-color: white;
     }
     .timeline > li.timeline-inverted > .timeline-panel:before {
         border-left-width: 0;
@@ -124,7 +129,10 @@ $this->title = 'Заказ';
     }
     .timeline-title {
         margin-top: 0;
-        color: inherit;
+        color: #000000;
+        text-transform: none;
+        font-weight: normal;
+
     }
     .timeline-body > p,
     .timeline-body > ul {
@@ -133,15 +141,14 @@ $this->title = 'Заказ';
     .timeline-body > p + p {
         margin-top: 5px;
     }
-    body {
-        background-color: white;
-        color: #000000;
-    }
     h4 {
         margin-bottom: 10px;
     }
     p {
         margin-bottom: 10px;
+    }
+    .text-muted {
+        font-size: 70%;
     }
 </style>
 
@@ -149,11 +156,28 @@ $this->title = 'Заказ';
 <!-- About Section -->
 <section id="about" class="container content-section" style="margin-top: 50px;">
     <div class="row">
-        <div class="col-lg-12" style="padding-bottom: 50px;">
+        <div class="col-lg-8 col-lg-offset-2" style="padding-bottom: 50px;">
             <h2 class="text-center">Заказ</h2>
-
-
-            <h2 class="page-header">История заказа</h2>
+            <p>Идентификацинный номер: <?= $request->getId() ?></p>
+            <p>Доставка: <?= \app\models\Shop\Request::$dostavkaList[$request->getField('dostavka')] ?></p>
+            <?php if ($request->getField('dostavka') == 3 || $request->getField('dostavka') == 4) { ?>
+                <p><?= $request->getField('address') ?></p>
+            <?php } ?>
+            <p>Комментарий: <?= $request->getField('comment') ?></p>
+            <p>Продукт: <?= $product->getField('name') ?></p>
+            <div style="padding: 20px; background-color: white; color: #000000; border-radius: 20px; margin-bottom: 30px; width: 100; max-width: 400px;"><?= $product->getField('content') ?></div>
+            <p>Создан: <?= Yii::$app->formatter->asDatetime($request->getField('date_create'))   ?></p>
+            <p>Билеты:</p>
+            <?php if ($request->getField('is_paid', 0) == 0) { ?>
+                <p>Заказ еще не оплачен</p>
+            <?php } else { ?>
+                <?php foreach($request->getTickets() as $t) { ?>
+                    <p><a href="<?=\yii\helpers\Url::to(['site/ticket', 'id'=> $t['id']])?>" target="_blank">Билет №<?= $t['id'] ?></a></p>
+                <?php } ?>
+            <?php } ?>
+        </div>
+        <div class="col-lg-12" style="padding-bottom: 50px;">
+        <h2 class="page-header">История заказа</h2>
             <?php $this->registerJs('$(".timeBack").tooltip()'); ?>
             <ul class="timeline">
                 <?php foreach($request->getMessages()->all() as $item) { ?>
@@ -267,12 +291,12 @@ JS
                 </div>
             </div>
             <hr>
-            <button class="btn btn-info" id="buttonSendMessage">Отправить сообщение</button>
+            <button class="btn btn-primary" id="buttonSendMessage">Отправить сообщение</button>
             <?php if (in_array($request->getStatus(), [\app\models\Shop\Request::STATUS_ORDER_DOSTAVKA])) { ?>
-                <button class="btn btn-info" id="buttonAnswerPay">Сообщить об оплате</button>
+                <button class="btn btn-primary" id="buttonAnswerPay">Сообщить об оплате</button>
             <?php } ?>
             <?php if (in_array($request->getStatus(), [\app\models\Shop\Request::STATUS_PAID_SHOP, \app\models\Shop\Request::STATUS_SEND_TO_USER, ])) { ?>
-                <button class="btn btn-info" id="buttonDone">Заказ получен</button>
+                <button class="btn btn-primary" id="buttonDone">Заказ получен</button>
             <?php } ?>
 
         </div>
