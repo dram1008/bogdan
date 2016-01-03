@@ -40,6 +40,7 @@ $this->title = 'Корректировка рода';
             </p>
 
             <p>«Главный мой приоритет - это близкие по духу и энергетике люди, желающие расти профессионально и творчески вместе. Я люблю работать с теми, кто готов заглянуть внутрь себя, кто стремится изучить и проявить свой внутренний созидательный  потенциал. У меня нет готовых ответов на ваши трудности и проблемы, но я верю, что мы можем исследовать и найти решение» (с) М.К.</p>
+            <p>skype: maxmakermax</p>
             <p><iframe width="100%" height="400" src="https://www.youtube.com/embed/2W6ZxCOOYY8" frameborder="0" allowfullscreen></iframe></p>
             <p><iframe width="100%" height="400" src="https://www.youtube.com/embed/hdJlX5DQK_Q" frameborder="0" allowfullscreen></iframe></p>
             <p class="text-center"><img src="/images/controller/products/rod/1385868_526638854089371_352584650_n2.jpg" style="width: 100%; max-width: 400px; border-radius: 20px; border: 1px solid #000000;" class="img-center"></p>
