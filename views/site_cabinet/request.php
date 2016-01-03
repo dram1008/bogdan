@@ -159,7 +159,7 @@ $this->title = 'Заказ';
         <div class="col-lg-8 col-lg-offset-2" style="padding-bottom: 50px;">
             <h2 class="text-center">Заказ</h2>
             <p>Идентификацинный номер: <?= $request->getId() ?></p>
-            <p>Доставка: <?= \app\models\Shop\Request::$dostavkaList[$request->getField('dostavka')] ?></p>
+            <p>Доставка: <?= $request->getDostavkaText() ?></p>
             <?php if ($request->getField('dostavka') == 3 || $request->getField('dostavka') == 4) { ?>
                 <p><?= $request->getField('address') ?></p>
             <?php } ?>

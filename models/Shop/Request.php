@@ -167,6 +167,16 @@ class Request extends \cs\base\DbRecord
         return $this->addMessageItem($fields, self::DIRECTION_TO_CLIENT);
     }
 
+    public function getDostavkaText()
+    {
+        $d = $this->getField('dostavka');
+        if (is_null($d)) {
+            return '';
+        }
+
+        return ArrayHelper::getValue(self::$dostavkaList, $d, '');
+    }
+
     /**
      * Устанавливает статус для заказа "Оплата подтверждена магазином" self::STATUS_PAID_SHOP
      * Прикрепляет билеты для заказа
