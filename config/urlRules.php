@@ -58,4 +58,27 @@ return [
     'products/svidetelstvo'                 => 'products/svidetelstvo',
 
     'about'                                 => 'site/about',
+
+    'admin'                                 => 'admin_products/main',
+    'admin/products'                        => 'admin_products/index',
+    'admin/products/add'                    => 'admin_products/add',
+    'admin/products/<id:\\d+>/delete'       => 'admin_products/delete',
+    'admin/products/<id:\\d+>'              => 'admin_products/edit',
+
+    'admin/pictures'                        => 'admin_pictures/index',
+    'admin/pictures/add'                    => 'admin_pictures/add',
+    'admin/pictures/<id:\\d+>/delete'       => 'admin_pictures/delete',
+    'admin/pictures/<id:\\d+>'              => 'admin_pictures/edit',
+
+    'admin/requests'                        => 'admin_requests/index',
+    'admin/requests/add'                    => 'admin_requests/add',
+    'admin/requests/<id:\\d+>'              => 'admin_requests/item',
+    'admin/requests/<id:\\d+>/delete'       => 'admin_requests/delete',
+    'admin/requests/<id:\\d+>/edit'         => 'admin_requests/edit',
+
+    'admin/requests/<id:\\d+>/message'      => 'admin_requests/item_message',
+    'admin/requests/<id:\\d+>/newBill'      => 'admin_requests/item_new_bill',
+    'admin/requests/<id:\\d+>/answerPay'    => 'admin_requests/item_answer_pay',
+    'admin/requests/<id:\\d+>/send'         => 'admin_requests/item_send',
+    'admin/requests/<id:\\d+>/done'         => 'admin_requests/item_done',
 ];
