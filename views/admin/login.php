@@ -10,10 +10,11 @@ use yii\bootstrap\ActiveForm;
 $this->title = 'Вход';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<section class="container content-section" style="margin-bottom: 50px;">
-
+<div class="site-login">
     <div class="col-lg-4 col-lg-offset-4">
-        <h1 class="page-header text-center"><?= Html::encode($this->title) ?></h1>
+        <h1 class="page-header"><?= Html::encode($this->title) ?></h1>
+
+        <p>Пожалуйста заполните нижеследующие поля:</p>
 
         <?php $form = ActiveForm::begin([
             'id'                   => 'login-form',
@@ -34,7 +35,8 @@ $this->params['breadcrumbs'][] = $this->title;
         <hr>
         <p><a style="width: 100%;" class="btn btn-default btn-xs" href="<?= \yii\helpers\Url::to(['auth/password_recover']) ?>" >Восстановить пароль</a>
 
-            <?php ActiveForm::end(); ?>
+        <?php ActiveForm::end(); ?>
     </div>
-</section>
 
+
+</div>

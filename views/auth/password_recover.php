@@ -8,11 +8,9 @@ use yii\captcha\Captcha;
 /* @var $model \app\models\Form\Registration */
 
 $this->title = 'Восстановление пароля';
-$this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="container">
+<section class="container content-section" style="margin-bottom: 50px;">
 
-    <div class="row">
         <div class="col-lg-4 col-lg-offset-4">
             <h1 class="page-header"><?= Html::encode($this->title) ?></h1>
 
@@ -46,5 +44,4 @@ $this->params['breadcrumbs'][] = $this->title;
                 <?php ActiveForm::end(); ?>
             <?php endif; ?>
         </div>
-    </div>
-</div>
+    </section>

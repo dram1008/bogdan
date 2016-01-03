@@ -19,7 +19,7 @@ use cs\web\Exception;
 
 class AuthController extends BaseController
 {
-    public $layout = 'menu';
+    public $layout = 'landing';
 
     public function behaviors()
     {

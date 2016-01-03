@@ -60,6 +60,7 @@ return [
     'about'                                 => 'site/about',
 
     'admin'                                 => 'admin_products/main',
+    'admin/login'                           => 'admin/login',
     'admin/products'                        => 'admin_products/index',
     'admin/products/add'                    => 'admin_products/add',
     'admin/products/<id:\\d+>/delete'       => 'admin_products/delete',

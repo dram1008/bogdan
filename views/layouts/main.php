@@ -10,9 +10,6 @@ use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 
 AppAsset::register($this);
-$this->registerMetaTag(['name' => 'keywords', 'content' => 'Генератор Теслы Купить, Арендовать, Бестопливный генератор, Вечный двигатель, Диллерская программа, Доставка в любую точку планеты, Сервисное обслуживание']);
-$this->registerMetaTag(['name' => 'description', 'content' => 'Генератор Теслы Купить, Арендовать, Бестопливный генератор, Вечный двигатель, Диллерская программа, Доставка в любую точку планеты, Сервисное обслуживание']);
-$this->registerMetaTag(['name' => 'title', 'content' => $this->title]);
 
 ?>
 <?php $this->beginPage() ?>
@@ -23,7 +20,7 @@ $this->registerMetaTag(['name' => 'title', 'content' => $this->title]);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name='yandex-verification' content='6721c497dd2fba14'/>
     <?= Html::csrfMetaTags() ?>
-    <title><?= Html::encode($this->title) ?> :: Агентство Сохранения Рода</title>
+    <title><?= Html::encode($this->title) ?> :: Авиалинии БогДан</title>
     <link rel="shortcut icon" href="/images/icon32.png">
     <?php $this->head() ?>
 </head>
