@@ -38,6 +38,7 @@ return [
     'copyright'                             => 'site/copyright',
     'hologram'                              => 'site/hologram',
     'ticket/<id:\\d+>'                      => 'site/ticket',
+    'article/why'                           => 'article/why',
 
     'auth'                                  => 'auth/auth',
     'login'                                 => 'site/login',

@@ -41,8 +41,8 @@ $this->title = 'О нас';
             <p>Также разрабатывает и продает летающие автомобили (особая секретная технология основнная на принципах антигравитации). Эта информация доступна только, тем кто принял <a href="http://teslagen.org/video" target="_blank">условия соглашения и вступил на Новую Землю</a></p>
 
             <p>Наши партнеры:<br>
+            <a href="http://www.i-am-avatar.com/" target="_blank">www.i-am-avatar.com</a>&nbsp;- Школа Богов<br>
             <a href="http://www.jetman.com/">www.jetman.com</a>&nbsp;- Полет в реальной жизни с реактивным двигателем<br>
-
             <a href="http://www.somniacs.co/" target="_blank">www.somniacs.co</a>&nbsp;- Полет на аттракционе в Виртуальной Реальности<br>
             <a href="http://www.ansmed.ru/" target="_blank">www.ansmed.ru</a>&nbsp;- Институт Многомерной Медицины<br>
             <a href="http://www.wavegenetics.org/" target="_blank">www.wavegenetics.org</a>&nbsp;- Институт Квантовой Генетики</p>
