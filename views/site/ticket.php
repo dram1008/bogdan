@@ -119,7 +119,7 @@ $data = base64_encode(file_get_contents($f->getPathFull()));
 $f->deleteFile();
 imagedestroy($im);
 ?>
-<table width="600">
+<table width="600" style="border: 1px solid #888;">
     <tr>
         <td>
             <img src="/images/mail/header.jpg" width="600">
