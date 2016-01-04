@@ -10,9 +10,8 @@ use yii\captcha\Captcha;
 $this->title = 'Восстановление пароля';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="container">
+<section class="container content-section" style="margin-bottom: 50px;">
 
-    <div class="site-contact">
 
 
         <div class="row">
@@ -44,5 +43,4 @@ $this->params['breadcrumbs'][] = $this->title;
                 <?php endif; ?>
             </div>
         </div>
-    </div>
-</div>
+    </section>
