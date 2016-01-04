@@ -23,6 +23,20 @@ $this->title = 'Заказ';
 JS
 );
                 ?>
+                <tr style="background-color: #0042ae;">
+                    <th>
+                        id
+                    </th>
+                    <th>
+                        Наименования
+                    </th>
+                    <th>
+                        Оплачен?
+                    </th>
+                    <th>
+                        Ответ?
+                    </th>
+                </tr>
                 <?php foreach($items as $item) {?>
                     <tr role="button" class="rowButton" data-id="<?= $item['id'] ?>">
                         <td>
@@ -30,6 +44,11 @@ JS
                         </td>
                         <td>
                             <?= $item['product_name']?>
+                        </td>
+                        <td>
+                            <?php if (\yii\helpers\ArrayHelper::getValue($item, 'is_paid', 0) == 1) { ?>
+                                Да
+                            <?php } ?>
                         </td>
                         <td>
                             <?php if ($item['is_answer_from_shop'] == 1) { ?>
