@@ -29,7 +29,7 @@ $this->title = 'Квантовая голограмма';
                     href="http://teslagen.org/news/2015/10/24/zapuschena_razrabotka_novogo_k" target="_blank">ТеслаГен</a>)
                 полностью
                 замещающий и нейтрализирующий все негативные действия и последствия действий <a
-                    href="http://tainy.net/12607-zikkurat-v-centre-moskvy.html" target="_blank">Зикурата</a> и
+                    href="http://www.galaxysss.ru/blog/2015/12/07/mavzoley__okkultnoe_stroenie" target="_blank">Зикурата</a> и
                 создании на
                 планете Земля мира <a href="http://www.i-am-avatar.com/">Богов СоТворцов Эры Водолея</a>.
             </p>
