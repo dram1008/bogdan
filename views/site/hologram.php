@@ -31,7 +31,7 @@ $this->title = 'Квантовая голограмма';
                 замещающий и нейтрализирующий все негативные действия и последствия действий <a
                     href="http://www.galaxysss.ru/blog/2015/12/07/mavzoley__okkultnoe_stroenie" target="_blank">Зикурата</a> и
                 создании на
-                планете Земля мира <a href="http://www.i-am-avatar.com/">Богов СоТворцов Эры Водолея</a>.
+                планете Земля мира <a href="http://www.i-am-avatar.com/" target="_blank">Богов СоТворцов Эры Водолея</a>.
             </p>
 
             <p class="lead" style="text-align: justify">
@@ -46,7 +46,7 @@ $this->title = 'Квантовая голограмма';
                 и
                 <a href="http://www.galaxysss.ru/chenneling/2015/11/07/svyaschennyy_soyuz_i_bozhestve">статья 2</a>).
                 Они состоялись 11 ноября 2015 г. которые стали началом новой Эры Водоления и Новой Реальности и <a
-                    href="/newEarth">Новой Земли</a>.
+                    href="http://www.galaxysss.ru/newEarth" target="_blank">Новой Земли</a>.
             </p>
 
             <hr>
