@@ -9,7 +9,7 @@ $this->title = 'Квантовая голограмма';
 ?>
 
 <!-- About Section -->
-<section id="about" class="container content-section">
+<section id="about" class="container content-section" style="margin-top: 80px;">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
             <h2 class="text-center">Квантовая голограмма</h2>
