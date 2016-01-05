@@ -17,17 +17,33 @@ class Request extends \cs\base\DbRecord
 {
     const TABLE = 'bog_shop_requests';
 
-    const STATUS_USER_NOT_CONFIRMED = 1; // Пользователь заказал с регистрацией пользователя, но не подтвердил своб почту еще
+    const STATUS_USER_NOT_CONFIRMED = 1; // Пользователь заказал с регистрацией пользователя, но не подтвердил свою почту еще
     const STATUS_SEND_TO_SHOP = 2;       // заказ отправлен в магазин
     const STATUS_ORDER_DOSTAVKA = 3;     // клиенту выставлен счет с учетом доставки
     const STATUS_PAID_CLIENT = 5;        // заказ оплачен со стороны клиента
     const STATUS_PAID_SHOP = 6;          // оплата подтверждена магазином
-    const STATUS_SEND_TO_USER = 7;       // заказ отправлен клиенту
-    const STATUS_FINISH_CLIENT = 10;     // заказ исполнен, как сообщил клиент
-    const STATUS_FINISH_SHOP = 11;       // заказ исполнен, магазин сам указал этот статут по своим данным
+
+    // Доставка
+    // Забрать на месте полета
+    const STATUS_DOSTAVKA_GET_MYSELF_POLET_WAIT = 111; // Ожидает на месте полета
+    const STATUS_DOSTAVKA_GET_MYSELF_POLET_DONE = 112; // Подарок получен
+    // Самовывоз из Базы Вознесения
+    const STATUS_DOSTAVKA_GET_MYSELF_VOZNESENIE_WAIT = 121; // Ожидает на Базе Вознесения
+    const STATUS_DOSTAVKA_GET_MYSELF_VOZNESENIE_DONE = 122; // Подарок получен
+    // Доставка по Москве
+    const STATUS_DOSTAVKA_MOSCOW_WAIT = 131; // Ожидание связи. Наш посланник пытается с вами связаться для передачи подарка
+    const STATUS_DOSTAVKA_MOSCOW_DONE = 132; // Подарок вручен
+    // Доставка по России
+    const STATUS_DOSTAVKA_RUSSIA_PREPARE = 141; // Подготовка к отправке. Подарок находится в режиме подготовки к отправки
+    const STATUS_DOSTAVKA_RUSSIA_SEND    = 142; // Подарок отправлен
+    const STATUS_DOSTAVKA_RUSSIA_GOT_CLIENT  = 143; // Подарок получен адресатом
+    // Доставка по миру
+    const STATUS_DOSTAVKA_WORLD_PREPARE = 151; // Подготовка к отправке. Подарок находится в режиме подготовки к отправки
+    const STATUS_DOSTAVKA_WORLD_SEND    = 152; // Подарок отправлен
+    const STATUS_DOSTAVKA_WORLD_GOT_CLIENT  = 153; // Подарок получен адресатом
 
     const DIRECTION_TO_CLIENT = 1;
-    const DIRECTION_TO_SHOP = 2;
+    const DIRECTION_TO_SHOP   = 2;
 
 
     public static $statusList = [
@@ -111,6 +127,7 @@ class Request extends \cs\base\DbRecord
         2 => "Самовывоз",
         3 => "Доставка по Москве",
         4 => "Доставка по России",
+        5 => "Доставка по миру",
     ];
 
     /**
@@ -193,6 +210,7 @@ class Request extends \cs\base\DbRecord
      */
     public function paid($message = null)
     {
+        // выдача билетов
         $tickets_counter = $this->getProduct()->getField('tickets_counter');
         for ($i = 0; $i < $tickets_counter; $i++) {
             Ticket::insert([
@@ -204,6 +222,25 @@ class Request extends \cs\base\DbRecord
         $this->addStatusToShop(self::STATUS_PAID_CLIENT);
         $this->addStatusToClient(self::STATUS_PAID_SHOP);
         $this->update(['is_paid' => 1]);
+        $dostavka = $this->getField('dostavka');
+        switch($dostavka) {
+            case 1:
+                $this->addStatusToClient(self::STATUS_DOSTAVKA_GET_MYSELF_POLET_WAIT);
+                break;
+            case 2:
+                $this->addStatusToClient(self::STATUS_DOSTAVKA_GET_MYSELF_VOZNESENIE_WAIT);
+                break;
+            case 3:
+                $this->addStatusToClient(self::STATUS_DOSTAVKA_MOSCOW_WAIT);
+                break;
+            case 4:
+                $this->addStatusToClient(self::STATUS_DOSTAVKA_RUSSIA_PREPARE);
+                break;
+            case 5:
+                $this->addStatusToClient(self::STATUS_DOSTAVKA_RUSSIA_PREPARE);
+                break;
+        }
+
         // отправка письма
         Application::mail($this->getClient()->getEmail(), 'Ваш подарок', 'new_request_client', [
             'request' => $this

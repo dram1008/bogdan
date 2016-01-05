@@ -258,12 +258,28 @@ $this->title = 'Заказ';
             });
         });
     });
-    $('#buttonDone').click(function() {
+    $('#buttonDoneRussia').click(function() {
         $('#messageModal').modal('show');
         $('#buttonSendMessageForm').click(function() {
             var text = $('#messageModal textarea').val();
             ajaxJson({
-                url: '/requests/{$request->getId()}/done',
+                url: '/requests/{$request->getId()}/doneRussia',
+                data: {
+                    text: text
+                },
+                success: function(ret) {
+                    $('#messageModal').modal('hide');
+                    window.location.reload();
+                }
+            });
+        });
+    });
+    $('#buttonDoneWorld').click(function() {
+        $('#messageModal').modal('show');
+        $('#buttonSendMessageForm').click(function() {
+            var text = $('#messageModal textarea').val();
+            ajaxJson({
+                url: '/requests/{$request->getId()}/doneWorld',
                 data: {
                     text: text
                 },
@@ -300,8 +316,11 @@ JS
             <?php if (in_array($request->getStatus(), [\app\models\Shop\Request::STATUS_ORDER_DOSTAVKA])) { ?>
                 <button class="btn btn-primary" id="buttonAnswerPay">Сообщить об оплате</button>
             <?php } ?>
-            <?php if (in_array($request->getStatus(), [\app\models\Shop\Request::STATUS_PAID_SHOP, \app\models\Shop\Request::STATUS_SEND_TO_USER, ])) { ?>
-                <button class="btn btn-primary" id="buttonDone">Заказ получен</button>
+            <?php if (in_array($request->getStatus(), [\app\models\Shop\Request::STATUS_DOSTAVKA_RUSSIA_SEND,])) { ?>
+                <button class="btn btn-primary" id="buttonDoneRussia">Заказ получен</button>
+            <?php } ?>
+            <?php if (in_array($request->getStatus(), [\app\models\Shop\Request::STATUS_DOSTAVKA_WORLD_SEND,])) { ?>
+                <button class="btn btn-primary" id="buttonDoneWorld">Заказ получен</button>
             <?php } ?>
 
         </div>

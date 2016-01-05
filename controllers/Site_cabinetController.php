@@ -117,7 +117,7 @@ class Site_cabinetController extends BaseController
 
     /**
      * AJAX
-     * Отправляет сообщение для клиента: Заказ получен
+     * Отправляет сообщение для клиента: STATUS_DOSTAVKA_RUSSIA_GOT_CLIENT
      *
      * REQUEST:
      * - text - string - текст сообщения
@@ -126,9 +126,25 @@ class Site_cabinetController extends BaseController
      *
      * @return \yii\web\Response json
      */
-    public function actionOrder_item_done($id)
+    public function actionOrder_item_done_russia($id)
     {
-        return $this->sendStatus($id, \app\models\Shop\Request::STATUS_FINISH_CLIENT);
+        return $this->sendStatus($id, \app\models\Shop\Request::STATUS_DOSTAVKA_RUSSIA_GOT_CLIENT);
+    }
+
+    /**
+     * AJAX
+     * Отправляет сообщение для клиента: STATUS_DOSTAVKA_WORLD_GOT_CLIENT
+     *
+     * REQUEST:
+     * - text - string - текст сообщения
+     *
+     * @param int $id  идентификатор заказа gs_users_shop_requests.id
+     *
+     * @return \yii\web\Response json
+     */
+    public function actionOrder_item_done_world($id)
+    {
+        return $this->sendStatus($id, \app\models\Shop\Request::STATUS_DOSTAVKA_WORLD_GOT_CLIENT);
     }
 
     /**
