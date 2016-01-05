@@ -40,8 +40,8 @@ class Admin_productsController extends AdminBaseController
 
     public function actionEdit($id)
     {
-        VarDumper::dump($id);
         $model = \app\models\Form\Shop\Product::find($id);
+        VarDumper::dump($id);
         if ($model->load(Yii::$app->request->post()) && $model->update()) {
             Yii::$app->session->setFlash('contactFormSubmitted');
 
