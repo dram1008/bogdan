@@ -23,6 +23,7 @@ class Request extends \cs\base\DbRecord
     const STATUS_PAID_CLIENT = 5;        // заказ оплачен со стороны клиента
     const STATUS_PAID_SHOP = 6;          // оплата подтверждена магазином
     const STATUS_FINISH_SHOP = 6;          // оплата подтверждена магазином
+    const STATUS_FINISH_CLIENT = 6;          // оплата подтверждена магазином
 
     // Доставка
     // Забрать на месте полета
