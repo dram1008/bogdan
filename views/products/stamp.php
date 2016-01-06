@@ -9,7 +9,7 @@ $this->title = 'Печать творца';
 ?>
 
 <!-- About Section -->
-<section id="about" class="container content-section">
+<section id="about" class="container content-section" style="margin-top: 50px;">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
             <h2 class="text-center">Печать творца</h2>
