@@ -40,9 +40,7 @@ return [
     'hologram'                              => 'site/hologram',
     'ticket/<id:\\d+>'                      => 'site/ticket',
 
-    'article/why'                           => 'article/why',
-    'article/arhangelMihail_2016_01'        => 'article/arhangel_mihail_2016_01',
-    'article/uchites_letat'                 => 'article/uchites_letat',
+    'article/<action>'                           => 'article/article',
 
     'auth'                                  => 'auth/auth',
     'login'                                 => 'site/login',

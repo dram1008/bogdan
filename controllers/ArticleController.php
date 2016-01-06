@@ -30,10 +30,10 @@ class ArticleController extends BaseController
 {
     public $layout = 'landing';
 
-    public function actionWhy()
+    public function actionArticle()
     {
 
-        return $this->render([
+        return $this->render($this->action->id, [
         ]);
     }
 
