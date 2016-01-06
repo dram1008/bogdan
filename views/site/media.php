@@ -45,7 +45,8 @@ $this->title = 'Медиа материалы';
             <?php } ?>
             </div>
             <p class="text-center">Статьи</p>
-            <p><a href="/article/why">Почему и как летают птицы?</a></p>
+            <p><a href="/article/arhangel_mihail_2016_01">Что такое Дух? Послание Архангела Михаила через Ронну Герман</a></p>
+            <p><a href="/article/uchites_letat">УЧИТЕСЬ ЛЕТАТЬ. Совет Старейшин Созвездия Андромеды</a></p>
 
 
         </div>
