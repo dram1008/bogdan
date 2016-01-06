@@ -30,10 +30,17 @@ class ArticleController extends BaseController
 {
     public $layout = 'landing';
 
-    public function actionArticle()
+    public function actionArhangel_mihail_2016_01()
     {
 
-        return $this->render($this->action->id, [
+        return $this->render( [
+        ]);
+    }
+
+    public function actionUchites_letat()
+    {
+
+        return $this->render([
         ]);
     }
 
