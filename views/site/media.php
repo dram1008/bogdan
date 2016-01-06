@@ -23,7 +23,6 @@ $this->title = 'Медиа материалы';
             <p class="text-center"><iframe src="//vk.com/video_ext.php?oid=-48319873&id=171212722&hash=f3c9b9b2a2f03532&hd=2" width="100%" height="480"  frameborder="0"></iframe></p>
             <p class="text-center">Презентация Крыльев Ангела</p>
             <p class="text-center"><iframe width="100%" height="315" src="https://www.youtube.com/embed/aFrXJRHq8kM" frameborder="0" allowfullscreen></iframe></p>
-            <p class="text-center"><iframe width="100%" height="315" src="https://www.youtube.com/embed/i7V33aCNso4" frameborder="0" allowfullscreen></iframe></p>
 
             <p class="text-center">Полеты птиц</p>
             <p class="text-center"><iframe width="100%" height="315" src="https://www.youtube.com/embed/-Z9PhUI5oUE" frameborder="0" allowfullscreen></iframe></p>
