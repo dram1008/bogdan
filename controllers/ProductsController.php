@@ -33,6 +33,11 @@ class ProductsController extends BaseController
         return $this->render([]);
     }
 
+    public function actionTicket()
+    {
+        return $this->render([]);
+    }
+
     public function actionKey_heart()
     {
         return $this->render([]);

@@ -54,6 +54,7 @@ return [
     'products/keyHeart'                     => 'products/key_heart',
     'products/rod'                          => 'products/rod',
     'products/stamp'                        => 'products/stamp',
+    'products/ticket'                       => 'products/ticket',
     'products/planet'                       => 'products/planet',
     'products/obereg'                       => 'products/obereg',
     'products/carKeeper'                    => 'products/car_keeper',

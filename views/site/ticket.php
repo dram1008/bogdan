@@ -131,7 +131,7 @@ imagedestroy($im);
 
             <p>Дата получения: <?= Yii::$app->formatter->asDatetime($ticket->getField('date_insert')) ?></p>
 
-            <p>Получатель: <?= $client->getField('name_first') ?> (<?= $client->getEmail() ?>)</p>
+            <p>Получатель: <?= $client->getField('name_first') ?> (<?= $client->getEmail() ?>), на этот email адрес придет уведомление о возможности полета.</p>
             <p>Проверочный код:</p>
             <p><img src="data:image/png;base64,<?= $data ?>"/></p>
             <p>Ваш вылет состоится в Москве в марте-мае 2016 г.</p>
