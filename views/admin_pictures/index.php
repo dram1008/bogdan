@@ -58,13 +58,19 @@ JS
         'columns'      => [
             'id',
             [
-                'header' => 'Картинка',
+                'header'  => 'Картинка',
                 'content' => function($item) {
                     if (\yii\helpers\ArrayHelper::getValue($item, 'image', '') == '') return '';
                     return Html::img($item['image'], ['width'=>50,'class' => 'thumbnail', 'style' => 'margin-bottom: 0px;']);
                 },
             ],
             'name',
+            [
+                'header'  => 'Удалить',
+                'content' => function($item) {
+                    return Html::button('Удалить', [ 'class' => 'btn btn-danger btn-xs buttonDelete', 'data-id' => $item['id']]);
+                },
+            ],
         ]
     ]) ?>
 
