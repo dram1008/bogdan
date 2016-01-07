@@ -29,6 +29,7 @@ return [
     'activate/<code:\\w+>'                  => 'site/activate',
     'logDb'                                 => 'site/log_db',
     'contact'                               => 'site/contact',
+    'sutra'                                 => 'site/sutra',
     'price'                                 => 'site/price',
     'buy/<id:\\d+>'                         => 'site/buy',
     'buy/<id:\\d+>/success'                 => 'site/buy_success',

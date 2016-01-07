@@ -191,6 +191,11 @@ class SiteController extends BaseController
         return $this->render([]);
     }
 
+    public function actionSutra()
+    {
+        return $this->render([]);
+    }
+
     /**
      * @param int $id product_id bog_shop_product.id
      * @return string|Response

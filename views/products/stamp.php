@@ -11,11 +11,11 @@ $this->title = 'Печать творца';
 <!-- About Section -->
 <section id="about" class="container content-section" style="margin-top: 50px;">
     <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
+        <div class="col-lg-8 col-lg-offset-2" style="margin-bottom: 100px;">
             <h2 class="text-center">Печать творца</h2>
 
             <p class="text-center"><img src="/images/controller/products/stamp/IMG_0571.jpg"
-                                        style="width: 100%; max-width: 400px;" class="img-center"></p>
+                                        style="width: 100%; max-width: 400px; border-radius: 20px;" class="img-center"></p>
 
             <p>Печать Творца - это инструмент для концентрации вашего внимания и структуризации пространства. Это
                 мандала с кристаллами. Вам ее желательно разместить в часто видимое вам место, можно на алтарь или на
@@ -30,6 +30,11 @@ $this->title = 'Печать творца';
             <p>Треугольник вверх - мужской аспект.</p>
 
             <p>Треугольник вниз - женский аспект.</p>
+
+            <p class="text-center"><img src="/images/controller/products/stamp/bogorodica.png"
+                                        style="width: 100%; max-width: 400px; border-radius: 20px;" class="img-center"></p>
+
+            <p>Печать Богородицы - имеет тоже назначение, но применяется для женщин.</p>
 
 
         </div>
