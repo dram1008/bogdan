@@ -99,12 +99,6 @@ $this->title = 'Главная';
             В звучании СутРы великие мантры святых гармонично переплетаются с вокалом и горловым пением, выражающим истинный дух природы пробужденной сущности о которой говорил Будда.<br>
             Творчество проекта СутРа наполнено сакральным смыслом и призвано помочь всем нам обрести свой истинный Дом в наших сердцах.<br>
             Среди друзей их уже зовут "Богами Звука", что подтверждает каждый услышавший их.</p>
-            <p class="text-center"><img src="/images/icon.png" class="img-center"> </p>
-            <h2>Наша цель</h2>
-            <p>Весь этот проект является исключительно благотворительным. Его миссия заключается в предоставлении технологиий для людей готовым к новым возможностям, которые открываются для челоечества в новый Золотой Век
-                Эры Водолея.
-            </p>
-            <p>Мы собираем деньги для того чтобы предотсавить такую возможность для Вас. Только при помощи ваших благодарностей мы сможем вам предоставить такой подарок.</p>
         </div>
     </div>
 </section>
@@ -127,22 +121,38 @@ $this->title = 'Главная';
 </section>
 
 
-
-<!-- Contact Section -->
-<section id="contact" class="container content-section text-center">
+<section class="container content-section text-center">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
-
-
-            <h2>Наши контакты</h2>
-            <p>+7-925-237-45-01<br>+7-926-518-98-75</p>
-            <p>
-                <a href="mailto:avia@galaxysss.ru">avia@galaxysss.ru</a>
+            <h2>Наша цель</h2>
+            <p>Весь этот проект является исключительно благотворительным. Его миссия заключается в предоставлении технологиий для людей готовым к новым возможностям, которые открываются для челоечества в новый Золотой Век
+                Эры Водолея.
             </p>
-
+            <p>Мы собираем деньги для того чтобы предотсавить такую возможность для Вас. Только при помощи ваших благодарностей мы сможем вам предоставить такой подарок.</p>
+            <p ><img src="/images/controller/site/index/072414-birdly-17.jpg" width="100%" style="border-radius: 20px; border: 1px solid blue;"></p>
         </div>
     </div>
 </section>
+
+<section id="contact" class="content-section text-center" style="height: 400px;">
+    <div class="download-section" style="
+    border-bottom: 1px solid #87aad0;
+    border-top: 1px solid #87aad0;
+    height: 350px;
+    ">
+        <div class="container">
+            <div class="col-lg-8 col-lg-offset-2" style="color: #000000">
+
+                <h2>Наши контакты</h2>
+                <p>+7-925-237-45-01<br>+7-926-518-98-75</p>
+                <p>
+                    <a href="mailto:avia@galaxysss.ru">avia@galaxysss.ru</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 <!-- share Section -->
 <section id="share" class="container content-section text-center">
