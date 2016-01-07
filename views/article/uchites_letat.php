@@ -9,10 +9,11 @@ $this->title = 'УЧИТЕСЬ ЛЕТАТЬ. Совет Старейшин Со�
 ?>
 
 <!-- About Section -->
-<section id="about" class="container content-section">
+<section id="about" class="container content-section" style="margin-top: 50px;">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
-                <p><img class="thumbnail" src="http://www.galaxysss.ru/upload/FileUpload2/gs_cheneling_list/00000473/original/img.jpg" alt="УЧИТЕСЬ ЛЕТАТЬ. Совет Старейшин Созвездия Андромеды" style="width:100%;"></p><p>Здравствуйте, дорогие наши братья и сестры!</p>
+            <h1 style="text-transform: none;font-weight: normal;">УЧИТЕСЬ ЛЕТАТЬ. Совет Старейшин Созвездия Андромеды</h1>
+            <p><img  src="http://www.galaxysss.ru/upload/FileUpload2/gs_cheneling_list/00000473/original/img.jpg" alt="УЧИТЕСЬ ЛЕТАТЬ. Совет Старейшин Созвездия Андромеды" style="width:100%; border-radius: 20px;"></p><p>Здравствуйте, дорогие наши братья и сестры!</p>
 
                 <p>Мы поздравляем вас с наступившим 2016 годом, который сулит вам столько нового и интересного. Вы знаете уже, что станет он переломным для многих из вас – тех, кто быстрыми шагами продвигается по пути Вознесения.</p>
 
@@ -44,6 +45,28 @@ $this->title = 'УЧИТЕСЬ ЛЕТАТЬ. Совет Старейшин Со�
 
                 <p>Приняла Марта 4 января 2016 г.</p>
 
+        </div>
+    </div>
+</section>
+
+
+<!-- Download Section -->
+<section class="content-section text-center">
+    <div class="download-section" style="
+    border-bottom: 1px solid #87aad0;
+    border-top: 1px solid #87aad0;
+    ">
+        <div class="container">
+            <div class="col-lg-8 col-lg-offset-2" style="color: #000000">
+                <p class="text-center"><img src="/images/icon.png" class="img-center"> </p>
+                <h2>Поделиться</h2>
+                <?= $this->render('../blocks/share', [
+                    'url'         => \yii\helpers\Url::current([], true),
+                    'image'       => 'http://www.galaxysss.ru/upload/FileUpload2/gs_cheneling_list/00000473/original/img.jpg',
+                    'title'       => 'УЧИТЕСЬ ЛЕТАТЬ. Совет Старейшин Созвездия Андромеды',
+                    'description' => 'Мы поздравляем вас с наступившим 2016 годом, который сулит вам столько нового и интересного. Вы знаете уже, что станет он переломным для многих из вас – тех, кто быстрыми шагами продвигается по пути Вознесения.',
+                ]) ?>
+            </div>
         </div>
     </div>
 </section>

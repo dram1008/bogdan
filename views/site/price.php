@@ -5,7 +5,7 @@
 /* @var $pagesCount int */
 /* @var $page int */
 
-$this->title = 'Цены';
+$this->title = 'Наши подарки';
 ?>
 
 <!-- About Section -->
@@ -13,6 +13,7 @@ $this->title = 'Цены';
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
             <h2 class="text-center">Наши подарки</h2>
+            <p>Мы предлагаем вам всевозможные варианты сотрудничества с нами. Выберите наиболее подходящий для вас и получите его.</p>
 
             <?php foreach(\app\models\Shop\Product::query()->orderBy(['price' => SORT_ASC])->all() as $item) { ?>
                 <div class="row">

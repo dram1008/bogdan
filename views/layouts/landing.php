@@ -147,7 +147,7 @@ JS
         <p><a href="/copyright">&copy;</a> www.bog-dan.com 2015-2016 & Birdly® of <a href="http://somniacs.co/" target="_blank">Somniacs</a><br><span style="font-size: 80%">При участии богов <a href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B0" target="_blank">РА</a>, <a target="_blank" target="_blank" href="https://ru.wikipedia.org/wiki/%D0%A1%D1%83%D1%80%D1%8C%D1%8F">Сурья</a>, <a target="_blank" href="https://ru.wikipedia.org/wiki/%D0%9D%D0%B0%D1%80%D0%B0%D1%8F%D0%BD%D0%B0">Нараяна</a>, <a href="https://ru.wikipedia.org/wiki/%D0%9F%D0%B5%D1%80%D1%83%D0%BD" target="_blank">Перун</a></span></p>
         <p><a href="/hologram"><img src="/images/holo.png" style="opacity: 0.3" onmouseover="$(this).css('opacity', 1);" onmouseout="$(this).css('opacity', 0.3);"></a></p>
 
-        <p style="font-size: 90%"><a href="http://www.galaxysss.ru/" target="_blank">Галактичский Союз Сил Света</a><br><a
+        <p style="font-size: 90%">С Любовью и Светом<br><a href="http://www.galaxysss.ru/" target="_blank">Галактичский Союз Сил Света</a><br><a
                 href="http://www.galaxysss.ru/vasudev/login" target="_blank">Элитный Клуб Фрактального Бизнеса «Vasudev
                 Bagavan»</a></p>
     </div>

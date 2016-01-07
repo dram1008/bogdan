@@ -9,14 +9,12 @@ $this->title = 'Что такое Дух? Послание Архангела М
 ?>
 
 <!-- About Section -->
-<section id="about" class="container content-section">
+<section id="about" class="container content-section" style="margin-top: 50px;">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
-            <p><img class="thumbnail" src="http://www.galaxysss.ru//upload/FileUpload2/gs_cheneling_list/00000472/original/img.jpg" alt="Послание Архангела Михаила за январь 2016 года" style="width:100%;"></p><p><strong>Что такое Дух?<br>
-                    Послание Архангела Михаила<br>
-                    через Ронну Герман</strong></p>
+            <h1 style="text-transform: none;font-weight: normal;">Что такое Дух? Послание Архангела Михаила через Ронну Герман</h1>
+            <p><img src="http://www.galaxysss.ru/upload/FileUpload2/gs_cheneling_list/00000472/original/img.jpg" alt="Послание Архангела Михаила за январь 2016 года" style="width:100%; border-radius: 20px;"></p>
 
-            <p><a href="http://www.galaxysss.ru//chenneling/2016/01/04/arhangel_mihail_chto_takoe_duh" target="_blank">Начало</a></p>
 
             <p>Гармонизированная, четырехмерная эмоциональная сфера теперь готова объединяться с первым подпланом пятимерной ментальной сферы, что открывает совершенно новый мир для приобретения опыта и обучения.</p>
 
@@ -40,6 +38,32 @@ $this->title = 'Что такое Дух? Послание Архангела М
 
             <p>&nbsp;Я — Архангел Михаил.</p>
 
+
+
+
+
+
+        </div>
+    </div>
+</section>
+
+<!-- Download Section -->
+<section class="content-section text-center">
+    <div class="download-section" style="
+    border-bottom: 1px solid #87aad0;
+    border-top: 1px solid #87aad0;
+    ">
+        <div class="container">
+            <div class="col-lg-8 col-lg-offset-2" style="color: #000000">
+                <p class="text-center"><img src="/images/icon.png" class="img-center"> </p>
+                <h2>Поделиться</h2>
+                <?= $this->render('../blocks/share', [
+                    'url'         => \yii\helpers\Url::current([], true),
+                    'image'       => 'http://www.galaxysss.ru/upload/FileUpload2/gs_cheneling_list/00000472/original/img.jpg',
+                    'title'       => 'Что такое Дух? Послание Архангела Михаила через Ронну Герман',
+                    'description' => 'Гармонизированная, четырехмерная эмоциональная сфера теперь готова объединяться с первым подпланом пятимерной ментальной сферы, что открывает совершенно новый мир для приобретения опыта и обучения.',
+                ]) ?>
+            </div>
         </div>
     </div>
 </section>

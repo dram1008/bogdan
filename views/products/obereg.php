@@ -38,25 +38,36 @@ $this->title = 'Оберег Ангела-Хранителя';
 <!-- Download Section -->
 <section class="content-section text-center">
     <div class="download-section" style="
+    border-bottom: 1px solid #87aad0;
     border-top: 1px solid #87aad0;
     ">
         <div class="container">
             <div class="col-lg-8 col-lg-offset-2" style="color: #000000">
                 <p class="text-center"><img src="/images/icon.png" class="img-center"> </p>
-                <h2>Поделиться</h2>
-                <?= $this->render('../blocks/share', [
-                    'url'         => \yii\helpers\Url::current([], true),
-                    'image'       => \yii\helpers\Url::to('/images/controller/products/rod/1385868_526638854089371_352584650_n2.jpg', true),
-                    'title'       => 'Персональная корректировка «Восстановление Рода» от Мастера Максима Кравцова',
-                    'description' => 'Корректировка проводится персонально для человека без участия членов семьи. Продолжительность: 2 часа при личной встрече.
-            Что вы получите в пезультате:
-             - Легкость сердца сразу после коректировки;
-             - Гармония в отношениях в родными;
-             - Наставления как поддерживать гармоничные отношения;
-             - Налаживание и подъем энергетики в других сферах деятелсьности.',
-                ]) ?>
+                <h2>Наши контакты</h2>
+                <p>+7-925-237-45-01<br>+7-926-518-98-75</p>
+                <p>
+                    <a href="mailto:avia@galaxysss.ru" style="color: #000000;">avia@galaxysss.ru</a>
+                </p>
             </div>
         </div>
     </div>
 </section>
 
+<!-- share Section -->
+<section class="container content-section text-center">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <h2>Поделиться</h2>
+            <?= $this->render('../blocks/share', [
+                'url'         => \yii\helpers\Url::current([], true),
+                'image'       => \yii\helpers\Url::to('/images/controller/products/key_heart/header.jpg', true),
+                'title'       => 'Оберег Ангела-Хранителя',
+                'description' => 'Оберег желательно разместить в спальной комнате чтобы в лежачем положении оберег был прямо виден. Или разместить на алтаре если такой имеется.',
+            ]) ?>
+
+
+
+        </div>
+    </div>
+</section>

@@ -41,3 +41,44 @@ $this->title = 'Печать творца';
     </div>
 </section>
 
+
+<!-- Download Section -->
+<section class="content-section text-center">
+    <div class="download-section" style="
+    border-bottom: 1px solid #87aad0;
+    border-top: 1px solid #87aad0;
+    ">
+        <div class="container">
+            <div class="col-lg-8 col-lg-offset-2" style="color: #000000">
+                <p class="text-center"><img src="/images/icon.png" class="img-center"> </p>
+                <h2>Наши контакты</h2>
+                <p>+7-925-237-45-01<br>+7-926-518-98-75</p>
+                <p>
+                    <a href="mailto:avia@galaxysss.ru" style="color: #000000;">avia@galaxysss.ru</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- share Section -->
+<section class="container content-section text-center">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <h2>Поделиться</h2>
+            <?= $this->render('../blocks/share', [
+                'url'         => \yii\helpers\Url::current([], true),
+                'image'       => \yii\helpers\Url::to('/images/controller/products/stamp/IMG_0571.jpg', true),
+                'title'       => 'Печать Творца и Богородицы',
+                'description' => 'Печать Творца - это инструмент для концентрации вашего внимания и структуризации пространства. Это
+                мандала с кристаллами.',
+            ]) ?>
+
+
+
+        </div>
+    </div>
+</section>
+
+
+
