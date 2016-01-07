@@ -15,6 +15,8 @@ $this->title = 'Медиа материалы';
         <div class="col-lg-8 col-lg-offset-2">
             <h2 class="text-center">Медиа материалы</h2>
 
+            <p class="text-center">Эволюция Сознания Человека</p>
+            <p class="text-center"><img src="/images/controller/site/media/12279213_634318063337452_2477462852464822447_n.jpg" class="img-center" style="border-radius: 20px; width:100%;"></p>
             <p class="text-center">Траектория движения крыльев птиц, стрекоз, летучей мыши и насекомых</p>
             <p class="text-center"><img src="/images/controller/site/media/tumblr_nxmafvUP9e1tl8u0ko1_500.gif"  class="img-center"></p>
             <p class="text-center">Летящий Ангел</p>
