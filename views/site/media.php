@@ -58,7 +58,7 @@ $this->title = 'Медиа материалы';
 </section>
 
 <!-- Download Section -->
-<section id="download" class="content-section text-center">
+<section class="content-section text-center">
     <div class="download-section" style="
     border-bottom: 1px solid #87aad0;
     border-top: 1px solid #87aad0;
@@ -77,7 +77,7 @@ $this->title = 'Медиа материалы';
 </section>
 
 <!-- share Section -->
-<section id="share" class="container content-section text-center">
+<section class="container content-section text-center">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
             <h2>Поделиться</h2>
