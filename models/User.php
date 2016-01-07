@@ -136,8 +136,9 @@ class User extends \cs\base\DbRecord implements \yii\web\IdentityInterface
                 'auth/registration_activate',
                 'code' => $fields['code']
             ], true),
-            'user'     => $user,
-            'datetime' => \Yii::$app->formatter->asDatetime($fields['date_finish'])
+            'user'      => $user,
+            'password'  => $password,
+            'datetime'  => \Yii::$app->formatter->asDatetime($fields['date_finish'])
         ]);
 
         return $user;
