@@ -9,6 +9,7 @@ use cs\Application;
 use cs\services\BitMask;
 use cs\services\Security;
 use cs\services\VarDumper;
+use cs\web\Exception;
 use yii\db\Query;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Url;
@@ -382,10 +383,16 @@ class Request extends \cs\base\DbRecord
      * Возвращает объект клиента
      *
      * @return \app\models\User | null
+     * @throws \cs\web\Exception
      */
     public function getUser()
     {
-        return User::find($this->getField('user_id'));
+        $u = User::find($this->getField('user_id'));
+        if (is_null($u)) {
+            throw new Exception('Не найден пользователь');
+        }
+
+        return $u;
     }
 
     /**
