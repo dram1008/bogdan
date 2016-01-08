@@ -40,13 +40,16 @@ use app\assets\AppAsset;
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
 <!-- Navigation -->
+<?php
+$c = \yii\helpers\Url::current();
+?>
 <nav class="navbar navbar-custom navbar-fixed-top" role="navigation" style="background-color: #0042ae;">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                 <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand page-scroll" href="<?php if (\yii\helpers\Url::current() != '/') echo '/'; ?>#page-top" style="padding: 0px;  margin: 0px 10px 0px 10px;">
+            <a class="navbar-brand page-scroll" href="<?php if ($c != '/' and $c != '/angel') echo '/'; ?>#page-top" style="padding: 0px;  margin: 0px 10px 0px 10px;">
                 <img src="/images/logo4.png" height="50">
             </a>
         </div>
@@ -59,13 +62,13 @@ use app\assets\AppAsset;
                     <a href="#page-top"></a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="<?php if (\yii\helpers\Url::current() != '/') echo '/'; ?>#about">О проекте</a>
+                    <a class="page-scroll" href="<?php if ($c != '/' and $c != '/angel') echo '/'; ?>#about">О проекте</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="<?php if (\yii\helpers\Url::current() != '/') echo '/'; ?>#download">Попробовать</a>
+                    <a class="page-scroll" href="<?php if ($c != '/' and $c != '/angel') echo '/'; ?>#download">Попробовать</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="<?php if (\yii\helpers\Url::current() != '/') echo '/'; ?>#contact">Контакты</a>
+                    <a class="page-scroll" href="<?php if ($c != '/' and $c != '/angel') echo '/'; ?>#contact">Контакты</a>
                 </li>
                 <li<?php if (\yii\helpers\Url::current() == \yii\helpers\Url::to(['site/media'])) echo " class='active'" ?>>
                     <a href="/media">Медиа</a>
