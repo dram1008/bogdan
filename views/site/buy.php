@@ -57,7 +57,7 @@ $this->registerJs(<<<JS
             },
             success: function(ret) {
                 if ($('input[name="sum"]').val() > 15000) {
-                    window.location = '/requests/' . ret;
+                    window.location = '/requests/' + ret;
                 } else {
                     $('#formPayLabel').val('bogdan.' + ret);
                     $('#formPay').submit();
