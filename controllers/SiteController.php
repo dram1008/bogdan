@@ -280,7 +280,7 @@ class SiteController extends BaseController
         $message = [
             'Стоимость с учетом доставки: ' . $fields['price'],
             'Доставка: ' . \app\models\Shop\Request::$dostavkaList[$fields['dostavka']],
-            (in_array($fields['dostavka'],[3,4,5]))? 'Адрес: ' . $fields['dostavka']  : '',
+            (in_array($fields['dostavka'],[3,4,5]))? 'Адрес: ' . $fields['address']  : '',
         ];
         $item->addStatusToClient([
             'status' => \app\models\Shop\Request::STATUS_ORDER_DOSTAVKA,
