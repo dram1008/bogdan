@@ -6,6 +6,8 @@
 $this->title = 'Заказ #' . $request->getId();
 
 $client = $request->getClient();
+\cs\services\VarDumper::dump($request);
+
 $product = $request->getProduct();
 ?>
 
@@ -149,7 +151,6 @@ $product = $request->getProduct();
         <div class="col-lg-12" style="padding-bottom: 50px;">
             <h2 class="text-center">Заказ #<?= $request->getId() ?></h2>
 <?php
-\cs\services\VarDumper::dump($client);
 ?>
             <p>Пользователь: <a href="http://www.galaxysss.ru/user/<?= $client->getId() ?>" target="_blank"><?= $client->getEmail() ?></a> <?= $client->getField('name_first') ?></p>
             <p>Продукт: <a href="<?= \yii\helpers\Url::to(['admin_products/edit', 'id' => $product->getId()]) ?>" target="_blank"><?= $product->getField('name') ?></a></p>
