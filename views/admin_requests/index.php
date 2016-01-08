@@ -76,6 +76,7 @@ JS
                 'class' => 'yii\grid\SerialColumn', // <-- here
                 // you may configure additional properties here
             ],
+            'id',
             'address',
             'phone',
             [
