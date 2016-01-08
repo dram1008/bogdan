@@ -320,6 +320,12 @@ class SiteController extends BaseController
         ]);
     }
 
+    public function actionAngel()
+    {
+        return $this->render([
+        ]);
+    }
+
     /**
      * Прием денег из яндекса
      *

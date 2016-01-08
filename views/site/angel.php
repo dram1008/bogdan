@@ -17,7 +17,7 @@ $this->title = 'Главная';
             <h2>Поделиться</h2>
             <?= $this->render('../blocks/share', [
                 'url'         => \yii\helpers\Url::current([], true),
-                'image'       => \yii\helpers\Url::to('/images/promo-facebook1.jpg', true),
+                'image'       => \yii\helpers\Url::to('/images/promo-facebook2.jpg', true),
                 'title'       => 'Проект «Крылья Ангела». Летайте как птицы! Получите билет от нас в подарок!',
                 'description' => 'Проект Крылья Ангела представляет собой тренажер для полетов в виртуальной реальности вместе с кристальным звуком. По факту этот тренажер является персональным кинотеатром 5D.
 
