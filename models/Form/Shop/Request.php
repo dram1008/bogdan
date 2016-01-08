@@ -27,6 +27,7 @@ class Request extends \cs\base\BaseForm
     public $status;
     public $date_create;
     public $comment;
+    public $phone;
     public $is_answer_from_shop;
     public $is_answer_from_client;
 
@@ -42,6 +43,12 @@ class Request extends \cs\base\BaseForm
             [
                 'comment',
                 'Комментарий',
+                0,
+                'string',
+            ],
+            [
+                'phone',
+                'Телефон',
                 0,
                 'string',
             ],

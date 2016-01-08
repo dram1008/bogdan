@@ -262,6 +262,7 @@ class SiteController extends BaseController
      * - dostavka - int -
      * - address - string -
      * - price - int - полная цена заказа с учетом доставки
+     * - phone - string - телефон
      *
      * @return string|Response
      */
@@ -272,14 +273,22 @@ class SiteController extends BaseController
         $fields['address'] = self::getParam('address');
         $fields['dostavka'] = self::getParam('dostavka');
         $fields['price'] = self::getParam('price');
+        $fields['phone'] = self::getParam('phone');
 
         $item = \app\models\Shop\Request::insert($fields);
         $item->addStatusToShop(\app\models\Shop\Request::STATUS_SEND_TO_SHOP);
+        $item->addStatusToClient([
+            'status' => \app\models\Shop\Request::STATUS_ORDER_DOSTAVKA,
+            'message' => 'Стоимость с учетом доставки: ' . $fields['price'] . "\n" .
+                         'Доставка: ' . \app\models\Shop\Request::$dostavkaList[$fields['dostavka']] . "\n".
+                         (in_array($fields['dostavka'],[3,4,5]))? 'Адрес: ' . $fields['dostavka']  : ''
+
+        ]);
 
         // отправка письма
-        Application::mail($item->getClient()->getEmail(), 'Ваш подарок', 'new_request_client', [
-            'request' => $item
-        ]);
+//        Application::mail($item->getClient()->getEmail(), 'Ваш подарок', 'new_request_client', [
+//            'request' => $item
+//        ]);
 
         return self::jsonSuccess($item->getId());
     }

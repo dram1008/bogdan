@@ -15,6 +15,9 @@ $this->registerJs(<<<JS
         if ($(this).val() == 3 || $(this).val() == 4) {
             $('.field-request-address').show();
             newPrice = productPrice + 300;
+        } else if ($(this).val() == 5) {
+            $('.field-request-address').show();
+            newPrice = productPrice + 1000;
         } else {
             $('.field-request-address').hide();
             newPrice = productPrice;
@@ -49,11 +52,16 @@ $this->registerJs(<<<JS
                 comment: $('#request-comment').val(),
                 dostavka: dd,
                 price: $('input[name="sum"]').val(),
+                phone: $('#request-phone').val(),
                 address: $('#request-address').val()
             },
             success: function(ret) {
-                $('#formPayLabel').val('bogdan.' + ret);
-                $('#formPay').submit();
+                if ($('input[name="sum"]').val() > 15000) {
+                    window.location = '/requests/' . ret;
+                } else {
+                    $('#formPayLabel').val('bogdan.' + ret);
+                    $('#formPay').submit();
+                }
             }
 
         });
@@ -78,6 +86,11 @@ JS
                 <div class="col-lg-12">
                     <img src="<?= $product->getImage() ?>" width="100" style="float: left; margin-right: 20px;"/>
                     <?= $product->getField('name') ?>
+                </div>
+                <div class="col-lg-12" style="margin-top: 12px;">
+                    Итого: <span
+                        id="productPrice"><?= Yii::$app->formatter->asDecimal($product->getField('price'), 0) ?></span>
+                    руб
                 </div>
             </div>
 
@@ -238,6 +251,7 @@ JS
                 ?>
                 <?= $model->field($form, 'dostavka')->radioList(\app\models\Shop\Request::$dostavkaList) ?>
                 <?= $model->field($form, 'address')->textarea(['rows' => 3]) ?>
+                <?= $model->field($form, 'phone') ?>
                 <?= $model->field($form, 'comment')->textarea(['rows' => 3]) ?>
                 <?php \yii\bootstrap\ActiveForm::end(); ?>
                 Оплата:
@@ -269,11 +283,7 @@ JS
 
                             </div>
                         </div>
-                        <div class="col-lg-12">
-                            Итого: <span
-                                id="productPrice"><?= Yii::$app->formatter->asDecimal($product->getField('price'), 0) ?></span>
-                            руб
-                        </div>
+
                     </div>
                     <div class="row">
                         <div class="col-lg-12" style="margin-top: 30px;">
