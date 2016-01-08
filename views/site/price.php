@@ -18,9 +18,10 @@ $this->title = 'Наши подарки';
             <?php foreach(\app\models\Shop\Product::query()->orderBy(['price' => SORT_ASC])->all() as $item) { ?>
                 <div class="row">
                     <div class="col-lg-4">
-                        <p><?= $item['name'] ?></p>
+                        <p><img src="<?= $item['image'] ?>" width="100%" style="border-radius: 10px;"></p>
                     </div>
                     <div class="col-lg-8">
+                        <p><b><?= $item['name'] ?></b></p>
                         <?= $item['content'] ?>
                         <p>= <b style="font-family: 'courier new'">RUB <?= Yii::$app->formatter->asDecimal($item['price'], 0) ?></b></p>
                         <?php if ($item['price'] > 100000) { ?>
