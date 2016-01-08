@@ -29,7 +29,7 @@ $this->title = 'О нас';
         <div class="col-lg-8 col-lg-offset-2">
             <h2 class="text-center">О нас</h2>
 
-            <p class="text-center"><img src="/images/controller/site/about/img2.jpg" height="400" class="img-center" style="border-radius: 20px;"></p>
+            <p class="text-center"><img src="/images/controller/site/about/img.jpg" height="400" class="img-center" style="border-radius: 20px;"></p>
             <p>Основателем компании является человек именуемый БогДан, обладающий колосальными знаниями и опытом полетов в том числе и знание своих прошлых жизней где он ранее летал. В этой жизни он решил сделать людям подарок в виде предоставления технологии полетов. Проект Крылья Ангела и является стартом такой манифестации.</p>
             <p>Компания «Авиалинии БогДан» являтся полноправным представителем Бога на планете Земля и одной из ее вледельцев.</p>
             <p><img src="/images/controller/site/about/1450666172_9RAcQICogZ.jpg" style="width: 100%;max-width: 800px;border-radius: 20px;" ></p>

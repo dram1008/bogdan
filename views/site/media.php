@@ -53,6 +53,7 @@ $this->title = 'Медиа материалы';
             <p class="text-center">Статьи</p>
             <p><a href="/article/arhangelMihail_2016_01">Что такое Дух? Послание Архангела Михаила через Ронну Герман</a></p>
             <p><a href="/article/uchites_letat">УЧИТЕСЬ ЛЕТАТЬ. Совет Старейшин Созвездия Андромеды</a></p>
+            <p><a href="/article/merkaba">Мер-ка-ба - тело света для полетов в мироздании</a></p>
 
 
         </div>

@@ -44,4 +44,11 @@ class ArticleController extends BaseController
         ]);
     }
 
+    public function actionMerkaba()
+    {
+
+        return $this->render([
+        ]);
+    }
+
 }
