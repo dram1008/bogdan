@@ -14,7 +14,7 @@ $this->title = 'Квантовая голограмма';
         <div class="col-lg-8 col-lg-offset-2">
             <h2 class="text-center">Квантовая голограмма</h2>
 
-            <p class="text-center"><img src="/images/controller/site/hologram/holo.png"
+            <p class="text-center"><img src="http://www.laxsmi.ru/ck/ckfinder/userfiles/images/BrowserPreview_tmp-2(1).gif"
                                         style="max-width: 400px; width: 100%;"></p>
 
             <p class="lead" style="text-align: justify">
