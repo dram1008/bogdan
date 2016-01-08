@@ -326,6 +326,12 @@ class SiteController extends BaseController
         ]);
     }
 
+    public function actionDostavka()
+    {
+        return $this->render([
+        ]);
+    }
+
     /**
      * Прием денег из яндекса
      *
@@ -492,11 +498,6 @@ class SiteController extends BaseController
     }
 
     public function actionCopyright()
-    {
-        return $this->render([]);
-    }
-
-    public function actionDostavka()
     {
         return $this->render([]);
     }

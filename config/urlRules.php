@@ -31,6 +31,7 @@ return [
     'contact'                               => 'site/contact',
     'sutra'                                 => 'site/sutra',
     'angel'                                 => 'site/angel',
+    'dostavka'                              => 'site/dostavka',
     'price'                                 => 'site/price',
     'buy/<id:\\d+>'                         => 'site/buy',
     'buy/<id:\\d+>/success'                 => 'site/buy_success',

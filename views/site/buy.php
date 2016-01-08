@@ -74,7 +74,39 @@ JS
     , \yii\web\View::POS_HEAD);
 ?>
 
-
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel" style="color: #000000">Условия доставки подарков</h4>
+            </div>
+            <div class="modal-body" style="color: #000000">
+                <p>
+                    У нас есть несколько способов получения наших подарков. Во первых вы можете из получить сразу после получения билета или во время вашего вылета.
+                </p>
+                <p>
+                    На месте полета - Вы получаете подарки сразу на месте полета, когда он состоится.
+                </p>
+                <p>
+                    Самовывоз - Вы можете приехать к нам за подарком самостоятельно.
+                </p>
+                <p>
+                    Доставка по Москве - Доставка осуществляется за 1-2 рабочих дня после оформления заказа. Доставка осуществляется пока только до метро. Стоимость 300 руб.
+                </p>
+                <p>
+                    Доставка по России - Доставка осуществляется за 1-2 рабочих дня после оформления заказа. Доставка осуществляется по почте России. Стоимость 300 руб.
+                </p>
+                <p>
+                    Доставка по миру - Доставка осуществляется за 3-4 рабочих дня после оформления заказа. Доставка осуществляется международными компаниями TNT, DHL. Стоимость 1000 руб.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- About Section -->
 <section id="about" class="container content-section" style="margin-top: 50px;margin-bottom: 100px;">
@@ -87,10 +119,15 @@ JS
                     <img src="<?= $product->getImage() ?>" width="100" style="float: left; margin-right: 20px;"/>
                     <?= $product->getField('name') ?>
                 </div>
-                <div class="col-lg-12" style="margin-top: 12px;">
-                    Итого: <span
+                <div class="col-lg-6" style="margin-top: 12px;">
+                    <div class="alert alert-info">Итого: <span
                         id="productPrice"><?= Yii::$app->formatter->asDecimal($product->getField('price'), 0) ?></span>
-                    руб
+                    руб</div>
+                </div>
+                <div class="col-lg-6" style="margin-top: 12px;">
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="width: 100%;">
+                        О доставке
+                    </button>
                 </div>
             </div>
 
