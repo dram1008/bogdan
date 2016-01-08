@@ -81,7 +81,12 @@ JS
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="myModalLabel" style="color: #000000">Условия доставки подарков</h4>
             </div>
-            <div class="modal-body" style="color: #000000">
+            <style>
+                .modal-body p {
+                    font-size: 100%;
+                }
+            </style>
+            <div class="modal-body" style="color: #000000;">
                 <p>
                     У нас есть несколько способов получения наших подарков. Во первых вы можете из получить сразу после получения билета или во время вашего вылета.
                 </p>
@@ -120,7 +125,7 @@ JS
                     <?= $product->getField('name') ?>
                 </div>
                 <div class="col-lg-6" style="margin-top: 12px;">
-                    <div class="alert alert-info">Итого: <span
+                    <div class="alert alert-info" style="color: #000000;font-size: 200%;">Итого: <span
                         id="productPrice"><?= Yii::$app->formatter->asDecimal($product->getField('price'), 0) ?></span>
                     руб</div>
                 </div>
@@ -133,7 +138,7 @@ JS
 
 
             <div class="row" id="blockLogin"<?php if (!Yii::$app->user->isGuest) echo(' style="display: none;"') ?>>
-                <div class="col-lg-12" style="padding-bottom: 30px;">
+                <div class="col-lg-12" style="padding-bottom: 30px; font-size: 200%;">
                     Вы не авторизованы. Если вы в первый раз на нашем сайте, то зарегистрируйтесь. Или войдит если у вас есть логин.
                 </div>
                 <div class="col-lg-6">
@@ -327,7 +332,7 @@ JS
                             <div class="btn-group" role="group" aria-label="...">
 
                                 <input type="button" value="Перейти к оплате"
-                                       class="btn btn-default btn-lg buttonSubmit" style="width: 400px;">
+                                       class="btn btn-success btn-lg buttonSubmit" style="width: 400px; border: 2px solid white; border-radius: 20px;">
                             </div>
                         </div>
                     </div>

@@ -132,6 +132,15 @@ class Request extends \cs\base\DbRecord
                 'color' => 'warning',
             ],
         ],
+        self::STATUS_DOSTAVKA_GET_MYSELF_POLET_DONE       => [
+            'client'   => 'Подарок получен',
+            'shop'     => 'Подарок получен',
+            'style'    => 'success',
+            'timeLine' => [
+                'icon'  => 'glyphicon-thumbs-up',
+                'color' => 'success',
+            ],
+        ],
     ];
 
 

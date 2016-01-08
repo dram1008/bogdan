@@ -27,12 +27,11 @@ $this->title = 'О нас';
 <section id="about" class="container content-section">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
-            <h2 class="text-center">О нас</h2>
+            <h2 class="text-center">О нас<br>Авиалинии БогДан</h2>
 
-            <p class="text-center"><img src="/images/controller/site/about/img.jpg" height="400" class="img-center" style="border-radius: 20px;"></p>
             <p>Основателем компании является человек именуемый БогДан, обладающий колосальными знаниями и опытом полетов в том числе и знание своих прошлых жизней где он ранее летал. В этой жизни он решил сделать людям подарок в виде предоставления технологии полетов. Проект Крылья Ангела и является стартом такой манифестации.</p>
             <p>Компания «Авиалинии БогДан» являтся полноправным представителем Бога на планете Земля и одной из ее вледельцев.</p>
-            <p><img src="/images/controller/site/about/1450666172_9RAcQICogZ.jpg" style="width: 100%;max-width: 800px;border-radius: 20px;" ></p>
+            <p><img src="/images/controller/site/about/1450666172_9RAcQICogZ.jpg" style="width: 100%;max-width: 800px;border-radius: 10px;" ></p>
             <p>Компания предоставляет людям новую технологию перелетов в пространстве при помощи «Крыльев Ангела».<br>
                 Компания включает школу по обучению, <a href="http://www.galaxysss.ru/category/medical/344" target="_blank">Институт Многомерной Медицины</a>, <a href="http://www.galaxysss.ru/category/medical/166" target="_blank">Институт Квантовой Генетики</a> и технологии виртуальной реальности.<br>
                 Также предоставляет перелеты на обычных самолетах. Отличительным знаком компании является «Крылья Ангела».</p>
