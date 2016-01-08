@@ -277,11 +277,14 @@ class SiteController extends BaseController
 
         $item = \app\models\Shop\Request::insert($fields);
         $item->addStatusToShop(\app\models\Shop\Request::STATUS_SEND_TO_SHOP);
+        $message = [
+            'Стоимость с учетом доставки: ' . $fields['price'],
+            'Доставка: ' . \app\models\Shop\Request::$dostavkaList[$fields['dostavka']],
+            (in_array($fields['dostavka'],[3,4,5]))? 'Адрес: ' . $fields['dostavka']  : '',
+        ];
         $item->addStatusToClient([
             'status' => \app\models\Shop\Request::STATUS_ORDER_DOSTAVKA,
-            'message' => 'Стоимость с учетом доставки: ' . $fields['price'] . "\n" .
-                         'Доставка: ' . \app\models\Shop\Request::$dostavkaList[$fields['dostavka']] . "\n".
-                         (in_array($fields['dostavka'],[3,4,5]))? 'Адрес: ' . $fields['dostavka']  : ''
+            'message' => join("\n", $message),
 
         ]);
 
