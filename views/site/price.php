@@ -15,7 +15,12 @@ $this->title = 'Наши подарки';
             <h2 class="text-center">Наши подарки</h2>
             <p>Мы предлагаем вам всевозможные варианты сотрудничества с нами. Выберите наиболее подходящий для вас и получите его.</p>
 
-            <?php foreach(\app\models\Shop\Product::query()->orderBy(['price' => SORT_ASC])->all() as $item) { ?>
+            <?php
+            $all = \app\models\Shop\Product::query()->orderBy(['price' => SORT_ASC])->all();
+            for($i = 0; $i < count($all); $i++) {
+                $item = &$all[$i];
+
+                ?>
                 <div class="row">
                     <div class="col-lg-4">
                         <p><img src="<?= $item['image'] ?>" width="100%" style="border-radius: 10px;"></p>
@@ -31,6 +36,9 @@ $this->title = 'Наши подарки';
                         <?php } ?>
                     </div>
                 </div>
+                <?php if ($i < (count($all) - 1)) { ?>
+                    <hr>
+                <?php } ?>
             <?php } ?>
 
         </div>
