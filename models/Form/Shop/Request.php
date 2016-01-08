@@ -30,6 +30,7 @@ class Request extends \cs\base\BaseForm
     public $phone;
     public $is_answer_from_shop;
     public $is_answer_from_client;
+    public $last_message_time;
 
     function __construct($fields = [])
     {

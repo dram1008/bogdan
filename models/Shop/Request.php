@@ -327,6 +327,7 @@ class Request extends \cs\base\DbRecord
         $fieldsRequest = [
             'is_answer_from_shop'   => ($direction == self::DIRECTION_TO_CLIENT) ? 1 : 0,
             'is_answer_from_client' => ($direction == self::DIRECTION_TO_CLIENT) ? 0 : 1,
+            'last_message_time'     => time(),
         ];
         if (isset($fields['status'])) {
             $fieldsRequest['status'] = $fields['status'];

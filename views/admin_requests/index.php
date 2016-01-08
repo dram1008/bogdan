@@ -52,7 +52,10 @@ JS
 
     <?= \yii\grid\GridView::widget([
         'dataProvider' => new \yii\data\ActiveDataProvider([
-            'query'      => \app\models\Shop\Request::query()->orderBy(['is_answer_from_client' => SORT_DESC]),
+            'query'      => \app\models\Shop\Request::query()->orderBy([
+                'is_answer_from_client' => SORT_DESC,
+                'last_message_time'     => SORT_DESC,
+            ]),
             'pagination' => [
                 'pageSize' => 50,
             ],
@@ -74,6 +77,7 @@ JS
                 // you may configure additional properties here
             ],
             'address',
+            'phone',
             [
                 'header' => 'Время',
                 'content' => function ($model, $key, $index, $column) {
