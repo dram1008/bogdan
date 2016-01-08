@@ -48,7 +48,7 @@ $this->title = 'О нас';
 
             <p><iframe allowfullscreen=""  frameborder="0" height="315" src="https://www.youtube.com/embed/gWLHIusLWOc" width="100%"></iframe></p>
 
-            <p>Союзничество с нами</p>
+            <h2>Союзничество с нами</h2>
             <p>Мы продаем тренажер Birdly@ на особых условиях для России. По вопросам сотрудничества пишите на <a href="mailto:avia@galaxysss.ru">avia@galaxysss.ru</a>.</p>
 
 
