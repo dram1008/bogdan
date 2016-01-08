@@ -79,9 +79,15 @@ JS
             'address',
             'phone',
             [
-                'header' => 'Время',
+                'header' => 'Время создания',
                 'content' => function ($model, $key, $index, $column) {
                     return Yii::$app->formatter->asDatetime($model['date_create']);
+                },
+            ],
+            [
+                'header' => 'Время последнего ответа',
+                'content' => function ($model, $key, $index, $column) {
+                    return Yii::$app->formatter->asDatetime($model['last_message_time']);
                 },
             ],
             [
@@ -90,7 +96,14 @@ JS
                     return Html::tag('pre', nl2br($model['comment']));
                 },
             ],
-            'is_answer_from_client',
+            [
+                'header' => 'Еслт ответ?',
+                'content' => function($item) {
+                    if ($item['is_answer_from_client'] == 1) {
+                        return Html::tag('span',null,['class' => 'glyphicon glyphicon-envelope']);
+                    }
+                }
+            ],
         ]
     ]) ?>
 
