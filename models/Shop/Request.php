@@ -123,6 +123,15 @@ class Request extends \cs\base\DbRecord
                 'color' => 'warning',
             ],
         ],
+        self::STATUS_DOSTAVKA_GET_MYSELF_POLET_WAIT       => [
+            'client'   => 'Ожидает на месте полета',
+            'shop'     => 'Ожидает на месте полета',
+            'style'    => 'success',
+            'timeLine' => [
+                'icon'  => 'glyphicon glyphicon-plane',
+                'color' => 'warning',
+            ],
+        ],
     ];
 
 
