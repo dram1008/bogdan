@@ -22,4 +22,5 @@ $this->registerMetaTag(['name' => 'og:description', 'content' => $description]);
     <a href="<?= (string)(new csUrl('http://www.facebook.com/sharer.php', [
         'u' => $url,
     ])) ?>" target="_blank" class="btn btn-default btn-lg">facebook</a>
+    <a href="<?= (string)(new csUrl('http://vkontakte.ru/share.php', ['url' => $url])) ?>" target="_blank" class="btn btn-default btn-lg">vkontakte</a>
 </p>
