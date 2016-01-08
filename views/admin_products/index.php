@@ -66,6 +66,12 @@ JS
             ],
             'name',
             'price',
+            [
+                'header'  => 'Удалить',
+                'content' => function($item) {
+                    return Html::button('Удалить', [ 'class' => 'btn btn-danger btn-xs buttonDelete', 'data-id' => $item['id']]);
+                },
+            ],
 
         ]
     ]) ?>
