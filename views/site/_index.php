@@ -134,7 +134,7 @@
         <div class="container">
             <div class="col-lg-8 col-lg-offset-2" style="color: #000000">
 
-                <p class="text-center"><img src="/images/icon.png" class="img-center"> </p>
+                <p class="text-center"><img src="/images/icon.png" class="img-center"></p>
                 <h2>Наши контакты</h2>
                 <p>+7-925-237-45-01<br>+7-926-518-98-75</p>
                 <p>

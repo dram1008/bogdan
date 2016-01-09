@@ -46,6 +46,8 @@ return [
     'article/arhangelMihail_2016_01'        => 'article/arhangel_mihail_2016_01',
     'article/uchites_letat'                 => 'article/uchites_letat',
     'article/merkaba'                       => 'article/merkaba',
+    'article/angels'                        => 'article/angels',
+    'article/angels2'                       => 'article/angels2',
 
     'auth'                                  => 'auth/auth',
     'login'                                 => 'site/login',

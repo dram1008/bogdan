@@ -32,21 +32,30 @@ class ArticleController extends BaseController
 
     public function actionArhangel_mihail_2016_01()
     {
-
         return $this->render( [
         ]);
     }
 
     public function actionUchites_letat()
     {
-
         return $this->render([
         ]);
     }
 
     public function actionMerkaba()
     {
+        return $this->render([
+        ]);
+    }
 
+    public function actionAngels()
+    {
+        return $this->render([
+        ]);
+    }
+
+    public function actionAngels2()
+    {
         return $this->render([
         ]);
     }

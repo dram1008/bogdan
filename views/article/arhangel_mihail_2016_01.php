@@ -60,7 +60,7 @@ $this->title = 'Что такое Дух? Послание Архангела М
                 <?= $this->render('../blocks/share', [
                     'url'         => \yii\helpers\Url::current([], true),
                     'image'       => 'http://www.galaxysss.ru/upload/FileUpload2/gs_cheneling_list/00000472/original/img.jpg',
-                    'title'       => 'Что такое Дух? Послание Архангела Михаила через Ронну Герман',
+                    'title'       => $this->title,
                     'description' => 'Гармонизированная, четырехмерная эмоциональная сфера теперь готова объединяться с первым подпланом пятимерной ментальной сферы, что открывает совершенно новый мир для приобретения опыта и обучения.',
                 ]) ?>
             </div>
