@@ -56,20 +56,26 @@ $this->title = 'Медиа материалы';
             <p class="text-center">Статьи</p>
             <div class="row">
                 <div class="col-lg-12" style="margin-bottom: 20px;">
-                    <p><a href="/article/arhangelMihail_2016_01"><img src="/images/controller/article/angels/image.jpg" width="200" style="border-radius: 10px; float: left; margin-right: 20px;">
+                    <p><a href="/article/arhangelMihail_2016_01"><img src="/images/controller/site/media/article/1.jpg" width="200" style="border-radius: 10px; float: left; margin-right: 20px;">
                     Что такое Дух? Послание Архангела Михаила через Ронну Герман</a></p>
                 </div>
-                <div class="col-lg-12">
-                    <p><a href="/article/arhangelMihail_2016_01"><img src="/images/controller/article/angels/image.jpg" width="200" style="border-radius: 10px; float: left; margin-right: 20px;">
-                    Что такое Дух? Послание Архангела Михаила через Ронну Герман</a></p>
+                <div class="col-lg-12" style="margin-bottom: 20px;">
+                    <p><a href="/article/uchites_letat"><img src="/images/controller/site/media/article/2.jpg" width="200" style="border-radius: 10px; float: left; margin-right: 20px;">
+                            УЧИТЕСЬ ЛЕТАТЬ. Совет Старейшин Созвездия Андромеды</a></p>
+                </div>
+                <div class="col-lg-12" style="margin-bottom: 20px;">
+                    <p><a href="/article/merkaba"><img src="/images/controller/site/media/article/3.jpg" width="200" style="border-radius: 10px; float: left; margin-right: 20px;">
+                            Мер-ка-ба - тело света для полетов в мироздании</a></p>
+                </div>
+                <div class="col-lg-12" style="margin-bottom: 20px;">
+                    <p><a href="/article/angels"><img src="/images/controller/site/media/article/4.jpg" width="200" style="border-radius: 10px; float: left; margin-right: 20px;">
+                            Ангелы о своей роли на Земле (статья первая)</a></p>
+                </div>
+                <div class="col-lg-12" style="margin-bottom: 20px;">
+                    <p><a href="/article/angels2"><img src="/images/controller/site/media/article/5.jpg" width="200" style="border-radius: 10px; float: left; margin-right: 20px;">
+                            Ангелы о своей роли на Земле (статья вторая)</a></p>
                 </div>
             </div>
-            <p><a href="/article/uchites_letat">УЧИТЕСЬ ЛЕТАТЬ. Совет Старейшин Созвездия Андромеды</a></p>
-            <p><a href="/article/merkaba">Мер-ка-ба - тело света для полетов в мироздании</a></p>
-            <p><a href="/article/angels">Ангелы о своей роли на Земле (статья первая)</a></p>
-            <p><a href="/article/angels2">Ангелы о своей роли на Земле (статья вторая)</a></p>
-
-
         </div>
     </div>
 </section>

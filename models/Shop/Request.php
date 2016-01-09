@@ -54,7 +54,6 @@ class Request extends \cs\base\DbRecord
         self::STATUS_USER_NOT_CONFIRMED => [
             'client'   => 'Пользователь не подтвердил почту',
             'shop'     => 'Пользователь не подтвердил почту',
-            'style'    => 'default',
             'timeLine' => [
                 'icon'  => 'glyphicon-minus',
                 'color' => 'default',
@@ -63,7 +62,6 @@ class Request extends \cs\base\DbRecord
         self::STATUS_SEND_TO_SHOP       => [
             'client'   => 'Отпрален в магазин',
             'shop'     => 'Пользователь отправил заказ',
-            'style'    => 'primary',
             'timeLine' => [
                 'icon'  => 'glyphicon-ok',
                 'color' => 'default',
@@ -72,7 +70,6 @@ class Request extends \cs\base\DbRecord
         self::STATUS_ORDER_DOSTAVKA     => [
             'client'   => 'Выставлен счет с учетом доставки',
             'shop'     => 'Клиенту выставлен счет с учетом доставки',
-            'style'    => 'primary',
             'timeLine' => [
                 'icon'  => 'glyphicon-credit-card',
                 'color' => 'warning',
@@ -81,7 +78,6 @@ class Request extends \cs\base\DbRecord
         self::STATUS_PAID_SHOP          => [
             'client'   => 'Оплата подтверждена',
             'shop'     => 'Оплата подтверждена',
-            'style'    => 'primary',
             'timeLine' => [
                 'icon'  => 'glyphicon-credit-card',
                 'color' => 'success',
@@ -90,7 +86,6 @@ class Request extends \cs\base\DbRecord
         self::STATUS_PAID_CLIENT        => [
             'client'   => 'Оплата сделана',
             'shop'     => 'Оплата сделана',
-            'style'    => 'primary',
             'timeLine' => [
                 'icon'  => 'glyphicon-credit-card',
                 'color' => 'success',
@@ -99,7 +94,6 @@ class Request extends \cs\base\DbRecord
         self::STATUS_FINISH_SHOP        => [
             'client'   => 'Заказ выполнен',
             'shop'     => 'Заказ выполнен',
-            'style'    => 'success',
             'timeLine' => [
                 'icon'  => 'glyphicon-thumbs-up',
                 'color' => 'success',
@@ -108,7 +102,6 @@ class Request extends \cs\base\DbRecord
         self::STATUS_FINISH_CLIENT      => [
             'client'   => 'Заказ получен',
             'shop'     => 'Заказ получен',
-            'style'    => 'success',
             'timeLine' => [
                 'icon'  => 'glyphicon-thumbs-up',
                 'color' => 'success',
@@ -117,7 +110,6 @@ class Request extends \cs\base\DbRecord
         self::STATUS_SEND_TO_USER       => [
             'client'   => 'Отправлен клиенту',
             'shop'     => 'Отправлен клиенту',
-            'style'    => 'success',
             'timeLine' => [
                 'icon'  => 'glyphicon glyphicon-plane',
                 'color' => 'warning',
@@ -126,7 +118,6 @@ class Request extends \cs\base\DbRecord
         self::STATUS_DOSTAVKA_GET_MYSELF_POLET_WAIT       => [
             'client'   => 'Ожидает на месте полета',
             'shop'     => 'Ожидает на месте полета',
-            'style'    => 'success',
             'timeLine' => [
                 'icon'  => 'glyphicon glyphicon-plane',
                 'color' => 'warning',
@@ -135,12 +126,12 @@ class Request extends \cs\base\DbRecord
         self::STATUS_DOSTAVKA_GET_MYSELF_POLET_DONE       => [
             'client'   => 'Подарок получен',
             'shop'     => 'Подарок получен',
-            'style'    => 'success',
             'timeLine' => [
                 'icon'  => 'glyphicon-thumbs-up',
                 'color' => 'success',
             ],
         ],
+
         self::STATUS_DOSTAVKA_GET_MYSELF_VOZNESENIE_WAIT       => [
             'client'   => 'Ожидает на Базе Вознесения',
             'shop'     => 'Ожидает на Базе Вознесения',
@@ -152,6 +143,73 @@ class Request extends \cs\base\DbRecord
         self::STATUS_DOSTAVKA_GET_MYSELF_VOZNESENIE_DONE       => [
             'client'   => 'Подарок получен',
             'shop'     => 'Подарок получен',
+            'timeLine' => [
+                'icon'  => 'glyphicon-thumbs-up',
+                'color' => 'success',
+            ],
+        ],
+
+        self::STATUS_DOSTAVKA_MOSCOW_WAIT       => [
+            'client'   => 'Ожидание связи',
+            'shop'     => 'Ожидание связи',
+            'timeLine' => [
+                'icon'  => 'glyphicon glyphicon-plane',
+                'color' => 'warning',
+            ],
+        ],
+        self::STATUS_DOSTAVKA_MOSCOW_DONE       => [
+            'client'   => 'Подарок вручен',
+            'shop'     => 'Подарок вручен',
+            'timeLine' => [
+                'icon'  => 'glyphicon-thumbs-up',
+                'color' => 'success',
+            ],
+        ],
+
+        self::STATUS_DOSTAVKA_RUSSIA_PREPARE       => [
+            'client'   => 'Подготовка к отправке',
+            'shop'     => 'Подготовка к отправке',
+            'timeLine' => [
+                'icon'  => 'glyphicon glyphicon-plane',
+                'color' => 'warning',
+            ],
+        ],
+        self::STATUS_DOSTAVKA_RUSSIA_SEND       => [
+            'client'   => 'Подарок отправлен',
+            'shop'     => 'Подарок отправлен',
+            'timeLine' => [
+                'icon'  => 'glyphicon glyphicon-plane',
+                'color' => 'success',
+            ],
+        ],
+        self::STATUS_DOSTAVKA_RUSSIA_GOT_CLIENT       => [
+            'client'   => 'Подарок получен адресатом',
+            'shop'     => 'Подарок получен адресатом',
+            'timeLine' => [
+                'icon'  => 'glyphicon-thumbs-up',
+                'color' => 'success',
+            ],
+        ],
+
+        self::STATUS_DOSTAVKA_WORLD_PREPARE       => [
+            'client'   => 'Подготовка к отправке',
+            'shop'     => 'Подготовка к отправке',
+            'timeLine' => [
+                'icon'  => 'glyphicon glyphicon-plane',
+                'color' => 'warning',
+            ],
+        ],
+        self::STATUS_DOSTAVKA_WORLD_SEND       => [
+            'client'   => 'Подарок отправлен',
+            'shop'     => 'Подарок отправлен',
+            'timeLine' => [
+                'icon'  => 'glyphicon glyphicon-plane',
+                'color' => 'success',
+            ],
+        ],
+        self::STATUS_DOSTAVKA_WORLD_GOT_CLIENT       => [
+            'client'   => 'Подарок получен адресатом',
+            'shop'     => 'Подарок получен адресатом',
             'timeLine' => [
                 'icon'  => 'glyphicon-thumbs-up',
                 'color' => 'success',
@@ -269,13 +327,22 @@ class Request extends \cs\base\DbRecord
                 $this->addStatusToClient(self::STATUS_DOSTAVKA_GET_MYSELF_VOZNESENIE_WAIT);
                 break;
             case 3:
-                $this->addStatusToClient(self::STATUS_DOSTAVKA_MOSCOW_WAIT);
+                $this->addStatusToClient([
+                    'status' => self::STATUS_DOSTAVKA_MOSCOW_WAIT,
+                    'moscow' => 'Наш посланник пытается с вами связаться для передачи подарка',
+                ]);
                 break;
             case 4:
-                $this->addStatusToClient(self::STATUS_DOSTAVKA_RUSSIA_PREPARE);
+                $this->addStatusToClient([
+                    'status' => self::STATUS_DOSTAVKA_RUSSIA_PREPARE,
+                    'moscow' => 'Подарок находится в режиме подготовки к отправке',
+                ]);
                 break;
             case 5:
-                $this->addStatusToClient(self::STATUS_DOSTAVKA_RUSSIA_PREPARE);
+                $this->addStatusToClient([
+                    'status' => self::STATUS_DOSTAVKA_WORLD_PREPARE,
+                    'moscow' => 'Подарок находится в режиме подготовки к отправке',
+                ]);
                 break;
         }
 
