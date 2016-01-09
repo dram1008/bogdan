@@ -171,7 +171,7 @@ $this->title = 'Заказ';
             <p>Комментарий: <?= $request->getField('comment') ?></p>
             <p>Стоимость: <?= Yii::$app->formatter->asCurrency($request->getField('price'))  ?></p>
             <p>Продукт: <?= $product->getField('name') ?></p>
-            <div style="padding: 20px; background-color: white; color: #000000; border-radius: 20px; margin-bottom: 30px; width: 100; max-width: 400px;"><?= $product->getField('content') ?></div>
+            <div style="padding: 20px; background-color: darkblue; color: #000000; border-radius: 20px; margin-bottom: 30px; width: 100; max-width: 400px;"><?= $product->getField('content') ?></div>
             <p>Создан: <?= Yii::$app->formatter->asDatetime($request->getField('date_create'))   ?></p>
             <p>Билеты:</p>
             <?php if ($request->getField('is_paid', 0) == 0) { ?>
