@@ -94,6 +94,29 @@ class Site_cabinetController extends BaseController
         return self::jsonSuccess();
     }
 
+
+    public function actionPassword_change()
+    {
+        $model = new \app\models\Form\PasswordNew();
+
+        if (Yii::$app->request->isAjax && $model->load(Yii::$app->request->post())) {
+            Yii::$app->response->format = Response::FORMAT_JSON;
+
+            return ActiveForm::validate($model);
+        }
+
+        if ($model->load(Yii::$app->request->post()) && $model->action(\Yii::$app->user->identity)) {
+            Yii::$app->session->setFlash('contactFormSubmitted');
+
+            return $this->refresh();
+        }
+        else {
+            return $this->render([
+                'model' => $model,
+            ]);
+        }
+    }
+
     /**
      * Заготовка для отправки статуса с сообщением
      *

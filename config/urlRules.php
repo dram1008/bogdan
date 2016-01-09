@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'cabinet/profile'                       => 'cabinet/profile',
+    'cabinet/passwordChange'                => 'site_cabinet/password_change',
     'requests'                              => 'site_cabinet/requests',
     'requests/<id:\\d+>'                    => 'site_cabinet/request',
     'requests/<id:\\d+>/message'            => 'site_cabinet/order_item_message',
@@ -9,7 +9,6 @@ return [
     'requests/<id:\\d+>/doneRussia'         => 'site_cabinet/order_item_done_russia',
     'requests/<id:\\d+>/doneWorld'          => 'site_cabinet/order_item_done_world',
 
-    'cabinet/passwordChange'                => 'cabinet/password_change',
     'cabinet/changeEmail'                   => 'cabinet/change_email',
     'changeEmail/activate/<code:\\w+>'      => 'auth/change_email_activate',
 

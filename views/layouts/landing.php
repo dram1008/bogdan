@@ -93,7 +93,6 @@ JS
                                 <span class="sr-only">Toggle Dropdown</span>
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a href="/registration">Регистрация</a></li>
                                 <li><a href="/password/recover">Восстановить пароль</a></li>
                             </ul>
                         </div>
@@ -113,6 +112,7 @@ JS
                                 <span class="sr-only">Toggle Dropdown</span>
                             </button>
                             <ul class="dropdown-menu">
+                                <li><a href="/cabinet/passwordChange">Сменить пароль</a></li>
                                 <li><a href="/requests">Заказы</a></li>
                                 <li role="separator" class="divider"></li>
                                 <li><a href="/logout">Выход</a></li>
