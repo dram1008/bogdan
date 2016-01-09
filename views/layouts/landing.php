@@ -71,7 +71,7 @@ $c = \yii\helpers\Url::current();
                     <a class="page-scroll" href="<?php if ($c != '/' and $c != '/angel') echo '/'; ?>#contact">Контакты</a>
                 </li>
                 <li<?php if (\yii\helpers\Url::current() == \yii\helpers\Url::to(['site/media'])) echo " class='active'" ?>>
-                    <a href="/media">Материалы</a>
+                    <a href="/media">Медиа</a>
                 </li>
                 <li<?php if (\yii\helpers\Url::current() == \yii\helpers\Url::to(['site/about'])) echo " class='active'" ?>>
                     <a href="/about">О нас</a>
