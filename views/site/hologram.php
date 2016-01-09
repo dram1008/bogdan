@@ -48,6 +48,12 @@ $this->title = 'Квантовая голограмма';
                 Они состоялись 11 ноября 2015 г. которые стали началом новой Эры Водоления и Новой Реальности и <a
                     href="http://www.galaxysss.ru/newEarth" target="_blank">Новой Земли</a>.
             </p>
+            <p>
+                Эта голограмма была активирована 11.11.2015 года в <a href="http://www.galaxysss.ru/newEarth/chakri">тринадцатой чакре планеты Земля</a> (Сергиев Посад) в
+                храмах Марии Магдалины, Архангела Михаила и Храме Вознесения с полным соблюдением <a href="http://www.galaxysss.ru/blog/2015/12/17/desyat_principov_soznatelnogo_">Десяти Принципов
+                    Сознательного Творения Реальности</a> в собрании Богов и Архангелов для блага всех живых существ планеты
+                Земля.
+            </p>
 
             <hr>
             <p class="text-center"><a href="http://www.i-am-avatar.com/" target="_blank"><img class="img-circle"
