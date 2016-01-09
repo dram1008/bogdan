@@ -209,7 +209,6 @@ $this->title = 'Заказ';
                         $icon = \app\models\Shop\Request::$statusList[$item['status']]['timeLine']['icon'];
                         $color = \app\models\Shop\Request::$statusList[$item['status']]['timeLine']['color'];
                         $message = \yii\helpers\ArrayHelper::getValue($item, 'message', '');
-                        \cs\services\VarDumper::dump($side);
                     }
                     ?>
                     <li<?= $liSuffix ?>>
