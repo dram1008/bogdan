@@ -329,19 +329,19 @@ class Request extends \cs\base\DbRecord
             case 3:
                 $this->addStatusToClient([
                     'status' => self::STATUS_DOSTAVKA_MOSCOW_WAIT,
-                    'moscow' => 'Наш посланник пытается с вами связаться для передачи подарка',
+                    'message' => 'Наш посланник пытается с вами связаться для передачи подарка',
                 ]);
                 break;
             case 4:
                 $this->addStatusToClient([
                     'status' => self::STATUS_DOSTAVKA_RUSSIA_PREPARE,
-                    'moscow' => 'Подарок находится в режиме подготовки к отправке',
+                    'message' => 'Подарок находится в режиме подготовки к отправке',
                 ]);
                 break;
             case 5:
                 $this->addStatusToClient([
                     'status' => self::STATUS_DOSTAVKA_WORLD_PREPARE,
-                    'moscow' => 'Подарок находится в режиме подготовки к отправке',
+                    'message' => 'Подарок находится в режиме подготовки к отправке',
                 ]);
                 break;
         }
