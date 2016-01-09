@@ -59,6 +59,7 @@ $this->registerJs(<<<JS
                 if ($('input[name="sum"]').val() > 15000) {
                     window.location = '/requests/' + ret;
                 } else {
+                    $('#formShopSuccessURL').val('http://www.bog-dan.com/requests/' + ret);
                     $('#formPayLabel').val('bogdan.' + ret);
                     $('#formPay').submit();
                 }
@@ -310,6 +311,7 @@ JS
                     <input type="hidden" name="need-fio" value="false">
                     <input type="hidden" name="need-email" value="false">
                     <input type="hidden" name="need-phone" value="false">
+                    <input type="hidden" name="shopSuccessURL" value="" id="formShopSuccessURL">
                     <input type="hidden" name="need-address" value="false">
                     <input type="hidden" name="paymentType" value="AC" id="paymentType">
 

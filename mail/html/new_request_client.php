@@ -6,6 +6,7 @@ $tickets = $request->getTickets();
 
 ?>
 
+<p style="text-align: center;"><img src="<?= \yii\helpers\Url::to('/images/controller/site/ticket/hologram.gif', true) ?>" style="width: 200px;"></p>
 
 <p>Поздравляем вы сделали первый шаг к своему полю коллективного счастья</p>
 
