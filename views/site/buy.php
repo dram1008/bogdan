@@ -313,20 +313,26 @@ JS
                     <input type="hidden" name="need-address" value="false">
                     <input type="hidden" name="paymentType" value="AC" id="paymentType">
 
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="btn-group" role="group" aria-label="...">
-                                <button type="button" class="btn btn-default paymentType" data-value="PC">
-                                    Яндекс.Деньгами
-                                </button>
-                                <button type="button" class="btn btn-default paymentType active" data-value="AC">
-                                    Банковской картой
-                                </button>
-
+                    <?php if ($product->getField('price') < 15000) { ?>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-default paymentType" data-value="PC">
+                                        Яндекс.Деньгами
+                                    </button>
+                                    <button type="button" class="btn btn-default paymentType active" data-value="AC">
+                                        Банковской картой
+                                    </button>
+                                </div>
                             </div>
                         </div>
-
-                    </div>
+                    <?php } else { ?>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <p>Перевед ваших благодарностей осуществляется в личном кабинете.</p>
+                            </div>
+                        </div>
+                    <?php } ?>
                     <div class="row">
                         <div class="col-lg-12" style="margin-top: 30px;">
                             <div class="btn-group" role="group" aria-label="...">
@@ -336,6 +342,8 @@ JS
                             </div>
                         </div>
                     </div>
+
+
 
                 </form>
             </div>
