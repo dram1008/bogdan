@@ -175,7 +175,6 @@ $this->title = 'Заказ';
                 <div class="row">
                     <div class="col-lg-4">
                         <img src="<?= $product->getImage() ?>" style="width: 100%; border-radius: 10px;">
-                        <?= $product->getField('content') ?>
                     </div>
                     <div class="col-lg-8">
                         <?= $product->getField('content') ?>
