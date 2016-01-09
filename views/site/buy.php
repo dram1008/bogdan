@@ -59,9 +59,7 @@ $this->registerJs(<<<JS
                 if ($('input[name="sum"]').val() > 15000) {
                     window.location = '/requests/' + ret;
                 } else {
-                    $('#formShopSuccessURL').val('http://www.bog-dan.com/requests/' + ret);
-                    $('#formPayLabel').val('bogdan.' + ret);
-                    $('#formPay').submit();
+                    window.location = '/buy/request/' + ret;
                 }
             }
 

@@ -34,6 +34,7 @@ return [
     'dostavka'                              => 'site/dostavka',
     'price'                                 => 'site/price',
     'buy/<id:\\d+>'                         => 'site/buy',
+    'buy/request/<id:\\d+>'                 => 'site/buy_request',
     'buy/<id:\\d+>/success'                 => 'site/buy_success',
     'buy/ajax'                              => 'site/buy_ajax',
     'request/success'                       => 'site/request_success',
