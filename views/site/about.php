@@ -43,6 +43,7 @@ $this->title = 'О нас';
             <a href="http://www.somniacs.co/" target="_blank">www.somniacs.co</a>&nbsp;- Полет на аттракционе в Виртуальной Реальности<br>
             <a href="http://www.ansmed.ru/" target="_blank">www.ansmed.ru</a>&nbsp;- Институт Многомерной Медицины<br>
             <a href="http://www.wavegenetics.org/" target="_blank">www.wavegenetics.org</a>&nbsp;- Институт Квантовой Генетики<br>
+            <a href="http://www.ronnastar.com/" target="_blank">www.ronnastar.com</a>&nbsp; - Ронна Герман - всемирно признанный канал Архангела Михаила. Она передает послания этого высокого духовного существа тысячам людей через свои книги.</p>
             <a href="http://www.angeltherapy.com/" target="_blank">www.angeltherapy.com</a>&nbsp; - Дорин Вёрче (Doreen Virtue): Писательница, духовный целитель, ангелотерапевт</p>
             <p><iframe allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/_VPvKl6ezyc" width="100%"></iframe></p>
 
