@@ -192,7 +192,6 @@ $this->title = 'Заказ';
             <ul class="timeline">
                 <?php foreach($request->getMessages()->all() as $item) { ?>
                     <?php
-                    \cs\services\VarDumper::dump($request->getMessages()->all());
                     $side = 'client';
                     $liSuffix = '';
                     if ($item['direction'] == (($side == 'client')? \app\models\Shop\Request::DIRECTION_TO_SHOP : \app\models\Shop\Request::DIRECTION_TO_CLIENT)) {
