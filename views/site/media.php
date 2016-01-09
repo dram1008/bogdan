@@ -17,8 +17,6 @@ $this->title = 'Медиа материалы';
 
             <p class="text-center">Эволюция Сознания Человека</p>
             <p class="text-center"><img src="/images/controller/site/media/12279213_634318063337452_2477462852464822447_n.jpg" class="img-center" style="border-radius: 10px; width:100%;"></p>
-            <p class="text-center">Принцип работы тренажера Birdly®</p>
-            <p class="text-center"><img src="/images/controller/site/media/11990631_10208204145722207_6888214533972897372_n.jpg" class="img-center" style="border-radius: 10px; width:100%;"></p>
             <p class="text-center">Траектория движения крыльев птиц, стрекоз, летучей мыши и насекомых</p>
             <p class="text-center"><img src="/images/controller/site/media/tumblr_nxmafvUP9e1tl8u0ko1_500.gif"  class="img-center" style="border-radius: 10px;width: 100%;max-width: 500px;"></p>
             <p class="text-center">Летящий Ангел</p>
@@ -37,6 +35,9 @@ $this->title = 'Медиа материалы';
 
             <p class="text-center">Медитация Крыльев Ангела</p>
             <p class="text-center"><iframe allowfullscreen=""  frameborder="0" height="315" src="https://www.youtube.com/embed/P8ZDQ3fPVOA" width="100%"></iframe></p>
+
+            <p class="text-center">Принцип работы тренажера Birdly®</p>
+            <p class="text-center"><img src="/images/controller/site/media/11990631_10208204145722207_6888214533972897372_n.jpg" class="img-center" style="border-radius: 10px; width:100%;"></p>
 
 
             <p class="text-center">Изображения</p>
