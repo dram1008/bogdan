@@ -23,9 +23,9 @@ class Request extends \cs\base\DbRecord
     const STATUS_ORDER_DOSTAVKA = 3;     // клиенту выставлен счет с учетом доставки
     const STATUS_PAID_CLIENT = 5;        // заказ оплачен со стороны клиента
     const STATUS_PAID_SHOP = 6;          // оплата подтверждена магазином
-    const STATUS_FINISH_SHOP = 6;          // оплата подтверждена магазином
-    const STATUS_FINISH_CLIENT = 6;          // оплата подтверждена магазином
-    const STATUS_SEND_TO_USER = 6;          // оплата подтверждена магазином
+    const STATUS_FINISH_SHOP = 7;          // оплата подтверждена магазином
+    const STATUS_FINISH_CLIENT = 8;          // оплата подтверждена магазином
+    const STATUS_SEND_TO_USER = 9;          // оплата подтверждена магазином
 
     // Доставка
     // Забрать на месте полета

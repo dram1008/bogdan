@@ -404,6 +404,7 @@ class SiteController extends BaseController
         }
         if ($label != '') {
             if (StringHelper::startsWith($label, 'bogdan.')) {
+                Yii::info(\yii\helpers\VarDumper::dumpAsString($fields), 'bog\\payment');
                 $label = explode('.', $label);
                 $request_id = $label[1];
                 $request = \app\models\Shop\Request::find($request_id);

@@ -9,6 +9,13 @@ use yii\grid\GridView;
 $this->title = 'Лог';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+
+
+<style>
+    .table-bordered>tbody>tr>td {
+        color: #000000;
+    }
+</style>
 <div class="container">
 
     <h1 class="page-header"><?= Html::encode($this->title) ?></h1>
