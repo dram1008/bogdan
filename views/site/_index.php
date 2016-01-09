@@ -122,6 +122,7 @@
             </p>
             <p>Мы собираем деньги для того чтобы предотсавить такую возможность для Вас. Только при помощи ваших благодарностей мы сможем вам предоставить такой подарок.</p>
             <p ><img src="/images/controller/site/index/072414-birdly-17.jpg" width="100%" style="border-radius: 10px;"></p>
+            <p ><img src="/images/controller/site/index/tumblr_n8pgl4QtR91sug4g8o3_500.gif" width="100%" style="border-radius: 10px;"></p>
         </div>
     </div>
 </section>
