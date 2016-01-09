@@ -84,7 +84,9 @@
 <section class="container content-section text-center">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
-            <p>В честь открытия проекта будет проведена специальная презентация тренажера Birdly® с концертом легендарной группы «<a href="http://www.galaxysss.ru/category/music/407" target="_blank">СутРа</a>», прославившейся тем, что их песня «Слава Роду» стала сандтреком к <a href="http://teslagen.org/video" target="_blank">презентации проекта «Новая Земля»</a> представленый <a href="http://www.galaxysss.ru/news/2015/12/21/stali_izvestny_vladelcy_planet" target="_blank">владельцами планеты Земля всем желающим 21 декабря 2015 г.</a></p>
+            <p><a href="http://www.galaxysss.ru/news/2016/01/01/2016_god__god_prihoda_angelov" target="_blank">2016 год – год прихода Ангелов на планету Земля</a></p>
+            <p><a href="http://www.galaxysss.ru/news/2016/01/01/2016_god__god_prihoda_angelov" target="_blank"><img src="/images/controller/site/index/2016.jpg" width="100%" style="border-radius: 10px; "></a></p>
+            <p>В честь открытия проекта будет проведена специальная презентация тренажера Birdly® с концертом легендарной группы «<a href="http://www.galaxysss.ru/category/music/407" target="_blank">СутРа</a>», прославившейся тем, что их песня «Слава Роду» стала саундтреком к <a href="http://teslagen.org/video" target="_blank">презентации проекта «Новая Земля»</a> представленый <a href="http://www.galaxysss.ru/news/2015/12/21/stali_izvestny_vladelcy_planet" target="_blank">владельцами планеты Земля всем желающим 21 декабря 2015 г.</a></p>
             <p>На открытии будет проведено награждение всех благодетелей и спонсоров проекта.</p>
             <p><a href="http://www.galaxysss.ru/category/music/407" target="_blank"><img src="/images/controller/site/index/1444423086_RBfWl4dSyh.jpg" width="100%" style="border-radius: 10px; "></a></p>
             <p><img src="/images/controller/site/index/SUTRAVISION600.jpg" width="100%" style="border-radius: 10px; "></p>
