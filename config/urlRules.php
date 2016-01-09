@@ -30,7 +30,7 @@ return [
     'logDb'                                 => 'site/log_db',
     'contact'                               => 'site/contact',
     'sutra'                                 => 'site/sutra',
-    'angel'                                 => 'site/angel',
+    'angel2'                                 => 'site/angel',
     'dostavka'                              => 'site/dostavka',
     'price'                                 => 'site/price',
     'buy/<id:\\d+>'                         => 'site/buy',
