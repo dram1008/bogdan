@@ -7,7 +7,7 @@ class m160109_181459_start extends Migration
 {
     public function up()
     {
-        $this->execute('ALTER TABLE galaxysss_1.bog_shop_requests_messages CHANGE status status int;');
+        $this->execute('ALTER TABLE bog_shop_requests_messages CHANGE status status int;');
     }
 
     public function down()
