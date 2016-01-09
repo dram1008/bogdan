@@ -54,7 +54,16 @@ $this->title = 'Медиа материалы';
             <?php } ?>
             </div>
             <p class="text-center">Статьи</p>
-            <p><a href="/article/arhangelMihail_2016_01">Что такое Дух? Послание Архангела Михаила через Ронну Герман</a></p>
+            <div class="row">
+                <div class="col-lg-12" style="margin-bottom: 20px;">
+                    <p><a href="/article/arhangelMihail_2016_01"><img src="/images/controller/article/angels/image.jpg" width="200" style="border-radius: 10px; float: left; margin-right: 20px;">
+                    Что такое Дух? Послание Архангела Михаила через Ронну Герман</a></p>
+                </div>
+                <div class="col-lg-12">
+                    <p><a href="/article/arhangelMihail_2016_01"><img src="/images/controller/article/angels/image.jpg" width="200" style="border-radius: 10px; float: left; margin-right: 20px;">
+                    Что такое Дух? Послание Архангела Михаила через Ронну Герман</a></p>
+                </div>
+            </div>
             <p><a href="/article/uchites_letat">УЧИТЕСЬ ЛЕТАТЬ. Совет Старейшин Созвездия Андромеды</a></p>
             <p><a href="/article/merkaba">Мер-ка-ба - тело света для полетов в мироздании</a></p>
             <p><a href="/article/angels">Ангелы о своей роли на Земле (статья первая)</a></p>
