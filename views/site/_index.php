@@ -72,7 +72,7 @@
                 <p class="text-center"><img src="/images/icon.png" class="img-center"> </p>
                 <h2>Попробовать</h2>
                 <p>Один билет равен 1 000 благодарностей (руб.) в наш адрес</p>
-                <a href="/price" class="btn btn-success btn-lg" style="border: 2px solid white; border-radius: 20px; width: 400px;">Получить билет</a>
+                <a href="/price" class="btn btn-success btn-lg" style="border: 2px solid white; border-radius: 20px; width: 100%;max-width: 400px;">Получить билет</a>
             </div>
         </div>
     </div>
@@ -83,9 +83,9 @@
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
             <p>В честь открытия проекта будет проведена специальная презентация тренажера Birdly® с концертом легендарной группы «<a href="http://www.galaxysss.ru/category/music/407" target="_blank">СутРа</a>», прославившейся тем, что их песня «Слава Роду» стала сандтреком к <a href="http://teslagen.org/video" target="_blank">презентации проекта «Новая Земля»</a> представленый <a href="http://www.galaxysss.ru/news/2015/12/21/stali_izvestny_vladelcy_planet" target="_blank">владельцами планеты Земля всем желающим 21 декабря 2015 г.</a></p>
-            <p ><a href="http://www.galaxysss.ru/category/music/407" target="_blank"><img src="/images/controller/site/index/1444423086_RBfWl4dSyh.jpg" width="100%" style="border-radius: 10px; "></a></p>
-            <p ><img src="/images/controller/site/index/SUTRAVISION600.jpg" width="100%" style="border-radius: 10px; "></p>
-            <p ><iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/208811865&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe></p>
+            <p><a href="http://www.galaxysss.ru/category/music/407" target="_blank"><img src="/images/controller/site/index/1444423086_RBfWl4dSyh.jpg" width="100%" style="border-radius: 10px; "></a></p>
+            <p><img src="/images/controller/site/index/SUTRAVISION600.jpg" width="100%" style="border-radius: 10px; "></p>
+            <p><iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/208811865&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe></p>
             <p>Боги Звука «СутРа» - это музыкальное трио друзей из Москвы, смело объединяющих электронную музыку с этническими инструментами и пением, что в результате дает многомерный коктейль удивительной и красивой музыки приласкающей ухо даже искушенного ценителя, а божественный голос вокалистов пробуждает разум с первых же переливов звучания.<br>
             В звучании «СутРа» великие мантры святых гармонично переплетаются с вокалом и горловым пением, выражающим истинный дух природы пробужденной сущности о которой говорил Будда.<br>
             Творчество Богов «СутРа» наполнено сакральным смыслом и призвано помочь всем нам обрести свой истинный Дом в наших сердцах.<br>
@@ -125,19 +125,20 @@
     </div>
 </section>
 
-<section id="contact" class="content-section text-center" style="height: 400px;">
+<section id="contact" class="content-section text-center" style="height: 600px;">
     <div class="download-section" style="
     border-bottom: 1px solid #87aad0;
     border-top: 1px solid #87aad0;
-    height: 350px;
+    height: 450px;
     ">
         <div class="container">
             <div class="col-lg-8 col-lg-offset-2" style="color: #000000">
 
+                <p class="text-center"><img src="/images/icon.png" class="img-center"> </p>
                 <h2>Наши контакты</h2>
                 <p>+7-925-237-45-01<br>+7-926-518-98-75</p>
                 <p>
-                    <a href="mailto:avia@galaxysss.ru">avia@galaxysss.ru</a>
+                    <a href="mailto:avia@galaxysss.ru" style="background-color: #2e6da4; padding: 10px 30px 10px 30px; border-radius: 10px;">avia@galaxysss.ru</a>
                 </p>
             </div>
         </div>

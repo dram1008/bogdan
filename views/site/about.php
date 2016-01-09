@@ -68,7 +68,7 @@ $this->title = 'О нас';
                 <h2>Наши контакты</h2>
                 <p>+7-925-237-45-01<br>+7-926-518-98-75</p>
                 <p>
-                    <a href="mailto:avia@galaxysss.ru" style="color: #000000;">avia@galaxysss.ru</a>
+                    <a href="mailto:avia@galaxysss.ru" style="background-color: #2e6da4; padding: 10px 30px 10px 30px; border-radius: 10px;">avia@galaxysss.ru</a>
                 </p>
             </div>
         </div>
