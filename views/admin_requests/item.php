@@ -7,7 +7,6 @@ $this->title = 'Заказ #' . $request->getId();
 
 $client = $request->getClient();
 $product = $request->getProduct();
-\cs\services\VarDumper::dump($request);
 ?>
 
 <style>
