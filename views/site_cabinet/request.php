@@ -172,14 +172,9 @@ $this->title = 'Заказ';
             <p>Стоимость: <?= Yii::$app->formatter->asCurrency($request->getField('price'))  ?></p>
             <p>Продукт: <?= $product->getField('name') ?></p>
             <div style="padding: 20px; background-color: #2e6da4; border: 1px solid darkblue; color: white; border-radius: 10px; margin-bottom: 30px; width: 100%; max-width: 400px;">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <img src="<?= $product->getImage() ?>" style="width: 100%; border-radius: 10px;">
-                    </div>
-                    <div class="col-lg-8">
-                        <?= $product->getField('content') ?>
-                    </div>
-                </div>
+                <p><img src="<?= $product->getImage() ?>" style="width: 100%; max-width: 200px; border-radius: 10px;"></p>
+                <?= $product->getField('content') ?>
+
             </div>
             <p>Создан: <?= Yii::$app->formatter->asDatetime($request->getField('date_create'))   ?></p>
             <p>Билеты:</p>
