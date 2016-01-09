@@ -205,6 +205,7 @@ $this->title = 'Заказ';
                         $message = $item['message'];
                     } else {
                         $type = 'status';
+                        \cs\services\VarDumper::dump($item);
                         $header = \app\models\Shop\Request::$statusList[$item['status']][$side];
                         $icon = \app\models\Shop\Request::$statusList[$item['status']]['timeLine']['icon'];
                         $color = \app\models\Shop\Request::$statusList[$item['status']]['timeLine']['color'];
