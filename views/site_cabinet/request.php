@@ -205,11 +205,11 @@ $this->title = 'Заказ';
                         $message = $item['message'];
                     } else {
                         $type = 'status';
-                        \cs\services\VarDumper::dump($side);
                         $header = \app\models\Shop\Request::$statusList[$item['status']][$side];
                         $icon = \app\models\Shop\Request::$statusList[$item['status']]['timeLine']['icon'];
                         $color = \app\models\Shop\Request::$statusList[$item['status']]['timeLine']['color'];
                         $message = \yii\helpers\ArrayHelper::getValue($item, 'message', '');
+                        \cs\services\VarDumper::dump($side);
                     }
                     ?>
                     <li<?= $liSuffix ?>>
