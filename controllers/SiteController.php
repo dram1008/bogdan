@@ -281,13 +281,17 @@ class SiteController extends BaseController
             'Стоимость с учетом доставки: ' . $fields['price'],
             'Доставка: ' . \app\models\Shop\Request::$dostavkaList[$fields['dostavka']],
             (in_array($fields['dostavka'],[3,4,5]))? 'Адрес: ' . $fields['address']  : '',
-            'Наши реквизиты:',
-            '1. Карта Альфа Банка. Номер карты 4154 8120 0278 5743',
-            '2. Карта СберБанка 4276 3800 2175 1719',
-            '3. PayPal Идентификатор: dram1008@yandex.ru',
-            '4. Yandex Money. Номер кошелька: 410011473018906',
-            '5. По ссылке http://www.galaxysss.ru/thank',
         ];
+        if ($fields['price'] > 15000) {
+            $message = ArrayHelper::merge($message, [
+                'Наши реквизиты:',
+                '1. Карта Альфа Банка. Номер карты 4154 8120 0278 5743',
+                '2. Карта СберБанка 4276 3800 2175 1719',
+                '3. PayPal Идентификатор: dram1008@yandex.ru',
+                '4. Yandex Money. Номер кошелька: 410011473018906',
+                '5. По ссылке http://www.galaxysss.ru/thank',
+            ]);
+        }
         $item->addStatusToClient([
             'status' => \app\models\Shop\Request::STATUS_ORDER_DOSTAVKA,
             'message' => join("\n", $message),
