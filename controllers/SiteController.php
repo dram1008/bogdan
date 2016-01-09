@@ -290,6 +290,7 @@ class SiteController extends BaseController
                 '3. PayPal Идентификатор: dram1008@yandex.ru',
                 '4. Yandex Money. Номер кошелька: 410011473018906',
                 '5. По ссылке http://www.galaxysss.ru/thank',
+                '<button class="btn btn-primary buttonAnswerPay">Сообщить об оплате</button>',
             ]);
         }
         $item->addStatusToClient([

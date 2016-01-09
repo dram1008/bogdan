@@ -247,7 +247,7 @@ $this->title = 'Заказ';
             });
         });
     });
-    $('#buttonAnswerPay').click(function() {
+    $('.buttonAnswerPay').click(function() {
         $('#messageModal').modal('show');
         $('#buttonSendMessageForm').click(function() {
             var text = $('#messageModal textarea').val();
@@ -319,7 +319,7 @@ JS
             <hr>
             <button class="btn btn-primary" id="buttonSendMessage">Отправить сообщение</button>
             <?php if (in_array($request->getStatus(), [\app\models\Shop\Request::STATUS_ORDER_DOSTAVKA])) { ?>
-                <button class="btn btn-primary" id="buttonAnswerPay">Сообщить об оплате</button>
+                <button class="btn btn-primary buttonAnswerPay">Сообщить об оплате</button>
             <?php } ?>
             <?php if (in_array($request->getStatus(), [\app\models\Shop\Request::STATUS_DOSTAVKA_RUSSIA_SEND,])) { ?>
                 <button class="btn btn-primary" id="buttonDoneRussia">Заказ получен</button>
