@@ -9,4 +9,4 @@
 Пришло сообщение:
 <?= $text ?>
 
-Заказ <?= \yii\helpers\Url::to(['admin_requests/item', 'id' => $request->getId()]) ?>
+Заказ <?= \yii\helpers\Url::to(['admin_requests/item', 'id' => $request->getId()], true) ?>
