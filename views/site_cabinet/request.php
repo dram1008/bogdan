@@ -171,7 +171,7 @@ $this->title = 'Заказ';
             <p>Комментарий: <?= $request->getField('comment') ?></p>
             <p>Стоимость: <?= Yii::$app->formatter->asCurrency($request->getField('price'))  ?></p>
             <p>Продукт: <?= $product->getField('name') ?></p>
-            <div style="padding: 20px; background-color: #2e6da4; border: 1px solid darkblue; color: white; border-radius: 10px; margin-bottom: 30px; width: 100; max-width: 400px;">
+            <div style="padding: 20px; background-color: #2e6da4; border: 1px solid darkblue; color: white; border-radius: 10px; margin-bottom: 30px; width: 100%; max-width: 400px;">
                 <div class="row">
                     <div class="col-lg-4">
                         <img src="<?= $product->getImage() ?>" style="width: 100%; border-radius: 10px;">
