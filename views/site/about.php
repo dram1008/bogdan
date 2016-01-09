@@ -50,7 +50,7 @@ $this->title = 'О нас';
             <p><iframe allowfullscreen=""  frameborder="0" height="315" src="https://www.youtube.com/embed/gWLHIusLWOc" width="100%"></iframe></p>
 
             <h2>Союзничество с нами</h2>
-            <p>Мы продаем тренажер Birdly@ на особых условиях для России. И приглашаем всех кто готов принять участие в данном проекте. По вопросам сотрудничества пишите на <a href="mailto:avia@galaxysss.ru">avia@galaxysss.ru</a>.</p>
+            <p>Мы продаем тренажер Birdly@ на особых условиях для России и приглашаем всех кто готов принять участие в данном проекте. По вопросам сотрудничества пишите на почту <a href="mailto:avia@galaxysss.ru">avia@galaxysss.ru</a>.</p>
         </div>
     </div>
 </section>
