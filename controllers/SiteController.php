@@ -156,7 +156,7 @@ class SiteController extends BaseController
         if (User::query(['email' => $login])->exists()) {
             return self::jsonErrorId(101, 'Пользователь уже существует');
         }
-        $user = User::registration($login, Security::generateRandomString(), [
+        $user = User::registration($login, substr(str_shuffle("01234567890123456789"), 0, 4), [
             'name_first' => $name,
         ]);
         Yii::$app->user->login($user);
