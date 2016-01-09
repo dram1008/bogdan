@@ -126,8 +126,8 @@ imagedestroy($im);
         </td>
     </tr>
     <tr>
-        <td style="padding: 30px;">
-            <p style="text-align: center;"><img src="/images/controller/site/ticket/hologram.gif" style="width: 100px;"></p>
+        <td style="padding: 0px 30px 30px 30px;">
+            <p style="text-align: center;"><img src="/images/controller/site/ticket/hologram.gif" style="width: 200px;"></p>
             <p>Билет №<?= $ticket->getId() ?></p>
 
             <p>Дата получения: <?= Yii::$app->formatter->asDatetime($ticket->getField('date_insert')) ?></p>
