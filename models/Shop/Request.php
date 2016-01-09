@@ -141,6 +141,22 @@ class Request extends \cs\base\DbRecord
                 'color' => 'success',
             ],
         ],
+        self::STATUS_DOSTAVKA_GET_MYSELF_VOZNESENIE_WAIT       => [
+            'client'   => 'Ожидает на Базе Вознесения',
+            'shop'     => 'Ожидает на Базе Вознесения',
+            'timeLine' => [
+                'icon'  => 'glyphicon glyphicon-plane',
+                'color' => 'warning',
+            ],
+        ],
+        self::STATUS_DOSTAVKA_GET_MYSELF_VOZNESENIE_DONE       => [
+            'client'   => 'Подарок получен',
+            'shop'     => 'Подарок получен',
+            'timeLine' => [
+                'icon'  => 'glyphicon-thumbs-up',
+                'color' => 'success',
+            ],
+        ],
     ];
 
 
