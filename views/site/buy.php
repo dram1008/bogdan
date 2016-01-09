@@ -59,7 +59,7 @@ $this->registerJs(<<<JS
                 if ($('input[name="sum"]').val() > 15000) {
                     window.location = '/requests/' + ret;
                 } else {
-                    window.location = '/buy/request/' + ret;
+                    window.location = '/buy/request/' + ret + '?type=' + $('#paymentType').val();
                 }
             }
 
