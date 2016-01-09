@@ -7,6 +7,7 @@ use app\models\Form\Request;
 use app\models\Log;
 use app\models\Product;
 use app\models\User;
+use cs\Application;
 use cs\base\BaseController;
 use cs\services\VarDumper;
 use cs\web\Exception;
@@ -85,6 +86,10 @@ class Site_cabinetController extends BaseController
             return self::jsonErrorId(101, 'Это не ваш заказ');
         }
         $request->addMessageToShop($text);
+        Application::mail(\Yii::$app->params['mailer']['payment'], 'Новое сообщение', 'new_message_to_shop', [
+            'request' => $request,
+            'text' => $text,
+        ]);
 
         return self::jsonSuccess();
     }

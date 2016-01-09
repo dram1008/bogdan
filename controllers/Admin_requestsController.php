@@ -7,6 +7,7 @@ use app\models\Page;
 use app\models\Shop\Request;
 use app\models\SiteUpdate;
 use app\services\Subscribe;
+use cs\Application;
 use cs\services\VarDumper;
 use cs\web\Exception;
 use Yii;
@@ -97,6 +98,11 @@ class Admin_requestsController extends AdminBaseController
             return self::jsonErrorId(101, 'Это не ваш заказ');
         }
         $request->addMessageToClient($text);
+        // отправка письма
+        Application::mail($request->getClient()->getEmail(), 'Новое сообщение', 'new_message_to_client', [
+            'request' => $this,
+            'text'    => $text,
+        ]);
 
         return self::jsonSuccess();
     }

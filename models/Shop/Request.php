@@ -348,7 +348,10 @@ class Request extends \cs\base\DbRecord
 
         // отправка письма
         Application::mail($this->getClient()->getEmail(), 'Ваш подарок', 'new_request_client', [
-            'request' => $this
+            'request' => $this,
+        ]);
+        Application::mail(\Yii::$app->params['mailer']['payment'], 'Заказ оплачен', 'new_request_shop', [
+            'request' => $this,
         ]);
         // прибавление счетчика
         \app\models\Counter::inc($this->getProduct()->getPrice());
