@@ -52,10 +52,19 @@ JS
 
     <?= \yii\grid\GridView::widget([
         'dataProvider' => new \yii\data\ActiveDataProvider([
-            'query'      => \app\models\Shop\Request::query()->orderBy([
-                'is_answer_from_client' => SORT_DESC,
-                'last_message_time'     => SORT_DESC,
-            ]),
+            'query'      => \app\models\Shop\Request::query()
+                ->innerJoin('gs_users', 'gs_users.id = bog_shop_requests.user_id')
+                ->select([
+                    'bog_shop_requests.*',
+                    'gs_users.name_first as user_name_first',
+                    'gs_users.avatar as user_avatar',
+                    'gs_users.email as user_email',
+                    'gs_users.name_last as user_name_last',
+                ])
+                ->orderBy([
+                    'is_answer_from_client' => SORT_DESC,
+                    'last_message_time'     => SORT_DESC,
+                ]),
             'pagination' => [
                 'pageSize' => 50,
             ],
@@ -79,6 +88,17 @@ JS
             'id',
             'address',
             'phone',
+            [
+                'header' => 'Пользоватль',
+                'content' => function ($model, $key, $index, $column) {
+                    $arr = [];
+                    $avatar = \yii\helpers\ArrayHelper::getValue($model, 'user_avatar', '/images/iam.png');
+                    $arr[] = Html::img($avatar, ['width' => 50]);
+                    $arr[] = $model['user_email'] . ' ' . $model['user_name_first'] . ' ' . $model['user_name_last'];
+
+                    return join('',$arr);
+                },
+            ],
             [
                 'header' => 'Время создания',
                 'content' => function ($model, $key, $index, $column) {

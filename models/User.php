@@ -20,6 +20,13 @@ class User extends \cs\base\DbRecord implements \yii\web\IdentityInterface
 
     const TABLE = 'gs_users';
 
+    public static $avatarPathList = [
+        'galaxysss.com/galaxysss',
+        'avia.galaxysss.ru/bogdan',
+        'rod.galaxysss.ru/rod',
+        'tesla.galaxysss.ru/tesla',
+    ];
+
     /**
      * @inheritdoc
      */
@@ -178,6 +185,8 @@ class User extends \cs\base\DbRecord implements \yii\web\IdentityInterface
     public function setAvatarAsContent($content, $extension)
     {
         $path = UploadFolderDispatcher::createFolder('FileUpload2', self::TABLE, $this->getId());
+        $p = $path->getPathFull();
+        $p = $p . '/../../../../';
         $path->addAndCreate('small');
         $path->add('avatar.' . $extension);
 
