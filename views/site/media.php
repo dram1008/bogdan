@@ -19,6 +19,8 @@ $this->title = 'Медиа материалы';
             <p class="text-center"><img src="/images/controller/site/media/12279213_634318063337452_2477462852464822447_n.jpg" class="img-center" style="border-radius: 10px; width:100%;"></p>
             <p class="text-center">Ульяна Скифова и Алексей Хвацкий «Просто Будь»</p>
             <p class="text-center"><iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/172626786&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe></p>
+            <p class="text-center">Став крылатым однажды, человек может все!</p>
+            <p class="text-center"><img src="/images/controller/site/media/0_167837_652a3333_orig.gif" class="img-center" style="border-radius: 10px; width:100%;"></p>
             <p class="text-center">Траектория движения крыльев птиц, стрекоз, летучей мыши и насекомых</p>
             <p class="text-center"><img src="/images/controller/site/media/tumblr_nxmafvUP9e1tl8u0ko1_500.gif"  class="img-center" style="border-radius: 10px;width: 100%;max-width: 500px;"></p>
             <p class="text-center">Летящий Ангел</p>
