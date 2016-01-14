@@ -42,6 +42,12 @@ class ArticleController extends BaseController
         ]);
     }
 
+    public function actionZnaki_zodizka()
+    {
+        return $this->render([
+        ]);
+    }
+
     public function actionMerkaba()
     {
         return $this->render([

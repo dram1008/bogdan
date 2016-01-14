@@ -48,6 +48,7 @@ return [
     'article/merkaba'                       => 'article/merkaba',
     'article/angels'                        => 'article/angels',
     'article/angels2'                       => 'article/angels2',
+    'article/znaki_zodizka'                 => 'article/znaki_zodizka',
 
     'auth'                                  => 'auth/auth',
     'login'                                 => 'site/login',

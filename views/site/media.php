@@ -79,6 +79,13 @@ $this->title = 'Медиа материалы';
                     <p><a href="/article/angels2"><img src="/images/controller/site/media/article/5.jpg" width="200" style="border-radius: 10px; float: left; margin-right: 20px;">
                             Ангелы о своей роли на Земле (статья вторая)</a></p>
                 </div>
+                <div class="col-lg-12" style="margin-bottom: 20px;">
+                    <p>
+                        <a href="/article/znaki_zodizka"><img src="/images/controller/site/media/article/6.png" width="200" style="border-radius: 10px; float: left; margin-right: 20px;">
+                            Зодиак Птиц Книги «ИСХОД» о знаках нового Зодиака
+                        </a>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
