@@ -50,8 +50,9 @@ $c = \yii\helpers\Url::current();
                 <i class="fa fa-bars"></i>
             </button>
             <a class="navbar-brand page-scroll" href="<?php if ($c != '/' and $c != '/angel') echo '/'; ?>#page-top" style="padding: 0px;  margin: 0px 10px 0px 10px;">
-                <img src="/images/logo4.png" height="50">
+                <img src="/images/logo4_1.png" height="50">
             </a>
+            <img src="/images/logo4_2.png"  height="50" class="hidden-md hidden-sm hidden-xs ">
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -76,7 +77,7 @@ $c = \yii\helpers\Url::current();
                 <li<?php if (\yii\helpers\Url::current() == \yii\helpers\Url::to(['site/about'])) echo " class='active'" ?>>
                     <a href="/about">О нас</a>
                 </li>
-                <li style="padding-top: 6px;" id="blockProfileLi">
+                <li style="padding-top: 6px; padding-left: 10px;" id="blockProfileLi">
                     <?php if (Yii::$app->user->isGuest) { ?>
                         <?php
                         $this->registerJs(<<<JS

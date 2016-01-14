@@ -50,7 +50,7 @@ $this->title = 'Медиа материалы';
             ?>
             <div class="row">
             <?php foreach(\app\models\Picture::query()->all() as $foto) { ?>
-                <div class="col-lg-2">
+                <div class="col-sm-2">
                     <a href="<?= \cs\Widget\FileUpload2\FileUpload::getOriginal($foto['image']) ?>" rel="lightbox[example]" class="highslide" onclick="return hs.expand(this)">
                         <img src="<?= $foto['image'] ?>"  alt="<?= $foto['name'] ?>" width="100%" style="margin-bottom: 20px;">
                     </a>
@@ -63,22 +63,32 @@ $this->title = 'Медиа материалы';
                     <p><a href="/article/arhangelMihail_2016_01"><img src="/images/controller/site/media/article/1.jpg" width="200" style="border-radius: 10px; float: left; margin-right: 20px;">
                     Что такое Дух? Послание Архангела Михаила через Ронну Герман</a></p>
                 </div>
+            </div>
+            <div class="row">
                 <div class="col-lg-12" style="margin-bottom: 20px;">
                     <p><a href="/article/uchites_letat"><img src="/images/controller/site/media/article/2.jpg" width="200" style="border-radius: 10px; float: left; margin-right: 20px;">
                             УЧИТЕСЬ ЛЕТАТЬ. Совет Старейшин Созвездия Андромеды</a></p>
                 </div>
+            </div>
+            <div class="row">
                 <div class="col-lg-12" style="margin-bottom: 20px;">
                     <p><a href="/article/merkaba"><img src="/images/controller/site/media/article/3.jpg" width="200" style="border-radius: 10px; float: left; margin-right: 20px;">
                             Мер-ка-ба - тело света для полетов в мироздании</a></p>
                 </div>
-                <div class="col-lg-12" style="margin-bottom: 20px;">
+            </div>
+            <div class="row">
+            <div class="col-lg-12" style="margin-bottom: 20px;">
                     <p><a href="/article/angels"><img src="/images/controller/site/media/article/4.jpg" width="200" style="border-radius: 10px; float: left; margin-right: 20px;">
                             Ангелы о своей роли на Земле (статья первая)</a></p>
                 </div>
+            </div>
+            <div class="row">
                 <div class="col-lg-12" style="margin-bottom: 20px;">
                     <p><a href="/article/angels2"><img src="/images/controller/site/media/article/5.jpg" width="200" style="border-radius: 10px; float: left; margin-right: 20px;">
                             Ангелы о своей роли на Земле (статья вторая)</a></p>
                 </div>
+            </div>
+            <div class="row">
                 <div class="col-lg-12" style="margin-bottom: 20px;">
                     <p>
                         <a href="/article/znaki_zodizka"><img src="/images/controller/site/media/article/6.png" width="200" style="border-radius: 10px; float: left; margin-right: 20px;">
