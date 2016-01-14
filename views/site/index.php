@@ -5,7 +5,7 @@
 /* @var $pagesCount int */
 /* @var $page int */
 
-$this->title = 'Главная';
+$this->title = 'Крылья Ангела';
 ?>
 
 <?= $this->render('_index') ?>
