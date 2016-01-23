@@ -25,6 +25,8 @@ $this->title = 'Медиа материалы';
             <p class="text-center"><iframe width="100%" height="315" src="https://www.youtube.com/embed/aMMZh5_IFxY" frameborder="0" allowfullscreen></iframe></p>
             <p class="text-center">Став крылатым однажды, человек может все!</p>
             <p class="text-center"><img src="/images/controller/site/media/0_167837_652a3333_orig.gif" class="img-center" style="border-radius: 10px; width:100%;"></p>
+            <p class="text-center">Звездный орел</p>
+            <p class="text-center"><img src="/images/controller/site/media/tumblr_nat50xVvgj1tj9ixko1_500.gif" class="img-center" style="border-radius: 10px; width:100%;"></p>
             <p class="text-center">Траектория движения крыльев птиц, стрекоз, летучей мыши и насекомых</p>
             <p class="text-center"><img src="/images/controller/site/media/tumblr_nxmafvUP9e1tl8u0ko1_500.gif"  class="img-center" style="border-radius: 10px;width: 100%;max-width: 500px;"></p>
             <p class="text-center">Летящий Ангел</p>
