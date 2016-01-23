@@ -19,6 +19,10 @@ $this->title = 'Медиа материалы';
             <p class="text-center"><img src="/images/controller/site/media/12279213_634318063337452_2477462852464822447_n.jpg" class="img-center" style="border-radius: 10px; width:100%;"></p>
             <p class="text-center">Ульяна Скифова и Алексей Хвацкий «Просто Будь»</p>
             <p class="text-center"><iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/172626786&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe></p>
+            <p class="text-center">Ксения Кузнецова. Дай Мне Крылья Как у Орла</p>
+            <p class="text-center"><iframe width="100%" height="315" src="https://www.youtube.com/embed/Gr4XCubHY0I" frameborder="0" allowfullscreen></iframe></p>
+            <p class="text-center">Yakuro - Voices Of Infinity (Stive Morgan Remix) - Tomasz Alen Kopera Art</p>
+            <p class="text-center"><iframe width="100%" height="315" src="https://www.youtube.com/embed/aMMZh5_IFxY" frameborder="0" allowfullscreen></iframe></p>
             <p class="text-center">Став крылатым однажды, человек может все!</p>
             <p class="text-center"><img src="/images/controller/site/media/0_167837_652a3333_orig.gif" class="img-center" style="border-radius: 10px; width:100%;"></p>
             <p class="text-center">Траектория движения крыльев птиц, стрекоз, летучей мыши и насекомых</p>
