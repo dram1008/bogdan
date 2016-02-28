@@ -32,10 +32,10 @@ $this->registerJs(<<<JS
             $(this).addClass('active');
         }
     });
-    $('.field-request-dostavka').on('click', function() {
+    $('.field-request-dostavka label').on('click', function() {
         alert(1);
-        $('.field-request-address').removeClass('has-error');
-        $('.field-request-address .help-block').hide();
+        $('.field-request-dostavka').removeClass('has-error');
+        $('.field-request-dostavka .help-block').hide();
     });
 
     $('.buttonSubmit').click(function() {
