@@ -53,8 +53,6 @@ $this->registerJs(<<<JS
                 return false;
             }
         });
-        console.log(val);
-        return false;
         if (val == '') {
             $('.field-request-dostavka').addClass('has-error');
             $('.field-request-dostavka .help-block').html('Поле нужно выбрать обязательно').show();
@@ -67,16 +65,13 @@ $this->registerJs(<<<JS
                 return false;
             }
         }
-        var dd = null;
-        $('input[name="Request[dostavka]"]').each(function(){
-            if ($(this).is(':checked')) dd = $(this).attr('value');
-        });
+
         ajaxJson({
             url: '/buy/ajax',
             data: {
                 id: {$product->getId()},
                 comment: $('#request-comment').val(),
-                dostavka: dd,
+                dostavka: val,
                 price: $('input[name="sum"]').val(),
                 phone: $('#request-phone').val(),
                 address: $('#request-address').val()
