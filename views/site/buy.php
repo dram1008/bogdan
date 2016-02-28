@@ -33,6 +33,7 @@ $this->registerJs(<<<JS
         }
     });
     $('.field-request-dostavka').on('click', function() {
+        alert(1);
         $('.field-request-address').removeClass('has-error');
         $('.field-request-address .help-block').hide();
     });
