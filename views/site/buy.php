@@ -40,6 +40,7 @@ $this->registerJs(<<<JS
         // проверка формы
         var val = $('input[name="Request[dostavka]"]').val();
         alert(val);
+        console.log(val);
         if (val == 3 || val == 4) {
             if ($('#request-address').val() == '') {
                 $('.field-request-address').addClass('has-error');
