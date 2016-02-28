@@ -32,12 +32,18 @@ $this->registerJs(<<<JS
             $(this).addClass('active');
         }
     });
+    $('#request-address').on('focus', function() {
+        $('.field-request-address').removeClass('has-error');
+        $('.field-request-address .help-block').hide();
+    });
     $('.buttonSubmit').click(function() {
         // проверка формы
         var val = $('input[name="Request[dostavka]"]').val();
+        alert(val);
         if (val == 3 || val == 4) {
-            if ($('textarea[name="Request[address]"]').val() == '') {
-                alert('Поле нужно заполнить обязательно');
+            if ($('#request-address').val() == '') {
+                $('.field-request-address').addClass('has-error');
+                $('.field-request-address .help-block').html('Поле нужно заполнить обязательно').show();
                 return false;
             }
         }
