@@ -94,9 +94,6 @@ class Admin_requestsController extends AdminBaseController
     {
         $text = self::getParam('text');
         $request = Request::find($id);
-        if ($request->getField('user_id') != Yii::$app->user->id) {
-            return self::jsonErrorId(101, 'Это не ваш заказ');
-        }
         $request->addMessageToClient($text);
         // отправка письма
         Application::mail($request->getClient()->getEmail(), 'Новое сообщение', 'new_message_to_client', [
@@ -137,9 +134,6 @@ class Admin_requestsController extends AdminBaseController
     public function actionItem_answer_pay($id)
     {
         $request = Request::find($id);
-        if ($request->getField('user_id') != Yii::$app->user->id) {
-            return self::jsonErrorId(101, 'Это не ваш заказ');
-        }
         $request->paid(self::getParam('text'));
 
         return self::jsonSuccess();
@@ -192,9 +186,6 @@ class Admin_requestsController extends AdminBaseController
     {
         $text = self::getParam('text');
         $request = Request::find($id);
-        if ($request->getField('user_id') != Yii::$app->user->id) {
-            return self::jsonErrorId(101, 'Это не ваш заказ');
-        }
         $request->addStatusToClient([
             'message' => $text,
             'status'  => $status,
