@@ -48,7 +48,6 @@ $this->registerJs(<<<JS
             $('.field-request-dostavka .help-block').html('Поле нужно выбрать обязательно').show();
             return false;
         }
-        return false;
         if (val == 3 || val == 4) {
             if ($('#request-address').val() == '') {
                 $('.field-request-address').addClass('has-error');
