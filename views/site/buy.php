@@ -36,11 +36,19 @@ $this->registerJs(<<<JS
         $('.field-request-address').removeClass('has-error');
         $('.field-request-address .help-block').hide();
     });
+    $('.field-request-address').on('focus', function() {
+        $('.field-request-address').removeClass('has-error');
+        $('.field-request-address .help-block').hide();
+    });
     $('.buttonSubmit').click(function() {
         // проверка формы
         var val = $('input[name="Request[dostavka]"]').val();
-        alert(val);
-        console.log(val);
+        if (val == '') {
+            $('.field-request-dostavka').addClass('has-error');
+            $('.field-request-dostavka .help-block').html('Поле нужно выбрать обязательно').show();
+            return false;
+        }
+        return false;
         if (val == 3 || val == 4) {
             if ($('#request-address').val() == '') {
                 $('.field-request-address').addClass('has-error');
