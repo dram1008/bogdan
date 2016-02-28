@@ -97,7 +97,7 @@ class Admin_requestsController extends AdminBaseController
         $request->addMessageToClient($text);
         // отправка письма
         Application::mail($request->getClient()->getEmail(), 'Новое сообщение', 'new_message_to_client', [
-            'request' => $this,
+            'request' => $request,
             'text'    => $text,
         ]);
 
