@@ -40,6 +40,10 @@ $this->registerJs(<<<JS
         $('.field-request-address').removeClass('has-error');
         $('.field-request-address .help-block').hide();
     });
+    $('input[name="Request[dostavka]"]').on('change', function() {
+        $('.field-request-address').removeClass('has-error');
+        $('.field-request-address .help-block').hide();
+    });
     $('.buttonSubmit').click(function() {
         // проверка формы
         var val = $('input[name="Request[dostavka]"]').val();
