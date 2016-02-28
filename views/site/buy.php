@@ -33,7 +33,6 @@ $this->registerJs(<<<JS
         }
     });
     $('.field-request-dostavka label').on('click', function() {
-        alert(1);
         $('.field-request-dostavka').removeClass('has-error');
         $('.field-request-dostavka .help-block').hide();
     });
@@ -41,7 +40,7 @@ $this->registerJs(<<<JS
     $('.buttonSubmit').click(function() {
         // проверка формы
         var val = '';
-        $('input[name="Request[dostavka]"]').each(function(i,v) {
+        $('input[name="Request[dostavka]"]').each(function(i, v) {
             if ($(v).is(':checked')) {
                 val = $(v).attr('value');
                 return false;
