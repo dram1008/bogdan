@@ -46,10 +46,12 @@ $this->registerJs(<<<JS
     });
     $('.buttonSubmit').click(function() {
         // проверка формы
-        var val = $('input[name="Request[dostavka]"]').val();
+        var val = '';
         $('input[name="Request[dostavka]"]').each(function(i,v) {
-            console.log($(v).is(':checked'));
-            console.log($(v).attr('value'));
+            if ($(v).is(':checked')) {
+                val = $(v).attr('value');
+                return false;
+            }
         });
         console.log(val);
         return false;
