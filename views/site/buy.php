@@ -47,7 +47,12 @@ $this->registerJs(<<<JS
     $('.buttonSubmit').click(function() {
         // проверка формы
         var val = $('input[name="Request[dostavka]"]').val();
+        $('input[name="Request[dostavka]"]').each(function(i,v) {
+            console.log($(v).is(':checked'));
+            console.log($(v).is(':selected'));
+        });
         console.log(val);
+        return false;
         if (val == '') {
             $('.field-request-dostavka').addClass('has-error');
             $('.field-request-dostavka .help-block').html('Поле нужно выбрать обязательно').show();
