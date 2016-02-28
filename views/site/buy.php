@@ -36,7 +36,7 @@ $this->registerJs(<<<JS
         $('.field-request-address').removeClass('has-error');
         $('.field-request-address .help-block').hide();
     });
-    $('.field-request-address').on('focus', function() {
+    $('.field-request-address label').on('click', function() {
         $('.field-request-address').removeClass('has-error');
         $('.field-request-address .help-block').hide();
     });
