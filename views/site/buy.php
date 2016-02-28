@@ -32,18 +32,11 @@ $this->registerJs(<<<JS
             $(this).addClass('active');
         }
     });
-    $('#request-address').on('focus', function() {
+    $('.field-request-dostavka').on('click', function() {
         $('.field-request-address').removeClass('has-error');
         $('.field-request-address .help-block').hide();
     });
-    $('.field-request-address label').on('click', function() {
-        $('.field-request-address').removeClass('has-error');
-        $('.field-request-address .help-block').hide();
-    });
-    $('input[name="Request[dostavka]"]').on('change', function() {
-        $('.field-request-address').removeClass('has-error');
-        $('.field-request-address .help-block').hide();
-    });
+
     $('.buttonSubmit').click(function() {
         // проверка формы
         var val = '';
