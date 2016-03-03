@@ -16,7 +16,7 @@ $this->registerJs(<<<JS
             ajaxJson({
                 url: '/admin/requests/' + id + '/delete',
                 success: function (ret) {
-                    infoWindow('Успешно', function() {
+                    showInfo('Успешно', function() {
                         button.parent().parent().remove();
                     });
                 }
