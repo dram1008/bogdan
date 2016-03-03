@@ -66,8 +66,8 @@ JS
         'columns'      =>
             [
                 'id',
-                'address',
-                'phone',
+                'address:text:Адрес',
+                'phone:text:Телефон',
                 [
                     'header'  => 'Пользоватль',
                     'content' => function ($model, $key, $index, $column) {
@@ -96,6 +96,15 @@ JS
 
                         return Html::tag('abbr', \cs\services\DatePeriod::back($v, ['isShort' => true]), ['class' => 'gsssTooltip', 'title' => Yii::$app->formatter->asDatetime($v)]);
                     },
+                ],
+                [
+                    'header'  => 'Оплачен?',
+                    'content' => function ($item) {
+                        $v = \yii\helpers\ArrayHelper::getValue($item, 'is_paid', 0);
+                        if ($v == 0) return Html::tag('span', 'Нет', ['class' => 'label label-default']);
+
+                        return Html::tag('span', 'Да', ['class' => 'label label-success']);
+                    }
                 ],
                 [
                     'header'  => 'Есть ответ?',
