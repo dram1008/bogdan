@@ -5,6 +5,8 @@ namespace app\controllers;
 use app\models\Article;
 use app\models\Page;
 use app\models\Shop\Request;
+use app\models\Shop\RequestMessage;
+use app\models\Shop\Ticket;
 use app\models\SiteUpdate;
 use app\services\Subscribe;
 use cs\Application;
@@ -12,6 +14,7 @@ use cs\services\VarDumper;
 use cs\web\Exception;
 use Yii;
 use yii\base\UserException;
+use yii\db\Query;
 
 class Admin_requestsController extends AdminBaseController
 {
@@ -71,9 +74,19 @@ class Admin_requestsController extends AdminBaseController
         }
     }
 
+    /**
+     * AJAX
+     * Удаление заказа в админке
+     *
+     * @param $id
+     * @return \yii\web\Response
+     */
     public function actionDelete($id)
     {
-        \app\models\Form\Page::find($id)->delete();
+        $request = Request::find($id);
+        (new Query())->createCommand()->delete(RequestMessage::TABLE, ['request_id' => $id])->execute();
+        (new Query())->createCommand()->delete(Ticket::TABLE, ['request_id' => $id])->execute();
+        $request->delete();
 
         return self::jsonSuccess();
     }

@@ -7,32 +7,17 @@ use yii\helpers\Html;
 $this->title = 'Заказы';
 
 $this->registerJs(<<<JS
-$('.buttonDelete').click(function (e) {
+    $('.buttonDelete').click(function (e) {
         e.preventDefault();
+        e.stopPropagation();
         if (confirm('Подтвердите удаление')) {
+            var button = $(this);
             var id = $(this).data('id');
             ajaxJson({
-                url: '/admin/articleList/' + id + '/delete',
+                url: '/admin/requests/' + id + '/delete',
                 success: function (ret) {
                     infoWindow('Успешно', function() {
-                        $('#newsItem-' + id).remove();
-                    });
-                }
-            });
-        }
-    });
-
-    // Сделать рассылку
-    $('.buttonAddSiteUpdate').click(function (e) {
-        e.preventDefault();
-        if (confirm('Подтвердите')) {
-            var buttonSubscribe = $(this);
-            var id = $(this).data('id');
-            ajaxJson({
-                url: '/admin/articleList/' + id + '/subscribe',
-                success: function (ret) {
-                    infoWindow('Успешно', function() {
-                        buttonSubscribe.remove();
+                        button.parent().parent().remove();
                     });
                 }
             });
@@ -62,8 +47,7 @@ JS
                     'gs_users.name_last as user_name_last',
                 ])
                 ->orderBy([
-                    'is_answer_from_client' => SORT_DESC,
-                    'last_message_time'     => SORT_DESC,
+                    'last_message_time' => SORT_DESC,
                 ]),
             'pagination' => [
                 'pageSize' => 50,
@@ -72,60 +56,62 @@ JS
         'tableOptions' => [
             'class' => 'table table-hover table-striped'
         ],
-        'rowOptions' => function($item) {
+        'rowOptions'   => function ($item) {
             return [
-                'role' => 'button',
+                'role'    => 'button',
                 'data-id' => $item['id'],
-                'class' => 'rowTable'
+                'class'   => 'rowTable'
             ];
         },
-        'columns' =>
-        [
+        'columns'      =>
             [
-                'class' => 'yii\grid\SerialColumn', // <-- here
-                // you may configure additional properties here
-            ],
-            'id',
-            'address',
-            'phone',
-            [
-                'header' => 'Пользоватль',
-                'content' => function ($model, $key, $index, $column) {
-                    $arr = [];
-                    $avatar = \yii\helpers\ArrayHelper::getValue($model, 'user_avatar', '/images/iam.png');
-                    $arr[] = Html::img($avatar, ['width' => 50]);
-                    $arr[] = $model['user_email'] . ' ' . $model['user_name_first'] . ' ' . $model['user_name_last'];
+                'id',
+                'address',
+                'phone',
+                [
+                    'header'  => 'Пользоватль',
+                    'content' => function ($model, $key, $index, $column) {
+                        $arr = [];
+                        $avatar = \yii\helpers\ArrayHelper::getValue($model, 'user_avatar', '/images/iam.png');
+                        $arr[] = Html::img($avatar, ['width' => 50]);
+                        $arr[] = $model['user_email'] . ' ' . $model['user_name_first'] . ' ' . $model['user_name_last'];
 
-                    return join('',$arr);
-                },
-            ],
-            [
-                'header' => 'Время создания',
-                'content' => function ($model, $key, $index, $column) {
-                    return Yii::$app->formatter->asDatetime($model['date_create']);
-                },
-            ],
-            [
-                'header' => 'Время последнего ответа',
-                'content' => function ($model, $key, $index, $column) {
-                    return Yii::$app->formatter->asDatetime($model['last_message_time']);
-                },
-            ],
-            [
-                'header' => 'Комментарий',
-                'content' => function ($model, $key, $index, $column) {
-                    return Html::tag('pre', nl2br($model['comment']));
-                },
-            ],
-            [
-                'header' => 'Еслт ответ?',
-                'content' => function($item) {
-                    if ($item['is_answer_from_client'] == 1) {
-                        return Html::tag('span',null,['class' => 'glyphicon glyphicon-envelope']);
+                        return join('', $arr);
+                    },
+                ],
+                [
+                    'header'  => 'Время создания',
+                    'content' => function ($model, $key, $index, $column) {
+                        $v = \yii\helpers\ArrayHelper::getValue($model, 'date_create', 0);
+                        if ($v == 0) return '';
+
+                        return Html::tag('abbr', \cs\services\DatePeriod::back($v, ['isShort' => true]), ['class' => 'gsssTooltip', 'title' => Yii::$app->formatter->asDatetime($v)]);
+                    },
+                ],
+                [
+                    'header'  => 'Время последнего ответа',
+                    'content' => function ($model, $key, $index, $column) {
+                        $v = \yii\helpers\ArrayHelper::getValue($model, 'last_message_time', 0);
+                        if ($v == 0) return '';
+
+                        return Html::tag('abbr', \cs\services\DatePeriod::back($v, ['isShort' => true]), ['class' => 'gsssTooltip', 'title' => Yii::$app->formatter->asDatetime($v)]);
+                    },
+                ],
+                [
+                    'header'  => 'Есть ответ?',
+                    'content' => function ($item) {
+                        if ($item['is_answer_from_client'] == 1) {
+                            return Html::tag('span', Html::tag('span', null, ['class' => 'glyphicon glyphicon-envelope']), ['class' => 'label label-success']);
+                        }
                     }
-                }
-            ],
-        ]
+                ],
+                [
+                    'header'  => 'Удалить',
+                    'content' => function ($item) {
+                        return Html::button('Удалить', ['class' => 'btn btn-danger btn-xs buttonDelete', 'data-id' => $item['id']]);
+                    }
+                ],
+            ]
     ]) ?>
 
 </div>
