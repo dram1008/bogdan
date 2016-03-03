@@ -36,4 +36,9 @@ class Asset extends AssetBundle
 //        'yii\bootstrap\BootstrapThemeAsset',
 //        'yii\bootstrap\BootstrapPluginAsset',
     ];
+
+    public function init()
+    {
+        \Yii::$app->view->registerJs("$('.gsssTooltip').tooltip()");
+    }
 }
