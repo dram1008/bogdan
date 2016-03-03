@@ -72,8 +72,6 @@ JS
                     'header'  => 'Пользоватль',
                     'content' => function ($model, $key, $index, $column) {
                         $arr = [];
-                        $avatar = \yii\helpers\ArrayHelper::getValue($model, 'user_avatar', '/images/iam.png');
-                        $arr[] = Html::img($avatar, ['width' => 50]);
                         $arr[] = $model['user_email'] . ' ' . $model['user_name_first'] . ' ' . $model['user_name_last'];
 
                         return join('', $arr);
