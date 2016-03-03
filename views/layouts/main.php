@@ -40,7 +40,7 @@ AppAsset::register($this);
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="<?= \yii\helpers\Url::to(['admin_article/main']) ?>" style="padding: 5px 15px 5px 5px;">
+                <a class="navbar-brand" href="/admin" style="padding: 5px 15px 5px 5px;">
                     <img src="/images/icon.png" height="40">
                 </a>
                 <a class="navbar-brand" href="<?= \yii\helpers\Url::to(['admin_article/main']) ?>">
