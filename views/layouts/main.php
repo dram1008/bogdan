@@ -43,7 +43,7 @@ AppAsset::register($this);
                 <a class="navbar-brand" href="/admin" style="padding: 5px 15px 5px 5px;">
                     <img src="/images/icon.png" height="40">
                 </a>
-                <a class="navbar-brand" href="<?= \yii\helpers\Url::to(['admin_article/main']) ?>">
+                <a class="navbar-brand" href="/admin">
                         Административный модуль
                 </a>
             </div>
