@@ -359,6 +359,7 @@ class SiteController extends BaseController
         if (is_null($request)) {
             return self::jsonErrorId(101, 'Не найден заказ');
         }
+        Yii::info('check request->isPaid = '. \yii\helpers\VarDumper::dumpAsString($request->isPaid()), 'bog\\\app\\controllers\\SiteController::actionRequest_is_paid()');
 
         return self::jsonSuccess($request->isPaid());
     }
