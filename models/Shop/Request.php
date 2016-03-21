@@ -241,6 +241,14 @@ class Request extends \cs\base\DbRecord
     }
 
     /**
+     * Возвращат ответ на вопрос: Оплачен заказ?
+     * @return bool
+     */
+    public function isPaid()
+    {
+        return $this->get('is_paid', 0) == 1;
+    }
+    /**
      * Добавить статус
      *
      * @param int | array $status статус self::STATUS_* или массив со статусом и сообщением

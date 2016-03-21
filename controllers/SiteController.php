@@ -320,7 +320,10 @@ class SiteController extends BaseController
         if (is_null($request)) {
             throw new Exception('Нет такого заказа');
         }
-        if ($request->getField('is_paid', 0) == 1) return $this->redirect(['site_cabinet/request', 'id' => $request->getId()]);
+        Yii::info('isPaid='.\yii\helpers\VarDumper::dumpAsString($request->isPaid()), 'bog\\buy\\request');
+        if ($request->isPaid()) {
+            return $this->redirect(['site_cabinet/request', 'id' => $request->getId()]);
+        }
 
         return $this->render([
             'request'    => $request,
