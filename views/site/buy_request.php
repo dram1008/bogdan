@@ -31,7 +31,7 @@ JS
 <section id="about" class="container content-section" style="margin-top: 50px;">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
-            <h2 class="text-center">Идет перенаправление на оплату...</h2>
+            <h2 class="text-center">Идет оформление заказа ...</h2>
 
             <form method="POST" action="https://money.yandex.ru/quickpay/confirm.xml" name="form2" id="formPay">
                 <input type="hidden" name="receiver" value="410011473018906">
