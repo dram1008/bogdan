@@ -17,6 +17,7 @@ $this->registerJs(<<<JS
                 if (ret) {
                     window.location = '/requests/' + {$id};
                 } else {
+                    $('#divButtonPay').show();
                     $('#formPay').submit();
                 }
             }
@@ -50,7 +51,7 @@ JS
                 <input type="hidden" name="need-address" value="false">
                 <input type="hidden" name="paymentType" value="<?= Yii::$app->request->get('type', 'AC') ?>" id="paymentType">
 
-                <div class="row">
+                <div class="row" style="margin-bottom: 50px;display: none;" id="divButtonPay">
                     <div class="col-lg-12" style="margin-top: 30px;">
                         <div class="btn-group" role="group" aria-label="...">
                             <input type="button" value="Перейти к оплате"
