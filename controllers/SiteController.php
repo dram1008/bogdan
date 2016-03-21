@@ -350,89 +350,17 @@ class SiteController extends BaseController
     }
 
     /**
-     * Прием денег из яндекса
-     *
-     * @return string
+     * @param int $id request id
+     * @return \yii\web\Response json
      */
-    public function actionRequest_success()
+    public function actionRequest_is_paid($id)
     {
-        $secretCode = 'Wre4ZX0X3vDc1aEHElOvsOof'; // для кошелька 410011473018906
-
-        // https://money.yandex.ru/doc.xml?id=526991
-        // Удостоверение подлинности и целостности уведомления
-
-    // живой платеж
-//        'notification_type' => 'card-incoming'
-//        'amount' => '19.60'
-//        'datetime' => '2015-12-28T15:38:38Z'
-//        'codepro' => 'false'
-//        'withdraw_amount' => '20.00'
-//        'sender' => ''
-//        'sha1_hash' => '4bf0ac57f8a86653914d68ba28a3a02c99780eed'
-//        'unaccepted' => 'false'
-//        'operation_label' => '1e136b24-0002-5000-8033-8fa644e381dd'
-//        'operation_id' => '504632318089016012'
-//        'currency' => '643'
-//        'label' => '1231'
-
-
-//        пример
-//        'notification_type' => 'p2p-incoming'
-//        'amount' => '138.29'
-//        'datetime' => '2015-12-27T20:28:51Z'
-//        'codepro' => 'false'
-//        'sender' => '41001000040'
-//        'sha1_hash' => '163ca7ebf6685d84db11985cd06df592301a1b20'
-//        'test_notification' => 'true'
-//        'operation_label' => ''
-//        'operation_id' => 'test-notification'
-//        'currency' => '643'
-//        'label' => ''
-
-
-        // добавляю в БД
-        $fields = Yii::$app->request->post();
-        $fields['is_valid'] = ($this->isValidSha1($fields, $secretCode))? 1 : 0;
-        $fields['date_insert'] = time();
-        Payments::insert(Yii::$app->request->post());
-
-        // проверка на верность
-        $label = ArrayHelper::getValue($fields, 'label', '');
-        $mail = ArrayHelper::getValue(Yii::$app->params, 'mailer.payment', '');
-        if ($fields['is_valid'] == 0) {
-            if ($mail) {
-                Application::mail($mail, 'Ошибка. подлинность не подтверждена', 'not_valid', [
-                    'fields' => $fields,
-                ]);
-            }
+        $request = \app\models\Shop\Request::find($id);
+        if (is_null($request)) {
+            return self::jsonErrorId(101, 'Не найден заказ');
         }
-        if ($label != '') {
-            if (StringHelper::startsWith($label, 'bogdan.')) {
-                Yii::info(\yii\helpers\VarDumper::dumpAsString($fields), 'bog\\payment');
-                $label = explode('.', $label);
-                $request_id = $label[1];
-                $request = \app\models\Shop\Request::find($request_id);
-                if (is_null($request)) {
-                    if ($mail) {
-                        Application::mail($mail, 'Ошибка. не найден заказ', 'no_request', [
-                            'fields' => $fields,
-                        ]);
-                    }
-                }
-                if ($request->getField('price') != $fields['withdraw_amount']) {
-                    if ($mail) {
-                        Application::mail($mail, 'Ошибка. Сумма не соотвтствует заказу', 'wrong_sum', [
-                            'fields' => $fields,
-                            'request' => $request,
-                        ]);
-                    }
-                }
-                $request->paid();
-//                Application::mail('dram1008@yandex.ru', 'yandexMoney', 'yandex_money', [
-//                    'post' => Yii::$app->request->post(),
-//                ]);
-            }
-        }
+
+        return self::jsonSuccess($request->isPaid());
     }
 
     /**

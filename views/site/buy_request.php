@@ -7,8 +7,21 @@
 $this->title = 'Заказ';
 $product = $request->getProduct();
 
+
+$id = $request->getId();
 $this->registerJs(<<<JS
-    $('#formPay').submit();
+    setTimeout(function() {
+        ajaxJson({
+            url: '/request/' + {$id} + '/isPaid',
+            success: function(ret) {
+                if (ret) {
+                    window.location = '/requests/' + {$id};
+                } else {
+                    $('#formPay').submit();
+                }
+            }
+        });
+    }, 5000);
 JS
 );
 ?>

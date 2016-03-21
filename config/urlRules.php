@@ -36,7 +36,7 @@ return [
     'buy/request/<id:\\d+>'                 => 'site/buy_request',
     'buy/<id:\\d+>/success'                 => 'site/buy_success',
     'buy/ajax'                              => 'site/buy_ajax',
-    'request/success'                       => 'site/request_success',
+    'request/<id:\\d+>/isPaid'              => 'site/request_is_paid',
     'table'                                 => 'site/table',
     'media'                                 => 'site/media',
     'copyright'                             => 'site/copyright',
